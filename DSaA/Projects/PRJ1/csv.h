@@ -8,6 +8,7 @@
 #include <string.h>
 
 #define MAX_CHARS 4000
+#define NULL_CELL 0
 
 extern char _csv_delim[];
 
@@ -18,7 +19,9 @@ typedef struct{
 
 void tell_shape(const char* filepath, CSV* csv);
 void read_csv(const char* filepath, CSV* csv);
+void write_csv(const char* filepath, const CSV* csv);
 void print_csv(const CSV* csv);
+void free_csv(CSV* csv);
 void set_delim(char delim);
 
 #endif

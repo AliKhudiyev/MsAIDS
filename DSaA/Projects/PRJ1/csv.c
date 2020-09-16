@@ -39,15 +39,38 @@ void read_csv(const char* filepath, CSV* csv){
     
     char line[MAX_CHARS];
     char *token, *ptr = line;
-    unsigned row=0, col=0;
+    unsigned row=0;
 
     while(fgets(line, MAX_CHARS, file)){
         ptr = line;
-        if(line[0] == _csv_delim[0]) ++col;
-        while((token = strtok(ptr, _csv_delim))){
-            csv->context[row][col++] = atof(token);
-            ptr = NULL;
-        }   ++row; col = 0;
+        for(unsigned col=0; col<csv->ncol; ++col){
+            char* beg = ptr;
+            char* end = strstr(beg, _csv_delim);
+
+            if(beg==end){
+                csv->context[row][col] = NULL_CELL;
+            }
+            else{
+                token = strtok(beg, _csv_delim);
+                csv->context[row][col] = atof(token);
+            }   ptr = end+1;
+        }
+        ++row;
+    }
+
+    fclose(file);
+}
+
+void write_csv(const char* filepath, const CSV* csv){
+    FILE* file = fopen(filepath, "w");
+
+    for(unsigned i=0; i<csv->nrow; ++i){
+        for(unsigned j=0; j<csv->ncol; ++j){
+            fprintf(file, "%lf", csv->context[i][j]);
+            if(j<csv->ncol-1){
+                fprintf(file, "%s", _csv_delim);
+            }
+        }   fprintf(file, "%c", '\n');
     }
 
     fclose(file);
@@ -59,6 +82,13 @@ void print_csv(const CSV* csv){
             printf("%lf, ", csv->context[r][c]);
         }   printf("\n");
     }
+}
+
+void free_csv(CSV* csv){
+    for(unsigned i=0; i<csv->nrow; ++i) free((void*)csv->context[i]);
+    free((void*)csv->context);
+    free((void*)csv);
+    csv = NULL;
 }
 
 void set_delim(char delim){
