@@ -65,7 +65,6 @@ CSV* read_csv(const char* filepath){
             }
             else{
                 token = strtok(beg, _csv_delim);
-                // csv->context[row][col] = atof(token);
                 strncpy(csv->context[row][col], token, MAX_CHARS/10);
                 clear_str(csv->context[row][col], MAX_CHARS/10);
             }   ptr = end+1;

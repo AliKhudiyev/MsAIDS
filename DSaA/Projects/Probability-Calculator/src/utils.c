@@ -118,11 +118,22 @@ double fibo(dens_t f, double area, Input input, unsigned arg_index, double dx, b
     double curr_area = 0.0;
 
     int i=0;
-
+    // printf("required area: %lf\n", area);
     while(curr_area < area){
+        // printf(" >> current area: %lf\n", curr_area);
+        // if(f(&input) < epsilon / 100){
+        //     printf(" f = %.15lf!!!\n", f(&input));
+        //     print_arr(input.args, 3);
+        //     printf("\n");
+        //     exit(3);
+        // }
         curr_area += f(&input) * dx;
         input.args[arg_index] += type * dx;
+        // printf(" >> current area: %lf\n", curr_area);
     }
+
+    // printf("done! %lf\n", input.args[arg_index]);
+    // exit(0);
 
     return input.args[arg_index];
 }

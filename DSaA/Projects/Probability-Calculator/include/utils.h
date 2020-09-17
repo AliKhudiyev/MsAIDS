@@ -12,7 +12,7 @@
 
 typedef struct{
     double args[3];
-    // args can be: arg, col, row (to calculate probability, i.e. calc_prob([args], distribution)
+    // args can be: arg, row, col (to calculate probability, i.e. calc_prob([args], distribution)
     // args can also be parameters for probability density functions
 }Input;
 

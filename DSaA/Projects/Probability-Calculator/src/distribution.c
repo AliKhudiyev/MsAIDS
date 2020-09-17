@@ -13,8 +13,8 @@ const char _files[5][100] = {
 
 // k - degree of freedom
 double calc_chi_square(const Input* input){
-    double x = input->args[0];
     double k = input->args[1];
+    double x = input->args[2];
 
     if(x > 0.0){
         return pow(x, k/2.0-1) * pow(M_E, -x/2.0) / (pow(2.0, k/2.0) * tgamma(k/2.0));
@@ -24,12 +24,13 @@ double calc_chi_square(const Input* input){
 
 // n - degree of freedom
 double calc_student_t(const Input* input){
-    double t = input->args[0];
     double n = input->args[1];
+    double t = input->args[2];
 
     return pow(1 + pow(t, 2.0)/n, -(1+n)/2.0) * (tgamma((1.0+n)/2.0) / (sqrt(M_PI*n) * tgamma(n/2.0)));
 }
 
+// d1, d2 - degrees of freedom
 double calc_f(const Input* input){
     double x = input->args[0];
     double d1 = input->args[1], d2 = input->args[2];
@@ -138,30 +139,53 @@ void free_dist_table(Dist_Table* table){
 }
 
 void free_distribution(Prob_Dist* distribution){
-    free((void*)distribution->arg_vals);
-    for(unsigned i=0; i<distribution->n_arg; ++i){
-        free_dist_table(distribution->table);
-    }
+    if(distribution->n_arg) free((void*)distribution->arg_vals);
+    free_dist_table(distribution->table);
     free((void*)distribution);
 }
 
 void save_probability_table(const char* filepath, Dist_T type, Dist_Param param){
     set_delim(';');
     
-    double** table;
-    unsigned gap = 1;
+    double** table, area = 0.0;
+    unsigned gap = 1, arg_index = (type == F_d)? 0 : 2;
     unsigned n_arg_val = param.n_arg_val? param.n_arg_val : 1;
+    Input input;
+    dens_t funcs[] = {NULL, calc_student_t, calc_chi_square, NULL, calc_f};
 
     if(type > 2) gap = 2;
 
     param.n_col_val += gap;
     unsigned n_row_val = n_arg_val * param.n_row_val + gap;
 
-    table = (double**)malloc(n_row_val * sizeof(double*));
-    for(unsigned i=0; i<n_row_val; ++i){
-        table[i] = (double*)malloc(param.n_col_val * sizeof(double));
-        for(unsigned j=0; j<param.n_col_val; ++j){
-            table[i][j] = 0.0;
+    // Allocating and initializing table
+    table = (double**)malloc((n_row_val-gap) * sizeof(double*));
+    for(unsigned i=0; i<n_arg_val; ++i){
+        input.args[0] = param.min_arg_val + i * param.arg_val_dif;
+        
+        for(unsigned j=0; j<param.n_row_val; ++j){
+            input.args[1] = param.min_row_val + j * param.row_val_dif;
+            table[param.n_row_val * i + j] = (double*)malloc(param.n_col_val * sizeof(double));
+            
+            for(unsigned t=0; t<param.n_col_val; ++t){
+                input.args[2] = param.min_col_val + t * param.col_val_dif;
+                if(type == Student_T_d){
+                    area = (1.0 - (param.min_col_val + t * param.col_val_dif)) / 2.0;
+                    // printf(" > student t | area: %lf\n", area);
+                } else if(type == Chi_Square_d){
+                    area = 1.0 - (param.min_col_val + t * param.col_val_dif);
+                    // printf(" > chi square t | area: %lf\n", area);
+                } else{
+                    area = param.min_arg_val + i * param.arg_val_dif;
+                    // printf(" > f t | area: %lf\n", area);
+                }
+                input.args[arg_index] = 0.0;
+                // print_arr(input.args, 3);
+                // printf("\n");
+
+                // if(!arg_index) fibo(funcs[type], area, input, arg_index, epsilon, INTEGRAL_UPPER_BOUNDARY);
+                table[param.n_row_val * i + j][t] = fibo(funcs[type], area, input, arg_index, epsilon, INTEGRAL_UPPER_BOUNDARY);
+            }
         }
     }
 
