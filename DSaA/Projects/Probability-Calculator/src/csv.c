@@ -1,5 +1,11 @@
 #include "csv.h"
 
+#define CHECK_FILE(file, err_msg)           \
+    if(!file){                              \
+        fprintf(stderr, "%s\n", err_msg);   \
+        exit(1);                            \
+    }
+
 char _csv_delim[] = ",";
 
 void tell_shape(const char* filepath, CSV* csv){
@@ -9,6 +15,7 @@ void tell_shape(const char* filepath, CSV* csv){
     char tmp;
 
     FILE* file = fopen(filepath, "r");
+    CHECK_FILE(file, "ERROR[parser]: Cannot open the file!")
 
     while((tmp=fgetc(file)) != '\n'){
         if(tmp == _csv_delim[0]) ++csv->ncol;
@@ -29,18 +36,19 @@ CSV* read_csv(const char* filepath){
     // Initializing and allocating memory for CSV
     tell_shape(filepath, csv);
 
-    printf("Shape: %u x %u\n", csv->nrow, csv->ncol);
+    // printf("Shape: %u x %u\n", csv->nrow, csv->ncol);
 
-    csv->context = malloc(csv->nrow * sizeof(double));
+    csv->context = (char***)malloc(csv->nrow * sizeof(char**));
     for(unsigned r=0; r<csv->nrow; ++r){
-        csv->context[r] = malloc(csv->ncol * sizeof(double));
+        csv->context[r] = (char**)malloc(csv->ncol * sizeof(char*));
         for(unsigned c=0; c<csv->ncol; ++c){
-            csv->context[r][c] = malloc(MAX_CHARS/10);
+            csv->context[r][c] = (char*)malloc(MAX_CHARS/10);
         }
     }
 
     // Reading the file into CSV pointer
     FILE* file = fopen(filepath, "r");
+    CHECK_FILE(file, "ERROR[parser]: Cannot open the file!")
     
     char line[MAX_CHARS];
     char *token, *ptr = line;

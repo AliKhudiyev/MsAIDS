@@ -3,12 +3,12 @@
 
 // Distribution Utilities
 
-const char _files[5][30] = {
-    "Loi Normal.csv",
-    "Student_T.csv",
-    "Chi_Square.csv",
-    "Binomial.csv",
-    "F.csv"
+const char _files[5][100] = {
+    "../distributions/Loi Normal.csv",
+    "../distributions/Student_T.csv",
+    "../distributions/Chi_Square.csv",
+    "../distributions/Binomial_Distribution.csv",
+    "../distributions/F.csv"
 };
 
 // k - degree of freedom
@@ -31,7 +31,10 @@ double calc_student_t(const Input* input){
 }
 
 double calc_f(const Input* input){
-    return 0.0;
+    double x = input->args[0];
+    double d1 = input->args[1], d2 = input->args[2];
+    
+    return sqrt(pow(d1*x, d1) * pow(d2, d2) / pow(d1*x+d2, d1+d2)) / (x * beta(d1/2.0, d2/2.0, epsilon));
 }
 
 // =========================
@@ -41,13 +44,28 @@ Prob_Dist* init_dist_table(const char* filepath, Dist_T type){
 
     Prob_Dist* distribution = malloc(sizeof(Prob_Dist));
     CSV* csv = read_csv(filepath);
-    print_csv(csv);
+    unsigned gap = 1;
+
+    // Pre-processing
+    distribution->n_arg = 0;
+    if(type > 2){
+        gap = 2;
+        distribution->n_arg = csv->nrow-gap;
+        distribution->arg_vals = malloc((csv->nrow-gap) * sizeof(double));
+        for(unsigned i=gap; i<csv->nrow; ++i){
+            if(strncmp(csv->context[i][0], NULL_CELL, 1)){
+                distribution->arg_vals[i-gap] = atof(csv->context[i][0]);
+            } else{
+                distribution->arg_vals[i-gap] = distribution->arg_vals[i-gap-1];
+            }
+        }
+    }
 
     // Allocting memory for Prob_Dist
     distribution->table = malloc(sizeof(Dist_Table));
         // Initializing meta-data for Dist_Table
-        distribution->table->n_col = csv->ncol - 1;
-        distribution->table->n_row = csv->nrow - 1;
+        distribution->table->n_col = csv->ncol - gap;
+        distribution->table->n_row = csv->nrow - gap;
         // -------------------------------------
     distribution->table->col_vals = malloc(distribution->table->n_col * sizeof(double));
     distribution->table->row_vals = malloc(distribution->table->n_row * sizeof(double));
@@ -57,37 +75,38 @@ Prob_Dist* init_dist_table(const char* filepath, Dist_T type){
     }
 
     // Initializing column and row values
-    for(unsigned c=1; c<csv->ncol; ++c){
-        distribution->table->col_vals[c-1] = atof(csv->context[0][c]);
+    for(unsigned c=gap; c<csv->ncol; ++c){
+        distribution->table->col_vals[c-gap] = atof(csv->context[0][c]);
     }
-    for(unsigned r=1; r<csv->nrow; ++r){
-        distribution->table->row_vals[r-1] = atof(csv->context[r][0]);
+    for(unsigned r=gap; r<csv->nrow; ++r){
+        distribution->table->row_vals[r-gap] = atof(csv->context[r][gap-1]);
     }
     
     // Initializing rest of the data
-    for(unsigned r=1; r<csv->nrow; ++r){
-        for(unsigned c=1; c<csv->ncol; ++c){
-            distribution->table->arr[r-1][c-1] = atof(csv->context[r][c]);
+    for(unsigned r=gap; r<csv->nrow; ++r){
+        for(unsigned c=gap; c<csv->ncol; ++c){
+            distribution->table->arr[r-gap][c-gap] = atof(csv->context[r][c]);
         }
     }
+
+    free_csv(csv);
 
     return distribution;
 }
 
 double calc_prob(const Input* input, const Prob_Dist* distribution){
-    int index = tell_index(distribution->arg_vals, input->args[0], distribution->n_arg);
     int row = tell_index(distribution->table->row_vals, input->args[1], distribution->table->n_row);
     int col = tell_index(distribution->table->col_vals, input->args[2], distribution->table->n_col);
 
-    if(!distribution->n_arg) index = 0;
-
-    printf("%d: %d, %d\n", index, row, col);
+    if(distribution->n_arg){
+        row = tell_index2(distribution->arg_vals, distribution->table->row_vals, input->args[0], input->args[1], distribution->table->n_row);
+    }   // printf("%d, %d\n", row, col);
 
     if(col < 0 || row < 0){
         return -1.;
     }
 
-    return distribution->table[index].arr[row][col];
+    return distribution->table->arr[row][col];
 }
 
 void print_columns(const Prob_Dist* distribution){
@@ -127,5 +146,68 @@ void free_distribution(Prob_Dist* distribution){
 }
 
 void save_probability_table(const char* filepath, Dist_T type, Dist_Param param){
-    ;
+    set_delim(';');
+    
+    double** table;
+    unsigned gap = 1;
+    unsigned n_arg_val = param.n_arg_val? param.n_arg_val : 1;
+
+    if(type > 2) gap = 2;
+
+    param.n_col_val += gap;
+    unsigned n_row_val = n_arg_val * param.n_row_val + gap;
+
+    table = (double**)malloc(n_row_val * sizeof(double*));
+    for(unsigned i=0; i<n_row_val; ++i){
+        table[i] = (double*)malloc(param.n_col_val * sizeof(double));
+        for(unsigned j=0; j<param.n_col_val; ++j){
+            table[i][j] = 0.0;
+        }
+    }
+
+    CSV* csv = malloc(sizeof(CSV));
+    
+    // Initialization
+    csv->nrow = n_row_val;
+    csv->ncol = param.n_col_val;
+    csv->context = (char***)malloc(csv->nrow * sizeof(char**));
+    for(unsigned r=0; r<csv->nrow; ++r){
+        csv->context[r] = (char**)malloc(csv->ncol * sizeof(char*));
+        for(unsigned c=0; c<csv->ncol; ++c){
+            csv->context[r][c] = (char*)malloc(MAX_CHARS/10);
+        }
+    }
+
+    // Initializing columns
+    for(unsigned c=0; c<gap; ++c){
+        strcpy(csv->context[0][c], NULL_CELL);
+    }
+    for(unsigned i=gap; i<csv->ncol; ++i){
+        sprintf(csv->context[0][i], "%.6lf", param.min_col_val + (i-gap) * param.col_val_dif);
+    }
+
+    // Initializing rows
+    for(unsigned r=0; r<gap; ++r){
+        strcpy(csv->context[r][0], NULL_CELL);
+    }
+    for(unsigned i=gap; i<param.n_arg_val+gap; ++i){
+        sprintf(csv->context[gap + param.n_row_val * (i-gap)][0], "%.6lf", param.min_arg_val + (i-gap) * param.arg_val_dif);
+        for(unsigned j=0; j<param.n_row_val; ++j){
+            sprintf(csv->context[gap + param.n_row_val * (i-gap) + j][1], "%.6lf", param.min_row_val + j * param.row_val_dif);
+        }
+    }
+    for(unsigned i=gap; !param.n_arg_val && i<csv->nrow; ++i){
+        sprintf(csv->context[i][0], "%.6lf", param.min_row_val + (i-gap) * param.row_val_dif);
+    }
+
+    // Initializing rest of the data (or table)
+    for(unsigned r=gap; r<csv->nrow; ++r){
+        for(unsigned c=gap; c<csv->ncol; ++c){
+            sprintf(csv->context[r][c], "%.6lf", table[r-gap][c-gap]);
+        }
+    }
+    
+    write_csv(filepath, csv);
+
+    free_csv(csv);
 }

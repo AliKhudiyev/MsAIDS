@@ -1,16 +1,38 @@
 #include "utils.h"
 #include <memory.h>
 
-int tell_index(double* arr, double val, unsigned size){
-    int index = -1;
+//
 
+double _beta(const Input* input){
+    double x = input->args[0];
+    double y = input->args[1];
+    double t = input->args[2];
+
+    return pow(t, x-1) * pow(1-t, y-1);
+}
+
+// ===============================
+
+int is_equal(double a, double b){
+    return (fabs(a-b) < epsilon)? 0 : (a>b)? 1 : -1;
+}
+
+int tell_index(double* arr, double val, unsigned size){
     for(unsigned i=0; i<size; ++i){
         if(fabs(arr[i]-val) < epsilon){
-            index = i;
+            return i;
         }
     }
+    return -1;
+}
 
-    return index;
+int tell_index2(const double* arr1, const double* arr2, double val1, double val2, unsigned size){
+    for(unsigned i=0; i<size; ++i){
+        if(!is_equal(arr1[i], val1) && !is_equal(arr2[i], val2)){
+            return i;
+        }
+    }
+    return -1;
 }
 
 void copy_arr(double* dst, const double* src, unsigned size){
@@ -42,6 +64,18 @@ double gammad(int val){
 
 double gamma_div_2d(int val){
     return sqrt(M_PI) / pow(2.0, ((double)val-1.)/2.) * gammad(gammad(val-2));
+}
+
+double beta(double x, double y, double dt){
+    double area = 0.0, t = 0.0;
+    Input input = {t, x, y};
+
+    for(; t<1.0; t+=dt){
+        input.args[0] = dt;
+        area += _beta(&input) * dt;
+    }
+
+    return area;
 }
 
 double calc_integral_of(func_t f, double beg, double end, unsigned n_iter){

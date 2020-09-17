@@ -6,7 +6,7 @@
 
 #define MAX_DIST_TYPES 5
 
-extern const char _files[5][30];
+extern const char _files[5][100];
 
 typedef enum{
     Normal_d = 0,
