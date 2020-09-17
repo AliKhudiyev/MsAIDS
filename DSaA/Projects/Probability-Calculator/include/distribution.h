@@ -2,19 +2,11 @@
 #ifndef _DISTRIBUTION_
 #define _DISTRIBUTION_
 
-#define MAX_DIST_TYPES 2
+#include "utils.h"
 
-#define INIT()                                              \
-    ;\
-    const char* filepaths[] = {                             \
-        "Loi\ Normal.csv",                                  \
-        "Binomial_Distribution.csv"                         \
-    };                                                      \
-    Prob_Dist distributions[MAX_DIST_TYPES];                \
-    for(int i=0; i< MAX_DIST_TYPES; ++i){                   \
-        distributions[i].type = (Dist_T)i;                  \
-        init_dist_table(distributions+i, filepaths[i]);     \
-    }
+#define MAX_DIST_TYPES 5
+
+extern const char _files[5][30];
 
 typedef enum{
     Normal_d = 0,
@@ -58,12 +50,17 @@ typedef struct{
 }Dist_Param;
 
 Prob_Dist* init_dist_table(const char* filepath, Dist_T type);
-double calc_prob(double col_arg, double row_arg, const Prob_Dist* distribution);
+double calc_prob(const Input* input, const Prob_Dist* distribution);
 void print_columns(const Prob_Dist* distribution);
 void print_rows(const Prob_Dist* distribution);
 void print_distribution(const Prob_Dist* distribution);
 void free_dist_table(Dist_Table* table);
 void free_distribution(Prob_Dist* distribution);
 void save_probability_table(const char* filepath, Dist_T type, Dist_Param param);
+
+// To Be Removed
+double calc_chi_square(const Input* input);
+double calc_student_t(const Input* input);
+double calc_f(const Input* input);
 
 #endif

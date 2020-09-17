@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/csv.h
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+string.h
+-
+utils.h
+../include/utils.h
+
+../include/distribution.h
+utils.h
+../include/utils.h
+
+../include/utils.h
+math.h
+-
+stdlib.h
+-
+stdio.h
+-
+
+/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+csv.h
+/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/csv.h
+distribution.h
+/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/distribution.h
+

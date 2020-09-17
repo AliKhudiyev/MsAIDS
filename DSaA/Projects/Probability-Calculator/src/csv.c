@@ -23,7 +23,9 @@ void tell_shape(const char* filepath, CSV* csv){
     fclose(file);
 }
 
-void read_csv(const char* filepath, CSV* csv){
+CSV* read_csv(const char* filepath){
+    CSV* csv = malloc(sizeof(CSV));
+
     // Initializing and allocating memory for CSV
     tell_shape(filepath, csv);
 
@@ -32,6 +34,9 @@ void read_csv(const char* filepath, CSV* csv){
     csv->context = malloc(csv->nrow * sizeof(double));
     for(unsigned r=0; r<csv->nrow; ++r){
         csv->context[r] = malloc(csv->ncol * sizeof(double));
+        for(unsigned c=0; c<csv->ncol; ++c){
+            csv->context[r][c] = malloc(MAX_CHARS/10);
+        }
     }
 
     // Reading the file into CSV pointer
@@ -52,13 +57,17 @@ void read_csv(const char* filepath, CSV* csv){
             }
             else{
                 token = strtok(beg, _csv_delim);
-                csv->context[row][col] = atof(token);
+                // csv->context[row][col] = atof(token);
+                strncpy(csv->context[row][col], token, MAX_CHARS/10);
+                clear_str(csv->context[row][col], MAX_CHARS/10);
             }   ptr = end+1;
         }
         ++row;
     }
 
     fclose(file);
+    
+    return csv;
 }
 
 void write_csv(const char* filepath, const CSV* csv){
@@ -66,7 +75,7 @@ void write_csv(const char* filepath, const CSV* csv){
 
     for(unsigned i=0; i<csv->nrow; ++i){
         for(unsigned j=0; j<csv->ncol; ++j){
-            fprintf(file, "%lf", csv->context[i][j]);
+            fprintf(file, "%s", csv->context[i][j]);
             if(j<csv->ncol-1){
                 fprintf(file, "%s", _csv_delim);
             }
@@ -79,7 +88,8 @@ void write_csv(const char* filepath, const CSV* csv){
 void print_csv(const CSV* csv){
     for(unsigned r=0; r<csv->nrow; ++r){
         for(unsigned c=0; c<csv->ncol; ++c){
-            printf("%lf, ", csv->context[r][c]);
+            printf("%s", csv->context[r][c]);
+            if(c<csv->ncol-1) printf(",\t");
         }   printf("\n");
     }
 }
