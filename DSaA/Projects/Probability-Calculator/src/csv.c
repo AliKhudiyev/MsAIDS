@@ -36,8 +36,6 @@ CSV* read_csv(const char* filepath){
     // Initializing and allocating memory for CSV
     tell_shape(filepath, csv);
 
-    // printf("Shape: %u x %u\n", csv->nrow, csv->ncol);
-
     csv->context = (char***)malloc(csv->nrow * sizeof(char**));
     for(unsigned r=0; r<csv->nrow; ++r){
         csv->context[r] = (char**)malloc(csv->ncol * sizeof(char*));

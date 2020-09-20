@@ -1,6 +1,9 @@
 #include "distribution.h"
 #include "csv.h"
 
+#include <omp.h>
+#include <time.h>
+
 // Distribution Utilities
 
 const char _files[5][100] = {
@@ -35,7 +38,7 @@ double calc_f(const Input* input){
     double x = input->args[0];
     double d1 = input->args[1], d2 = input->args[2];
     
-    return sqrt(pow(d1*x, d1) * pow(d2, d2) / pow(d1*x+d2, d1+d2)) / (x * beta(d1/2.0, d2/2.0, epsilon));
+    return sqrt(pow(d1*x, d1) * pow(d2, d2) / pow(d1*x+d2, d1+d2)) / (x * beta(d1/2.0, d2/2.0, epsilon, 1.0));
 }
 
 // =========================
@@ -101,7 +104,7 @@ double calc_prob(const Input* input, const Prob_Dist* distribution){
 
     if(distribution->n_arg){
         row = tell_index2(distribution->arg_vals, distribution->table->row_vals, input->args[0], input->args[1], distribution->table->n_row);
-    }   // printf("%d, %d\n", row, col);
+    }
 
     if(col < 0 || row < 0){
         return -1.;
@@ -144,6 +147,13 @@ void free_distribution(Prob_Dist* distribution){
     free((void*)distribution);
 }
 
+double func(const Input* input){
+    double x = input->args[0] * epsilon;
+    double d1 = input->args[1], d2 = input->args[2];
+    
+    return sqrt(pow(d1*x, d1) * pow(d2, d2) / pow(d1*x+d2, d1+d2)) / (input->args[0] * beta(d1/2.0, d2/2.0, epsilon, 1.0));
+}
+
 void save_probability_table(const char* filepath, Dist_T type, Dist_Param param){
     set_delim(';');
     
@@ -157,34 +167,32 @@ void save_probability_table(const char* filepath, Dist_T type, Dist_Param param)
 
     param.n_col_val += gap;
     unsigned n_row_val = n_arg_val * param.n_row_val + gap;
+    double coef = 1.0;
 
     // Allocating and initializing table
     table = (double**)malloc((n_row_val-gap) * sizeof(double*));
+
+    #pragma omp parallel for
     for(unsigned i=0; i<n_arg_val; ++i){
         input.args[0] = param.min_arg_val + i * param.arg_val_dif;
         
         for(unsigned j=0; j<param.n_row_val; ++j){
             input.args[1] = param.min_row_val + j * param.row_val_dif;
-            table[param.n_row_val * i + j] = (double*)malloc(param.n_col_val * sizeof(double));
+            table[param.n_row_val * i + j] = (double*)malloc((param.n_col_val-gap) * sizeof(double));
             
-            for(unsigned t=0; t<param.n_col_val; ++t){
+            for(unsigned t=0; t<param.n_col_val-gap; ++t){
                 input.args[2] = param.min_col_val + t * param.col_val_dif;
                 if(type == Student_T_d){
                     area = (1.0 - (param.min_col_val + t * param.col_val_dif)) / 2.0;
-                    // printf(" > student t | area: %lf\n", area);
                 } else if(type == Chi_Square_d){
                     area = 1.0 - (param.min_col_val + t * param.col_val_dif);
-                    // printf(" > chi square t | area: %lf\n", area);
                 } else{
                     area = param.min_arg_val + i * param.arg_val_dif;
-                    // printf(" > f t | area: %lf\n", area);
                 }
-                input.args[arg_index] = 0.0;
-                // print_arr(input.args, 3);
-                // printf("\n");
-
-                // if(!arg_index) fibo(funcs[type], area, input, arg_index, epsilon, INTEGRAL_UPPER_BOUNDARY);
-                table[param.n_row_val * i + j][t] = fibo(funcs[type], area, input, arg_index, epsilon, INTEGRAL_UPPER_BOUNDARY);
+                input.args[arg_index] = (type != F_d? 0.0 : epsilon*20);
+                if(!arg_index) coef = 10 * (input.args[1]+input.args[2]);
+                
+                table[param.n_row_val * i + j][t] = fibo(funcs[type], area, input, arg_index, coef*epsilon, INTEGRAL_UPPER_BOUNDARY);
             }
         }
     }
@@ -230,7 +238,7 @@ void save_probability_table(const char* filepath, Dist_T type, Dist_Param param)
             sprintf(csv->context[r][c], "%.6lf", table[r-gap][c-gap]);
         }
     }
-    
+
     write_csv(filepath, csv);
 
     free_csv(csv);

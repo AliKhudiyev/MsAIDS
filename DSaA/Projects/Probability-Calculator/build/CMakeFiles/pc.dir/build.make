@@ -79,54 +79,54 @@ include CMakeFiles/pc.dir/flags.make
 CMakeFiles/pc.dir/main.c.o: CMakeFiles/pc.dir/flags.make
 CMakeFiles/pc.dir/main.c.o: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pc.dir/main.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/main.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/main.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c
 
 CMakeFiles/pc.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pc.dir/main.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c > CMakeFiles/pc.dir/main.c.i
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c > CMakeFiles/pc.dir/main.c.i
 
 CMakeFiles/pc.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pc.dir/main.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c -o CMakeFiles/pc.dir/main.c.s
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/main.c -o CMakeFiles/pc.dir/main.c.s
 
 CMakeFiles/pc.dir/src/csv.c.o: CMakeFiles/pc.dir/flags.make
 CMakeFiles/pc.dir/src/csv.c.o: ../src/csv.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/pc.dir/src/csv.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/src/csv.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/csv.c
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/src/csv.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/csv.c
 
 CMakeFiles/pc.dir/src/csv.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pc.dir/src/csv.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/csv.c > CMakeFiles/pc.dir/src/csv.c.i
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/csv.c > CMakeFiles/pc.dir/src/csv.c.i
 
 CMakeFiles/pc.dir/src/csv.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pc.dir/src/csv.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/csv.c -o CMakeFiles/pc.dir/src/csv.c.s
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/csv.c -o CMakeFiles/pc.dir/src/csv.c.s
 
 CMakeFiles/pc.dir/src/distribution.c.o: CMakeFiles/pc.dir/flags.make
 CMakeFiles/pc.dir/src/distribution.c.o: ../src/distribution.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pc.dir/src/distribution.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/src/distribution.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/distribution.c
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/src/distribution.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/distribution.c
 
 CMakeFiles/pc.dir/src/distribution.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pc.dir/src/distribution.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/distribution.c > CMakeFiles/pc.dir/src/distribution.c.i
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/distribution.c > CMakeFiles/pc.dir/src/distribution.c.i
 
 CMakeFiles/pc.dir/src/distribution.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pc.dir/src/distribution.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/distribution.c -o CMakeFiles/pc.dir/src/distribution.c.s
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/distribution.c -o CMakeFiles/pc.dir/src/distribution.c.s
 
 CMakeFiles/pc.dir/src/utils.c.o: CMakeFiles/pc.dir/flags.make
 CMakeFiles/pc.dir/src/utils.c.o: ../src/utils.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pc.dir/src/utils.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/src/utils.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/utils.c
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pc.dir/src/utils.c.o -c /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/utils.c
 
 CMakeFiles/pc.dir/src/utils.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pc.dir/src/utils.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/utils.c > CMakeFiles/pc.dir/src/utils.c.i
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/utils.c > CMakeFiles/pc.dir/src/utils.c.i
 
 CMakeFiles/pc.dir/src/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pc.dir/src/utils.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/utils.c -o CMakeFiles/pc.dir/src/utils.c.s
+	/usr/local/bin/gcc-10 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/alikhudiyev/Desktop/MsAIDS/DSaA/Projects/Probability-Calculator/src/utils.c -o CMakeFiles/pc.dir/src/utils.c.s
 
 # Object files for target pc
 pc_OBJECTS = \

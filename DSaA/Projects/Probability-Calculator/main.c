@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <omp.h>
 
 #include "csv.h"
 #include "distribution.h"
@@ -14,37 +15,34 @@ int main(int argc, const char** argv){
 
     check_inputs(argc, argv);
 
-    // CSV* csv = read_csv("../distributions/100_Sales_Records.csv");
-    // print_csv(csv);
-    // write_csv("new.csv", csv);
-
     Prob_Dist* distributions[MAX_DIST_TYPES];
 
     {
         Dist_Param params[3] = {
             {
                 0.1, 0.1, 9,
-                1.0, 1.0, 15,
+                1.0, 1.0, 30,
                 0.0, 0.0, 0,
             },
             {
                 0.1, 0.1, 9,
-                1.0, 1.0, 15,
+                1.0, 1.0, 30,
                 0.0, 0.0, 0,
             },
             {
-                1.0, 1.0, 3,
-                1.0, 1.0, 3,
-                0.95, 0.04, 2,
+                2.0, 1.0, 9,
+                1.0, 1.0, 10,
+                0.95, 0.04, 1,
             }
         };
-
-        for(int i=0, j=0; i<MAX_DIST_TYPES; ++i){
+        
+        #pragma omp parallel for
+        for(int i=0; i<MAX_DIST_TYPES; ++i){
             if(!strcmp(argv[1], "-g") && i && i!=Binomial_d){
-                // printf("saving dist(%d) in %s\n", i, _files[i]);
-                save_probability_table(_files[i], (Dist_T)i, params[j++]);
+                save_probability_table(_files[i], (Dist_T)i, params[(int)floor((double)i/2.0)]);
+            } else if(strcmp(argv[1], "-g")){
+                distributions[i] = init_dist_table(_files[i], (Dist_T)i);
             }
-            distributions[i] = init_dist_table(_files[i], (Dist_T)i);
         }
     }
 
@@ -56,8 +54,8 @@ int main(int argc, const char** argv){
             printf("Give z: ");
             scanf("%lf", &input.args[0]);
             // args[0] -> args[1] + args[2]
-            input.args[1] = 0.1 * floor(input.args[0]/0.1);
-            input.args[2] = input.args[0]-input.args[1];
+            input.args[1] = 0.1 * floor(fabs(input.args[0])/0.1);
+            input.args[2] = fabs(input.args[0])-input.args[1];
         }
         else if(opt > 2 && opt < 5){
             printf("Give [arg]: ");
@@ -72,7 +70,7 @@ int main(int argc, const char** argv){
         double prob = calc_prob(&input, distributions[opt]);
 
         if(prob >= 0.f){
-            printf("Probabily: %lf\n", prob);
+            printf("Probabily: %lf\n", input.args[0] >= 0.0 ? prob : 1.0 - prob);
         } else{
             printf("Wrong arguments, there is no such entry!\n");
         }

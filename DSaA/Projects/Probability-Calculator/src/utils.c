@@ -66,12 +66,12 @@ double gamma_div_2d(int val){
     return sqrt(M_PI) / pow(2.0, ((double)val-1.)/2.) * gammad(gammad(val-2));
 }
 
-double beta(double x, double y, double dt){
-    double area = 0.0, t = 0.0;
-    Input input = {t, x, y};
+double beta(double x, double y, double dt, double upper_boundary){
+    double area = 0.0, t = epsilon;
+    Input input = {x, y, t};
 
-    for(; t<1.0; t+=dt){
-        input.args[0] = dt;
+    for(; t<upper_boundary; t+=dt){
+        input.args[2] = t;
         area += _beta(&input) * dt;
     }
 
@@ -104,8 +104,6 @@ double cio(dens_t f, Input input_lwr, Input input_ppr, unsigned n_iter, unsigned
     double area = 0.0;
     double dx = (input_ppr.args[arg_index] - input_lwr.args[arg_index]) / (double)n_iter;
 
-    printf("dx: %.10lf\n", dx);
-
     for(unsigned i=0; i<n_iter; ++i){
         area += f(&input_lwr) * dx;
         input_lwr.args[arg_index] += dx;
@@ -117,23 +115,10 @@ double cio(dens_t f, Input input_lwr, Input input_ppr, unsigned n_iter, unsigned
 double fibo(dens_t f, double area, Input input, unsigned arg_index, double dx, boundary_t type){
     double curr_area = 0.0;
 
-    int i=0;
-    // printf("required area: %lf\n", area);
     while(curr_area < area){
-        // printf(" >> current area: %lf\n", curr_area);
-        // if(f(&input) < epsilon / 100){
-        //     printf(" f = %.15lf!!!\n", f(&input));
-        //     print_arr(input.args, 3);
-        //     printf("\n");
-        //     exit(3);
-        // }
         curr_area += f(&input) * dx;
         input.args[arg_index] += type * dx;
-        // printf(" >> current area: %lf\n", curr_area);
     }
-
-    // printf("done! %lf\n", input.args[arg_index]);
-    // exit(0);
 
     return input.args[arg_index];
 }

@@ -58,9 +58,4 @@ void free_dist_table(Dist_Table* table);
 void free_distribution(Prob_Dist* distribution);
 void save_probability_table(const char* filepath, Dist_T type, Dist_Param param);
 
-// To Be Removed
-double calc_chi_square(const Input* input);
-double calc_student_t(const Input* input);
-double calc_f(const Input* input);
-
 #endif

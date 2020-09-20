@@ -33,7 +33,7 @@ void print_arr(double* arr, unsigned size);
 void clear_str(char* str, unsigned size);
 double gammad(int val);
 double gamma_div_2d(int val);
-double beta(double x, double y, double dt);
+double beta(double x, double y, double dt, double upper_boundary);
 double calc_integral_of(func_t f, double beg, double end, unsigned n_iter);
 double find_integral_boundary_of(func_t f, double area, double boundary, double dx, boundary_t type);
 double cio(dens_t f, Input input_lwr, Input input_ppr, unsigned n_iter, unsigned arg_index);
