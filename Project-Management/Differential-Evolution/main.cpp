@@ -1,150 +1,72 @@
 #include <iostream>
-
-using namespace std;
-
 #include <set>
 #include <random>
 #include <vector>
-#include "function.h"
+
+#include "parser.h"
+#include "dea.h"
+
+using namespace std;
 
 #define N_DIMENSION 2
 
-using input_t = vector<double>;
-using space_t = vector<input_t>;
-
-void initialize_input_space(space_t& input_space, size_t dimension, size_t population_size, double lower_limit, double upper_limit){
-    srand(time(nullptr));
-    
-    default_random_engine generator;
-    uniform_real_distribution<double> distribution(lower_limit, upper_limit);
-
-    for(size_t i=0; i<population_size; ++i){
-        input_t input;
-        for(size_t j=0; j<dimension; ++j){
-            input.push_back(distribution(generator));
-        }
-        input_space.push_back(input);
+ostream& operator<<(ostream& out, const vector<double>& vec){
+    out<<"(";
+    for(size_t i=0; i<vec.size(); ++i){
+        cout<<vec[i];
+        if(i < vec.size() - 1) cout<<", ";
     }
+    out<<")";
+    return out;
 }
 
-void get_random_inputs( const space_t& input_space, 
-                        size_t excluded_index, 
-                        input_t& target, 
-                        input_t& input1, 
-                        input_t& input2 ){
-    size_t size = input_space.size();
-    input_t* inputs[3] = {&target, &input1, &input2};
-    set<size_t> unique;
-    unique.insert(excluded_index);
-    for(size_t i=0; i<3; ){
-        size_t index = rand()%size;
-        if(!unique.count(index)){
-            *(inputs[i++]) = input_space[index];
-            unique.insert(index);
-        }
-    }
-}
+int main(int argc, char* const* argv){
+    ArgumentList::parse(argc, argv);
 
-input_t mutate(const input_t& target, const input_t input1, const input_t input2, double f){
-    input_t mutant;
+    for(size_t n_run=0; n_run<ArgumentList::n_benchmark_run; ++n_run){
+        space_t input_space;
 
-    for(size_t i=0; i<target.size(); ++i){
-        double coord = target[i] + f * (input1[i] - input2[i]);
-        if(coord < -32) coord = -32;
-        else if(coord > 32) coord = 32;
-        mutant.push_back(coord);
-    }
+        unsigned int n_generation = 0;
+        double multiplication_factor = ArgumentList::f;
+        double probability_crossover = ArgumentList::p;
+        double best_y = 0;
 
-    return mutant;
-}
+        set<unsigned int> indices;
+        input_t target, inputs[2];
+        input_t mutant, trial;
 
-input_t crossover(const input_t& parent, const input_t& mutant, double probability_crossover){
-    input_t trial = parent;
+        initialize_input_space(input_space, N_DIMENSION, ArgumentList::population_size, -32, 32);
 
-    // default_random_engine generator;
-    // uniform_real_distribution<double> distribution(0, 1);
-    rand();
+        while(++n_generation){
+            best_y = Function::calculate(input_space[best_match(input_space)]);
 
-    for(size_t i=0; i<trial.size(); ++i){
-        if(((double)rand())/((double)RAND_MAX) <= probability_crossover){ // TO DO || rand()%(trial.size()) == i
-            trial[i] = mutant[i];
-        }
-    }
+            if(ArgumentList::verbose_flag){
+                cout<<"\n[ Generation "<<n_generation<<" ]"<<endl;
+                for(const auto& input: input_space){
+                    for(const auto& coord: input){
+                        cout<<coord<<", ";
+                    }   cout<<endl;
+                }
 
-    return trial;
-}
-
-void select(const input_t& trial, input_t& parent){
-    if(Function::calculate(trial) < Function::calculate(parent)){
-        parent = trial;
-    }
-}
-
-size_t best_match(const space_t& input_space){
-    size_t index = 1;
-    double ans = Function::calculate(input_space[0]);
-
-    for(size_t i=1; i<input_space.size()-1; ++i){
-        const input_t& input = input_space[i];
-        double tmp = Function::calculate(input);
-        if(tmp < ans){
-            ans = tmp;
-            index = i;
-        }
-    }
-
-    return index;
-}
-
-int main(int argc, const char** argv){
-    space_t input_space;
-
-    bool silent_run = false;
-    unsigned int n_generation = 300;
-    unsigned int n_population = 5;
-    double multiplication_factor = 0.8;
-    double probability_crossover = 0.9;
-
-    set<unsigned int> indices;
-    input_t target, inputs[2];
-
-    input_t mutant, trial;
-
-    initialize_input_space(input_space, N_DIMENSION, n_population, -32, 32);
-    // cout<<input_space.size()<<endl;
-    
-    for(unsigned int gen_index=0; gen_index<n_generation; ++gen_index){
-        if(!silent_run){
-            cout<<"\n[ Generation "<<gen_index+1<<"]"<<endl;
-            for(const auto& input: input_space){
-                for(const auto& coord: input){
-                    cout<<coord<<", ";
-                }   cout<<endl;
+                input_t input = input_space[best_match(input_space)];
+                cout<<"Best fit: "<<input<<endl;
             }
 
-            cout<<"Best fit: (";
-            input_t input = input_space[best_match(input_space)];
-            for(size_t j=0; j<input.size(); ++j){
-                cout<<input[j];
-                if(j < input.size() - 1) cout<<", ";
+            for(size_t i=0; i<input_space.size(); ++i){
+                input_t& parent = input_space[i];
+                get_random_inputs(input_space, i, target, inputs[0], inputs[1]);
+                mutant = mutate(target, inputs[0], inputs[1], multiplication_factor);
+                trial = crossover(mutant, parent, probability_crossover);
+                select(trial, parent, ArgumentList::goal, ArgumentList::expected_y);
             }
-            cout<<")\n";
+        
+            if(!ArgumentList::is_generation_driven()){
+                double error = fabs(best_y-ArgumentList::expected_y);
+                if(error <= ArgumentList::threshold) break;
+            } else if(n_generation == ArgumentList::n_generation) break;
         }
 
-        for(size_t i=0; i<input_space.size(); ++i){
-            input_t& parent = input_space[i];
-            // cout<<"=========>>>\nParent agent: "<<parent[0]<<", "<<parent[1]<<endl;
-            get_random_inputs(input_space, i, target, inputs[0], inputs[1]);
-            // cout<<"> Target agent: "<<target[0]<<", "<<target[1]<<endl;
-            // cout<<">> Agent 1: "<<inputs[0][0]<<", "<<inputs[0][1]<<endl;
-            // cout<<">> Agent 2: "<<inputs[1][0]<<", "<<inputs[1][1]<<endl;
-            mutant = mutate(target, inputs[0], inputs[1], multiplication_factor);
-            // cout<<"Mutant: "<<mutant[0]<<", "<<mutant[1]<<endl;
-            trial = crossover(mutant, parent, probability_crossover);
-            // cout<<"Trial: "<<trial[0]<<", "<<trial[1]<<endl;
-            select(trial, parent);
-            // cout<<"Selected: "<<parent[0]<<", "<<parent[1]<<"\n<<<========\n";
-        }
+        cout<<"Best fit: f"<<input_space[best_match(input_space)]<<" = "<<best_y<<endl;
     }
 
     return 0;
