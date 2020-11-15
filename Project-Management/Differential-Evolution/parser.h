@@ -75,10 +75,12 @@ struct ArgumentList{
 
             case 'f':
             printf ("option -f with value [%s]\n", optarg);
+            ArgumentList::f = std::atof(optarg);
             break;
 
             case 'p':
             printf ("option -p with value [%s]\n", optarg);
+            ArgumentList::p = std::atof(optarg);
             break;
             
             case 't':

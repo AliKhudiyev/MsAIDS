@@ -66,7 +66,7 @@ int main(int argc, char* const* argv){
             } else if(n_generation == ArgumentList::n_generation) break;
         }
 
-        cout<<"Best fit: f"<<input_space[best_match(input_space)]<<" = "<<best_y<<endl;
+        cout<<"[ Generation "<<n_generation<<" ]: f"<<input_space[best_match(input_space)]<<" = "<<best_y<<endl;
     }
 
     return 0;
