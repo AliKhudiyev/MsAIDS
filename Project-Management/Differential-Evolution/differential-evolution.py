@@ -92,22 +92,18 @@ def run():
         pass
 
     # Printing settings
-    print('Function:', function)
-    print('Population size:', population_size)
-    print('F:', f)
-    print('P:', p)
-    print('Number of generations:', generation_count)
-    print('Appriximation point:', approximation_point)
-    print('Threshold:', threshold)
-    print('Benchmark runs:', bencmark_run_count)
-    print('Optimization MT/SA:', f'{multi_thread}/{self_adaptive}')
+    # print('Function:', function)
+    # print('Population size:', population_size)
+    # print('F:', f)
+    # print('P:', p)
+    # print('Number of generations:', generation_count)
+    # print('Appriximation point:', approximation_point)
+    # print('Threshold:', threshold)
+    # print('Benchmark runs:', bencmark_run_count)
+    # print('Optimization MT/SA:', f'{multi_thread}/{self_adaptive}')
 
-    plt.plot(range(10), range(10), '.-')
-    plt.show()
-
-    # os.system(f'./eval.sh {function} "{population_size} {f} {p} {generation_count}"')
-
-    dimension = 0
+    dimension = len(set(re.findall('x\[.*?\]', function)))
+    # print('Dimension:', dimension)
     args = f'--population={population_size} -f{f} -p{p} --benchmark-run={bencmark_run_count} -o{2*multi_thread+self_adaptive} '
     if generation_count is None:
         args += f'--threshold={threshold} '
@@ -116,14 +112,20 @@ def run():
     
     if goal == 'Global minimum':
         args += '--global-min '
+        approximation_point = 0
     elif goal == 'Global maximum':
         args += '--global-max '
+        approximation_point = 0
+    else:
+        approximation_point = float(entry_approximationPoint.get())
     
     if visual:
         args += '--visual '
 
-    os.system(f'./eval.sh {dimension} {function} "{args}"')
+    os.system(f'./cli.sh {dimension} "{function}" "{args}" {approximation_point}')
 
+    if visual:
+        os.system('python visualizer.py')
 
 
 root = Tk()

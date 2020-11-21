@@ -2,27 +2,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-# logs = []
-# with open('evolution.log', 'r') as f:
-#     n_generation = f.readline()
+logs = []
+counter = 0
 
-#     for i in range(int(n_generation)):
-#         line = f.readline().split(';')
-#         generation_log = []
-#         for token in line:
-#             input_ = token.split(',')
-#             tmp = []
-#             for value in input_:
-#                 tmp.append(float(value))
-#             generation_log.append(tmp)
-#         logs.append(generation_log)
+with open('build/evolution.log', 'r') as f:
+    population_size = int(f.readline())
+    raw_logs = f.readlines()
+    print(population_size)
+    generation_log = []
+    for i, raw_log in enumerate(raw_logs):
+        agent_log = []
 
-#     print(logs)
-# f.close()
+        for coord in raw_log.split(','):
+            agent_log.append(float(coord))
+        generation_log.append(agent_log)
 
-# fig, ax = plt.subplots(1, 1, figsize=(6, 6))
-# ax.plot
-# plt.show()
+        if i and i % (population_size - 1) == 0:
+            logs.append(generation_log)
+            generation_log = []
+    # print(logs)
+    # exit()
+f.close()
 
 fig = plt.figure()
 #creating a subplot 
@@ -48,19 +48,24 @@ def ackley2D_complete():
     return X, Y, Z
 
 def animate(i):
-    data = open('stock.txt','r').read()
-    lines = data.split('\n')
+    global logs
+    global counter
+
     xs = []
     ys = []
     zs = []
     X, Y, Z = ackley2D_complete()
-   
-    for line in lines:
-        x, y, z = line.split(',') # Delimiter is comma    
-        xs.append(float(x))
-        ys.append(float(y))
-        zs.append(float(z))
-   
+    
+    if counter >= len(logs):
+        counter = len(logs) - 1
+    
+    generation_log = logs[counter]
+    for agent_log in generation_log:
+        xs.append(agent_log[0])
+        ys.append(agent_log[1])
+        zs.append(agent_log[2])
+    
+    counter += 10
     
     ax1.clear()
     ax1.plot(X, Y, Z)
@@ -71,5 +76,5 @@ def animate(i):
     # plt.title('DEA in Ackley function')	
 	
     
-ani = animation.FuncAnimation(fig, animate, interval=1500) 
+ani = animation.FuncAnimation(fig, animate, interval=500) 
 plt.show()

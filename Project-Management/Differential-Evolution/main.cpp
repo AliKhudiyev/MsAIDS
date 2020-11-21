@@ -2,6 +2,7 @@
 #include <set>
 #include <random>
 #include <vector>
+#include <fstream>
 
 #include "parser.h"
 #include "dea.h"
@@ -24,6 +25,7 @@ int main(int argc, char* const* argv){
     ArgumentList::parse(argc, argv);
 
     for(size_t n_run=0; n_run<ArgumentList::n_benchmark_run; ++n_run){
+        ofstream out("evolution.log");
         space_t input_space;
 
         unsigned int n_generation = 0;
@@ -36,9 +38,16 @@ int main(int argc, char* const* argv){
         input_t mutant, trial;
 
         initialize_input_space(input_space, N_DIMENSION, ArgumentList::population_size, -32, 32);
+        out<<ArgumentList::population_size<<endl;
 
         while(++n_generation){
             best_y = Function::calculate(input_space[best_match(input_space)]);
+
+            for(const auto& input: input_space){
+                for(const auto& coord: input){
+                    out<<coord<<", ";
+                }   out<<Function::calculate(input)<<endl;
+            }
 
             if(ArgumentList::verbose_flag){
                 cout<<"\n[ Generation "<<n_generation<<" ]"<<endl;
@@ -66,6 +75,7 @@ int main(int argc, char* const* argv){
             } else if(n_generation == ArgumentList::n_generation) break;
         }
 
+        out.close();
         cout<<"[ Generation "<<n_generation<<" ]: f"<<input_space[best_match(input_space)]<<" = "<<best_y<<endl;
     }
 

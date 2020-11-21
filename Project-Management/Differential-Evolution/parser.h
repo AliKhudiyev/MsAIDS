@@ -38,8 +38,9 @@ struct ArgumentList{
         static struct option long_options[] =
             {
             /* These options set a flag. */
-            {"verbose", no_argument,       &ArgumentList::verbose_flag, 1},
-            {"help",   no_argument,        &ArgumentList::help_flag, 1},
+            {"verbose",     no_argument,       &ArgumentList::verbose_flag, 1},
+            {"help",        no_argument,       &ArgumentList::help_flag, 1},
+            {"visual",      no_argument,       &ArgumentList::visual_flag, 1},
             /* These options don’t set a flag.
                 We distinguish them by their indices. */
             {"population",    optional_argument,      &ArgumentList::population_size, 10},
@@ -48,7 +49,6 @@ struct ArgumentList{
             {"global-max",    no_argument,            &ArgumentList::goal, GOAL_GLOBAL_MAX},
             {"threshold",     optional_argument,      0, 't'},
             {"benchmark-run", optional_argument,      0, 'r'},
-            {"visual",        optional_argument,      &ArgumentList::visual_flag, 1},
             {"optimization",  optional_argument,      0, 'o'},
             {0, 0, 0, 0}
             };
