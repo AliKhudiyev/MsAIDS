@@ -3,7 +3,7 @@
 #include <random>
 #include <vector>
 #include <fstream>
-// #include <omp.h>
+#include <omp.h>
 
 #include "parser.h"
 #include "dea.h"
@@ -24,9 +24,50 @@ ostream& operator<<(ostream& out, const vector<double>& vec){
 }
 
 int main(int argc, char* const* argv){
+    // Parsing arguments from the command line and initializing the settings
     ArgumentList::parse(argc, argv);
 
-    // #pragma omp parallel for
+    /* = = = = = = = Initializing settings for benchmark functions = = = = = = = */
+    size_t n_dimension = 30;
+    double interval[2] = { -32, 32 };
+    switch (ArgumentList::function)
+    {
+    case CUSTOM_FUNCTION:
+        Function::calculate = Function::calculate_;
+        n_dimension = N_DIMENSION;
+        // ArgumentList::n_generation = 10000;
+        break;
+    
+    case ACKLEY_FUNCTION:
+        Function::calculate = Function::Benchmark::ackley;
+        break;
+    
+    case RASTRIGIN_FUNCTION:
+        Function::calculate = Function::Benchmark::rastrigin;
+        break;
+    
+    case ROSENBROCK_FUNCTION:
+        Function::calculate = Function::Benchmark::rosenbrock;
+        break;
+    
+    case SCHWEFEL_FUNCTION:
+        Function::calculate = Function::Benchmark::schwefel;
+        break;
+    
+    default:
+        break;
+    }
+    /* = = = = = = = = = = = = = = */
+
+    /* = = = = = = = Initializing number of threads = = = = = = = */
+    size_t n_thread = 1;
+    if(ArgumentList::optimization >= 2){
+        n_thread = omp_get_max_threads();
+    }
+    /* = = = = = = = = = = = = = = */
+    
+    /* = = = = = = = Running the DEA = = = = = = = */
+    #pragma omp parallel for num_threads(n_thread)
     for(size_t n_run=0; n_run<ArgumentList::n_benchmark_run; ++n_run){
         space_t input_space;
         ofstream log;
@@ -41,7 +82,7 @@ int main(int argc, char* const* argv){
         input_t target, inputs[2];
         input_t mutant, trial;
 
-        initialize_input_space(input_space, N_DIMENSION, ArgumentList::population_size, -32, 32);
+        initialize_input_space(input_space, n_dimension, ArgumentList::population_size, interval);
         if(ArgumentList::visual_flag) log<<ArgumentList::population_size<<endl;
 
         while(++n_generation){
@@ -70,7 +111,7 @@ int main(int argc, char* const* argv){
             for(size_t i=0; i<input_space.size(); ++i){
                 input_t& parent = input_space[i];
                 get_random_inputs(input_space, i, target, inputs[0], inputs[1]);
-                mutant = mutate(target, inputs[0], inputs[1], multiplication_factor);
+                mutant = mutate(target, inputs[0], inputs[1], multiplication_factor, interval);
                 trial = crossover(mutant, parent, probability_crossover);
                 select(trial, parent, ArgumentList::goal, ArgumentList::expected_y);
             }
@@ -97,6 +138,7 @@ int main(int argc, char* const* argv){
         }
         out.close();
     }
+    /* = = = = = = = = = = = = = = */
 
     return 0;
 }

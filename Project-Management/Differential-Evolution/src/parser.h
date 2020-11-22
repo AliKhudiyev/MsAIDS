@@ -17,6 +17,12 @@
 #define OPTIMIZATION_MT_NA  2   // Multi Thread + Non-Adaptive
 #define OPTIMIZATION_MT_MA  3   // Multi Thread + Self-Adaptive
 
+#define CUSTOM_FUNCTION     0
+#define ACKLEY_FUNCTION     1
+#define RASTRIGIN_FUNCTION  2
+#define ROSENBROCK_FUNCTION 3
+#define SCHWEFEL_FUNCTION   4
+
 struct ArgumentList{
     static int help_flag;
     static int verbose_flag;
@@ -29,6 +35,7 @@ struct ArgumentList{
     static double threshold, expected_y;
     static double f, p;
     static int optimization;
+    static int function;
 
     static void parse(int argc, char* const* argv){
         int c;
@@ -50,12 +57,13 @@ struct ArgumentList{
             {"threshold",       optional_argument,      0, 't'},
             {"benchmark-run",   optional_argument,      0, 'r'},
             {"optimization",    optional_argument,      0, 'o'},
+            {"function",        optional_argument,      0, 'b'},
             {0, 0, 0, 0}
             };
         /* getopt_long stores the option index here. */
         int option_index = 0;
 
-        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:",
+        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:",
                         long_options, &option_index);
 
         /* Detect the end of the options. */
@@ -105,7 +113,12 @@ struct ArgumentList{
 
             case 's':
             // printf ("option -s with value [%s]\n", optarg);
-            ArgumentList::population_size = std::atof(optarg);
+            ArgumentList::population_size = std::atoi(optarg);
+            break;
+
+            case 'b':
+            // printf ("option -b with value [%s]\n", optarg);
+            ArgumentList::function = std::atoi(optarg);
             break;
 
             case '?':
@@ -178,3 +191,4 @@ double ArgumentList::expected_y = 0.0;
 double ArgumentList::f = 0.8;
 double ArgumentList::p = 0.9;
 int ArgumentList::optimization = NO_OPTIMIZATION;
+int ArgumentList::function = CUSTOM_FUNCTION;

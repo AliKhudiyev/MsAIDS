@@ -10,11 +10,11 @@
 using input_t = std::vector<double>;
 using space_t = std::vector<input_t>;
 
-void initialize_input_space(space_t& input_space, size_t dimension, size_t population_size, double lower_limit, double upper_limit){
+void initialize_input_space(space_t& input_space, size_t dimension, size_t population_size, const double* interval){
     srand(time(nullptr));
     
     std::default_random_engine generator;
-    std::uniform_real_distribution<double> distribution(lower_limit, upper_limit);
+    std::uniform_real_distribution<double> distribution(interval[0], interval[1]);
 
     for(size_t i=0; i<population_size; ++i){
         input_t input;
@@ -43,13 +43,13 @@ void get_random_inputs( const space_t& input_space,
     }
 }
 
-input_t mutate(const input_t& target, const input_t input1, const input_t input2, double f){
+input_t mutate(const input_t& target, const input_t input1, const input_t input2, double f, const double* interval){
     input_t mutant;
 
     for(size_t i=0; i<target.size(); ++i){
         double coord = target[i] + f * (input1[i] - input2[i]);
-        if(coord < -32) coord = -32;
-        else if(coord > 32) coord = 32;
+        if(coord < interval[0]) coord = interval[0];
+        else if(coord > interval[1]) coord = interval[1];
         mutant.push_back(coord);
     }
 

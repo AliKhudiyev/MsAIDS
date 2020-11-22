@@ -103,7 +103,7 @@ def run():
     # print('Optimization MT/SA:', f'{multi_thread}/{self_adaptive}')
 
     dimension = len(set(re.findall('x\[.*?\]', function)))
-    # print('Dimension:', dimension)
+    # print('Dimension:', dimension)\
     args = f'--population={population_size} -f{f} -p{p} --benchmark-run={bencmark_run_count} -o{2*multi_thread+self_adaptive} '
     if generation_count is None:
         args += f'--threshold={threshold} '
