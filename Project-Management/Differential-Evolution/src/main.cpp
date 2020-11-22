@@ -10,7 +10,7 @@
 
 using namespace std;
 
-#define N_DIMENSION 2
+#define N_DIMENSION 1
 #define _DIMENSION N_DIMENSION
 
 ostream& operator<<(ostream& out, const vector<double>& vec){
@@ -23,13 +23,37 @@ ostream& operator<<(ostream& out, const vector<double>& vec){
     return out;
 }
 
+double mean_(const vector<double>& vals){
+    double result = 0;
+    
+    for(const auto& val: vals){
+        result += val;
+    }
+
+    return result / static_cast<double>(vals.size());
+}
+
+double std_(const vector<double>& vals){
+    double result = 0;
+    double mean = mean_(vals);
+    
+    for(const auto& val: vals){
+        result += pow(val - mean, 2);
+    }
+
+    return sqrt(result / static_cast<double>(vals.size()));
+}
+
 int main(int argc, char* const* argv){
     // Parsing arguments from the command line and initializing the settings
     ArgumentList::parse(argc, argv);
+    srand(time(nullptr));
 
     /* = = = = = = = Initializing settings for benchmark functions = = = = = = = */
     size_t n_dimension = 30;
-    double interval[2] = { -32, 32 };
+    double interval[2] = { -32.768, 32.768 };
+    vector<double> global_mins;
+
     switch (ArgumentList::function)
     {
     case CUSTOM_FUNCTION:
@@ -44,14 +68,20 @@ int main(int argc, char* const* argv){
     
     case RASTRIGIN_FUNCTION:
         Function::calculate = Function::Benchmark::rastrigin;
+        interval[0] = -5.12;
+        interval[1] = 5.12;
         break;
     
     case ROSENBROCK_FUNCTION:
         Function::calculate = Function::Benchmark::rosenbrock;
+        interval[0] = -5;
+        interval[1] = 10;
         break;
     
     case SCHWEFEL_FUNCTION:
         Function::calculate = Function::Benchmark::schwefel;
+        interval[0] = -500;
+        interval[1] = 500;
         break;
     
     default:
@@ -71,7 +101,7 @@ int main(int argc, char* const* argv){
     for(size_t n_run=0; n_run<ArgumentList::n_benchmark_run; ++n_run){
         space_t input_space;
         ofstream log;
-        if(ArgumentList::visual_flag){ log.open("evolution.log"); }
+        if(ArgumentList::visual_flag && !n_run){ log.open("evolution.log"); }
 
         unsigned int n_generation = 0;
         double multiplication_factor = ArgumentList::f;
@@ -88,7 +118,7 @@ int main(int argc, char* const* argv){
         while(++n_generation){
             best_y = Function::calculate(input_space[best_match(input_space)]);
 
-            if(ArgumentList::visual_flag){
+            if(ArgumentList::visual_flag && !n_run){
                 for(const auto& input: input_space){
                     for(const auto& coord: input){
                         log<<coord<<", ";
@@ -122,10 +152,12 @@ int main(int argc, char* const* argv){
             } else if(n_generation == ArgumentList::n_generation) break;
         }
 
-        if(ArgumentList::visual_flag){ log.close(); }
+        if(ArgumentList::visual_flag && !n_run){ log.close(); }
+        global_mins.push_back(best_y);
         cout<<"[ Generation "<<n_generation<<" ]: f"<<input_space[best_match(input_space)]<<" = "<<best_y<<endl;
     }
 
+    cout<<"Mean: "<<mean_(global_mins)<<"\tStd: "<<std_(global_mins)<<endl;
     if(ArgumentList::visual_flag && _DIMENSION <= 2){
         vector<double> input(2);
         ofstream out("function.out");

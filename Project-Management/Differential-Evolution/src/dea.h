@@ -11,15 +11,14 @@ using input_t = std::vector<double>;
 using space_t = std::vector<input_t>;
 
 void initialize_input_space(space_t& input_space, size_t dimension, size_t population_size, const double* interval){
-    srand(time(nullptr));
-    
     std::default_random_engine generator;
     std::uniform_real_distribution<double> distribution(interval[0], interval[1]);
 
     for(size_t i=0; i<population_size; ++i){
         input_t input;
+        double tmp = interval[0] + (double)rand() / (double)RAND_MAX * (interval[1] - interval[0]);
         for(size_t j=0; j<dimension; ++j){
-            input.push_back(distribution(generator));
+            input.push_back(distribution(generator)); // distribution(generator)
         }
         input_space.push_back(input);
     }
@@ -59,11 +58,11 @@ input_t mutate(const input_t& target, const input_t input1, const input_t input2
 input_t crossover(const input_t& parent, const input_t& mutant, double probability_crossover){
     input_t trial = parent;
 
-    // default_random_engine generator;
-    // uniform_real_distribution<double> distribution(0, 1);
+    // std::default_random_engine generator;
+    // std::uniform_real_distribution<double> distribution(0, 1);
 
     for(size_t i=0; i<trial.size(); ++i){
-        if(((double)rand())/((double)RAND_MAX) <= probability_crossover){ // TO DO || rand()%(trial.size()) == i
+        if(((double)rand())/((double)RAND_MAX) <= probability_crossover){ // || rand()%(trial.size()) == i
             trial[i] = mutant[i];
         }
     }
