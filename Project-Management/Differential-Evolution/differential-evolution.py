@@ -125,7 +125,7 @@ def run():
     os.system(f'./cli.sh {dimension} "{function}" "{args}" {approximation_point}')
 
     if visual:
-        os.system('python visualizer.py')
+        os.system('python src/visualizer.py')
 
 
 root = Tk()

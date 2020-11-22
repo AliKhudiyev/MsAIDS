@@ -3,6 +3,7 @@
 #include <random>
 #include <vector>
 #include <fstream>
+// #include <omp.h>
 
 #include "parser.h"
 #include "dea.h"
@@ -25,6 +26,7 @@ ostream& operator<<(ostream& out, const vector<double>& vec){
 int main(int argc, char* const* argv){
     ArgumentList::parse(argc, argv);
 
+    // #pragma omp parallel for
     for(size_t n_run=0; n_run<ArgumentList::n_benchmark_run; ++n_run){
         space_t input_space;
         ofstream log;
