@@ -2,5 +2,5 @@
 
 int main(){
     double* x;
-    return pow(x[0],2)+x[1]*x[1];
+    return pow(x[0], 2)+pow(x[1], 2);
 }

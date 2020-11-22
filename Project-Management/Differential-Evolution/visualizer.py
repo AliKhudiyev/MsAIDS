@@ -3,7 +3,12 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 logs = []
+function_out = []
 counter = 0
+
+X = []
+Y = []
+Z = []
 
 with open('build/evolution.log', 'r') as f:
     population_size = int(f.readline())
@@ -21,6 +26,21 @@ with open('build/evolution.log', 'r') as f:
             logs.append(generation_log)
             generation_log = []
     # print(logs)
+    # exit()
+f.close()
+
+with open('build/function.out', 'r') as f:
+    raw_outs = f.readlines()
+    
+    for raw_out in raw_outs:
+        out = []
+        for raw_out_unit in raw_out.split(','):
+            out.append(float(raw_out_unit))
+        X.append(out[0])
+        Y.append(out[1])
+        Z.append(out[-1])
+        function_out.append(out)
+    # print(function_out[:10])
     # exit()
 f.close()
 
@@ -51,10 +71,14 @@ def animate(i):
     global logs
     global counter
 
+    global X
+    global Y
+    global Z
+
     xs = []
     ys = []
     zs = []
-    X, Y, Z = ackley2D_complete()
+    # X, Y, Z = ackley2D_complete()
     
     if counter >= len(logs):
         counter = len(logs) - 1

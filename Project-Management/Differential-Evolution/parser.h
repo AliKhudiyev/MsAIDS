@@ -38,24 +38,24 @@ struct ArgumentList{
         static struct option long_options[] =
             {
             /* These options set a flag. */
-            {"verbose",     no_argument,       &ArgumentList::verbose_flag, 1},
-            {"help",        no_argument,       &ArgumentList::help_flag, 1},
-            {"visual",      no_argument,       &ArgumentList::visual_flag, 1},
+            {"verbose",         no_argument,            &ArgumentList::verbose_flag, 1},
+            {"help",            no_argument,            &ArgumentList::help_flag, 1},
+            {"visual",          no_argument,            &ArgumentList::visual_flag, 1},
+            {"global-min",      no_argument,            &ArgumentList::goal, GOAL_GLOBAL_MIN},
+            {"global-max",      no_argument,            &ArgumentList::goal, GOAL_GLOBAL_MAX},
             /* These options don’t set a flag.
                 We distinguish them by their indices. */
-            {"population",    optional_argument,      &ArgumentList::population_size, 10},
-            {"generation",    optional_argument,      0, 'g'},
-            {"global-min",    no_argument,            &ArgumentList::goal, GOAL_GLOBAL_MIN},
-            {"global-max",    no_argument,            &ArgumentList::goal, GOAL_GLOBAL_MAX},
-            {"threshold",     optional_argument,      0, 't'},
-            {"benchmark-run", optional_argument,      0, 'r'},
-            {"optimization",  optional_argument,      0, 'o'},
+            {"population",      optional_argument,      0, 's'},
+            {"generation",      optional_argument,      0, 'g'},
+            {"threshold",       optional_argument,      0, 't'},
+            {"benchmark-run",   optional_argument,      0, 'r'},
+            {"optimization",    optional_argument,      0, 'o'},
             {0, 0, 0, 0}
             };
         /* getopt_long stores the option index here. */
         int option_index = 0;
 
-        c = getopt_long (argc, argv, "f:p:t:o:r:g:",
+        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:",
                         long_options, &option_index);
 
         /* Detect the end of the options. */
@@ -74,33 +74,38 @@ struct ArgumentList{
             break;
 
             case 'f':
-            printf ("option -f with value [%s]\n", optarg);
+            // printf ("option -f with value [%s]\n", optarg);
             ArgumentList::f = std::atof(optarg);
             break;
 
             case 'p':
-            printf ("option -p with value [%s]\n", optarg);
+            // printf ("option -p with value [%s]\n", optarg);
             ArgumentList::p = std::atof(optarg);
             break;
             
             case 't':
-            printf ("option -t with value [%s]\n", optarg);
+            // printf ("option -t with value [%s]\n", optarg);
             ArgumentList::threshold = std::atof(optarg);
             break;
 
             case 'o':
-            printf ("option -o with value [%s]\n", optarg);
+            // printf ("option -o with value [%s]\n", optarg);
             ArgumentList::optimization = std::atoi(optarg);
             break;
             
             case 'r':
-            printf ("option -r with value [%s]\n", optarg);
+            // printf ("option -r with value [%s]\n", optarg);
             ArgumentList::n_benchmark_run = std::atoi(optarg);
             break;
             
             case 'g':
-            printf ("option -g with value [%s]\n", optarg);
+            // printf ("option -g with value [%s]\n", optarg);
             ArgumentList::n_generation = std::atoi(optarg);
+            break;
+
+            case 's':
+            // printf ("option -s with value [%s]\n", optarg);
+            ArgumentList::population_size = std::atof(optarg);
             break;
 
             case '?':
@@ -129,14 +134,15 @@ struct ArgumentList{
         } else if(ArgumentList::threshold >= 0 && ArgumentList::goal == NO_GOAL){
             ArgumentList::n_generation = 0;
         }
-        printf("GOAL: %d\n", ArgumentList::goal);
-        if(ArgumentList::n_generation > 0)
-            printf("Number of generations: %d\n", ArgumentList::n_generation);
-        else if(ArgumentList::threshold >= 0)
-            printf("Threshold: %lf\n", ArgumentList::threshold);
-        printf("Bencmark runs: %d\n", ArgumentList::n_benchmark_run);
-        printf("Visualization: %d\n", ArgumentList::visual_flag);
-        printf("Optimization: %d\n", ArgumentList::optimization);
+        // printf("GOAL: %d\n", ArgumentList::goal);
+        // printf("Population size: %d\n", ArgumentList::population_size);
+        // if(ArgumentList::n_generation > 0)
+        //     printf("Number of generations: %d\n", ArgumentList::n_generation);
+        // else if(ArgumentList::threshold >= 0)
+        //     printf("Threshold: %lf\n", ArgumentList::threshold);
+        // printf("Bencmark runs: %d\n", ArgumentList::n_benchmark_run);
+        // printf("Visualization: %d\n", ArgumentList::visual_flag);
+        // printf("Optimization: %d\n", ArgumentList::optimization);
 
         if(ArgumentList::goal == NO_GOAL){
             printf("f(X) = ");

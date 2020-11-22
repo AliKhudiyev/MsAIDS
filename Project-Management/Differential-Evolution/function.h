@@ -9,21 +9,21 @@ namespace Function
     namespace Benchmark
     {
         double ackley(const std::vector<double>& x){
-            return pow(x[0],2)+x[1]*x[1];
+            return pow(x[0], 2)+pow(x[1], 2);
         }
 
         double ackley2(const std::vector<double>& x){
-            return pow(x[0],2)+x[1]*x[1];
+            return pow(x[0], 2)+pow(x[1], 2);
         }
 
         double ackley3(const std::vector<double>& x){
-            return pow(x[0],2)+x[1]*x[1];
+            return pow(x[0], 2)+pow(x[1], 2);
         }
 
         double ackley4(const std::vector<double>& x){
-            return pow(x[0],2)+x[1]*x[1];
+            return pow(x[0], 2)+pow(x[1], 2);
         }
     } // namespace Benchmark
 
-    double calculate(const std::vector<double>& x){ return pow(x[0],2)+x[1]*x[1]; } 
+    double calculate(const std::vector<double>& x){ return pow(x[0], 2)+pow(x[1], 2); } 
 } // namespace Function
