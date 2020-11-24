@@ -10,7 +10,7 @@
 
 using namespace std;
 
-#define N_DIMENSION 2
+#define N_DIMENSION 1
 #define _DIMENSION N_DIMENSION
 
 ostream& operator<<(ostream& out, const vector<double>& vec){
@@ -54,14 +54,13 @@ int main(int argc, char* const* argv){
     double interval[2] = { -32.768, 32.768 };
     vector<double> global_mins;
 
-    // Function::function.set(ArgumentList::variables, ArgumentList::function);
-    // Function::calculate = Function::_calculate_;
-
+    Function::function.set(ArgumentList::variables, ArgumentList::function);
     switch (ArgumentList::benchmark)
     {
     case CUSTOM_FUNCTION:
-        Function::calculate = Function::calculate_;
-        n_dimension = N_DIMENSION;
+        Function::calculate = Function::_calculate_;
+        n_dimension = ArgumentList::variables.size();
+        // n_dimension = N_DIMENSION;
         // ArgumentList::n_generation = 10000;
         break;
     
@@ -92,6 +91,7 @@ int main(int argc, char* const* argv){
     }
     /* = = = = = = = = = = = = = = */
 
+    // printf("2...\n");
     /* = = = = = = = Initializing number of threads = = = = = = = */
     size_t n_thread = 1;
     if(ArgumentList::optimization >= 2){
@@ -161,7 +161,7 @@ int main(int argc, char* const* argv){
     }
 
     cout<<"Mean: "<<mean_(global_mins)<<"\tStd: "<<std_(global_mins)<<endl;
-    if(ArgumentList::visual_flag && _DIMENSION <= 2){
+    if(ArgumentList::visual_flag && n_dimension <= 2){
         vector<double> input(2);
         ofstream out("function.out");
         for(double i=-32; i<32; i+=0.5){

@@ -12,7 +12,7 @@ def select_goal(option):
         entry_approximationPoint.grid_forget()
 
 def run():
-    print('Running')
+    # print('Running')
 
     global entry_function
     global entry_populationSize
@@ -102,8 +102,10 @@ def run():
     # print('Benchmark runs:', bencmark_run_count)
     # print('Optimization MT/SA:', f'{multi_thread}/{self_adaptive}')
 
-    dimension = len(set(re.findall('x\[.*?\]', function)))
-    # print('Dimension:', dimension)\
+    function = function.replace(' ', '')
+    variables = set(re.findall('x\[.*?\]', function))
+    dimension = len(variables)
+    # print('Dimension:', dimension)
     args = f'--population={population_size} -f{f} -p{p} --benchmark-run={bencmark_run_count} -o{2*multi_thread+self_adaptive} '
     if generation_count is None:
         args += f'--threshold={threshold} '
@@ -121,6 +123,14 @@ def run():
     
     if visual:
         args += '--visual '
+    
+    args += '-V '
+    for i, variable in enumerate(variables):
+        args += variable
+        if i < dimension - 1:
+            args += ','
+    args += f' -F {function}'
+    print(args)
 
     os.system(f'./cli.sh {dimension} "{function}" "{args}" {approximation_point}')
 

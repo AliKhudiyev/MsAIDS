@@ -2,8 +2,8 @@
 #pragma once
 
 #include <stdio.h>
-// #include <iostream>
 #include <string>
+#include <sstream>
 #include <getopt.h>
 
 #define NO_GOAL             0
@@ -36,8 +36,8 @@ struct ArgumentList{
     static double f, p;
     static int optimization;
     static int benchmark;
-    // static std::vector<std::string> variables;
-    // static std::string function;
+    static std::vector<std::string> variables;
+    static std::string function;
 
     static void parse(int argc, char* const* argv){
         int c;
@@ -60,14 +60,14 @@ struct ArgumentList{
             {"benchmark-run",   optional_argument,      0, 'r'},
             {"optimization",    optional_argument,      0, 'o'},
             {"benchmark",       optional_argument,      0, 'b'},
-            // {"variables",       optional_argument,      0, 'V'},
-            // {"function",        optional_argument,      0, 'F'},
+            {"variables",       optional_argument,      0, 'V'},
+            {"function",        optional_argument,      0, 'F'},
             {0, 0, 0, 0}
             };
         /* getopt_long stores the option index here. */
         int option_index = 0;
 
-        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:V:F",
+        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:V:F:",
                         long_options, &option_index);
 
         /* Detect the end of the options. */
@@ -125,15 +125,22 @@ struct ArgumentList{
             ArgumentList::benchmark = std::atoi(optarg);
             break;
 
-            // case 'V':
-            // // printf ("option -V with value [%s]\n", optarg);
-            // ArgumentList::variables.push_back(std::string(optarg));
-            // break;
+            case 'V':
+            // printf ("option -V with value [%s]\n", optarg);
+            {
+                std::string tmp(optarg), variable;
+                std::istringstream iss(tmp);
+                while(std::getline(iss, variable, ',')){
+                    ArgumentList::variables.push_back(variable);
 
-            // case 'F':
-            // // printf ("option -F with value [%s]\n", optarg);
-            // ArgumentList::function = std::string(optarg);
-            // break;
+                }
+            }
+            break;
+
+            case 'F':
+            // printf ("option -F with value [%s]\n", optarg);
+            ArgumentList::function = std::string(optarg);
+            break;
 
             case '?':
             /* getopt_long already printed an error message. */
@@ -170,6 +177,8 @@ struct ArgumentList{
         // printf("Bencmark runs: %d\n", ArgumentList::n_benchmark_run);
         // printf("Visualization: %d\n", ArgumentList::visual_flag);
         // printf("Optimization: %d\n", ArgumentList::optimization);
+        // printf("Variables: %s\n", ArgumentList::variables[0]);
+        // printf("Function: %s\n", ArgumentList::function);
 
         if(ArgumentList::goal == NO_GOAL){
             printf("f(X) = ");
@@ -206,3 +215,5 @@ double ArgumentList::f = 0.8;
 double ArgumentList::p = 0.9;
 int ArgumentList::optimization = NO_OPTIMIZATION;
 int ArgumentList::benchmark = CUSTOM_FUNCTION;
+std::vector<std::string> ArgumentList::variables = std::vector<std::string>();
+std::string ArgumentList::function = std::string();
