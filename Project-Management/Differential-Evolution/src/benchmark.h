@@ -3,9 +3,17 @@
 
 #include <cmath>
 #include <vector>
+// #include "../include/expreval.h"
 
 namespace Function
-{
+{   
+    // ExprEval::Function function;
+
+    // double _calculate_(const std::vector<double>& x){
+    //     std::initializer_list<double> args;
+    //     return function(x);
+    // }
+
     namespace Benchmark
     {
         double ackley(const std::vector<double>& x){

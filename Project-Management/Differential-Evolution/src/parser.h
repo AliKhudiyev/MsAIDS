@@ -35,7 +35,9 @@ struct ArgumentList{
     static double threshold, expected_y;
     static double f, p;
     static int optimization;
-    static int function;
+    static int benchmark;
+    // static std::vector<std::string> variables;
+    // static std::string function;
 
     static void parse(int argc, char* const* argv){
         int c;
@@ -57,13 +59,15 @@ struct ArgumentList{
             {"threshold",       optional_argument,      0, 't'},
             {"benchmark-run",   optional_argument,      0, 'r'},
             {"optimization",    optional_argument,      0, 'o'},
-            {"function",        optional_argument,      0, 'b'},
+            {"benchmark",       optional_argument,      0, 'b'},
+            // {"variables",       optional_argument,      0, 'V'},
+            // {"function",        optional_argument,      0, 'F'},
             {0, 0, 0, 0}
             };
         /* getopt_long stores the option index here. */
         int option_index = 0;
 
-        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:",
+        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:V:F",
                         long_options, &option_index);
 
         /* Detect the end of the options. */
@@ -118,8 +122,18 @@ struct ArgumentList{
 
             case 'b':
             // printf ("option -b with value [%s]\n", optarg);
-            ArgumentList::function = std::atoi(optarg);
+            ArgumentList::benchmark = std::atoi(optarg);
             break;
+
+            // case 'V':
+            // // printf ("option -V with value [%s]\n", optarg);
+            // ArgumentList::variables.push_back(std::string(optarg));
+            // break;
+
+            // case 'F':
+            // // printf ("option -F with value [%s]\n", optarg);
+            // ArgumentList::function = std::string(optarg);
+            // break;
 
             case '?':
             /* getopt_long already printed an error message. */
@@ -191,4 +205,4 @@ double ArgumentList::expected_y = 0.0;
 double ArgumentList::f = 0.8;
 double ArgumentList::p = 0.9;
 int ArgumentList::optimization = NO_OPTIMIZATION;
-int ArgumentList::function = CUSTOM_FUNCTION;
+int ArgumentList::benchmark = CUSTOM_FUNCTION;

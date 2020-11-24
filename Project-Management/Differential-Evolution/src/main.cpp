@@ -10,7 +10,7 @@
 
 using namespace std;
 
-#define N_DIMENSION 1
+#define N_DIMENSION 2
 #define _DIMENSION N_DIMENSION
 
 ostream& operator<<(ostream& out, const vector<double>& vec){
@@ -54,7 +54,10 @@ int main(int argc, char* const* argv){
     double interval[2] = { -32.768, 32.768 };
     vector<double> global_mins;
 
-    switch (ArgumentList::function)
+    // Function::function.set(ArgumentList::variables, ArgumentList::function);
+    // Function::calculate = Function::_calculate_;
+
+    switch (ArgumentList::benchmark)
     {
     case CUSTOM_FUNCTION:
         Function::calculate = Function::calculate_;
