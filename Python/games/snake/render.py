@@ -1,3 +1,6 @@
+from tkinter import *
+
+
 class Renderer:
     def __init__(self, canvas):
         self.canvas = canvas

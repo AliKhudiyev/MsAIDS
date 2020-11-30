@@ -8,7 +8,7 @@ class Fruit(Object):
 
         self.x = None
         self.y = None
-        self.size = 16
+        self.size = 20
         self.generate(width, height)
     
     def generate(self, width, height):

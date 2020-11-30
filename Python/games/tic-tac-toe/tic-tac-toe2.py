@@ -118,10 +118,10 @@ class TicTacToe:
         self.quit()
 
 
-while True:
-    option = input('Do you want to play Tic-Tac-Toe? [y/n] ')
-    if option.upper() == 'Y':
-        game = TicTacToe()
-        game.run()
-    else:
-        break
+# while True:
+#     option = input('Do you want to play Tic-Tac-Toe? [y/n] ')
+#     if option.upper() == 'Y':
+#         game = TicTacToe()
+#         game.run()
+#     else:
+#         break

@@ -6,8 +6,8 @@ from fruit import *
 
 class Game:
     def __init__(self):
-        self.width = 500
-        self.height = 500
+        self.width = 700
+        self.height = 600
 
         self.root = Tk()
         self.root.title('Snake 2D')
@@ -48,16 +48,31 @@ class Game:
 
     def handle_interaction(self):
         # Check int. between snake and walls
+        for block in self.snake.blocks:
+            if block.x >= self.width:
+                block.x = 0
+            elif block.x < 0:
+                block.x = self.width
+            if block.y >= self.height:
+                block.y = 0
+            elif block.y < 0:
+                block.y = self.height
+
 
         # Check int. between snake and fruit
-        if self.snake.blocks[0].x - 10 <= self.fruit.x <= self.snake.blocks[0].x + 10 and self.snake.blocks[0].y - 10 <= self.fruit.y <= self.snake.blocks[0].y + 10:
-            # print('fruit:', self.fruit.x, self.fruit.y)
-            self.snake.grow()
-            self.fruit.generate(self.width, self.height)
+        for block in self.snake.blocks:
+            if block.x - 10 <= self.fruit.x <= block.x + 10 and block.y - 10 <= self.fruit.y <= block.y + 10:
+                # print('fruit:', self.fruit.x, self.fruit.y)
+                self.snake.grow()
+                self.fruit.generate(self.width, self.height)
         
-        # Check int. between snake and snake
-        pass
-
+        # Check int. between snake and itself
+        for block in self.snake.blocks[1:]:
+            if self.snake.blocks[0].x == block.x and self.snake.blocks[0].y == block.y:
+                self.snake.blocks = [ Block(50, 50) ]
+                self.snake.speed = 1
+                self.snake.counter = 1
+        
     def update(self):
         if not self.game_is_over:
             self.snake.move(self.direction)

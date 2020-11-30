@@ -2,36 +2,42 @@ from object import *
 
 
 class Block:
-    def __init__(self, x=0, y=0, old_dir=None, new_dir=None):
+    def __init__(self, x=0, y=0):
         self.x = x
         self.y = y
         self.size = 20
-        self.old_dir = old_dir
-        self.new_dir = new_dir
+        self.old_pos = x, y
+        self.new_pos = x, y
     
-    def move(self, direction, speed):
-        self.x += self.size * speed * direction[0]
-        self.y += self.size * speed * direction[1]
+    def move(self, position):
+        self.x = position[0]
+        self.y = position[1]
 
-        if self.new_dir is not None:
-            self.old_dir = self.new_dir
-        self.new_dir = direction
+        if self.new_pos is not None:
+            self.old_pos = self.new_pos
+        self.new_pos = self.x, self.y
+
 
 class Snake(Object):
     def __init__(self):
         super().__init__(Object.SNAKE)
 
         self.speed = 1
-        self.blocks = [Block(50, 50)]
+        self.blocks = [ Block(50, 50) ]
+        self.counter = 1
     
     def move(self, direction):
-        self.blocks[0].move(direction, self.speed)
-        for i, block in enumerate(self.blocks[1:]):
-            block.move(self.blocks[i].old_dir, self.speed)
+        size = self.blocks[0].size
+        for n in range(self.speed):
+            self.blocks[0].move((self.blocks[0].x + size*direction[0], self.blocks[0].y + size*direction[1]))
+            for i, block in enumerate(self.blocks[1:]):
+                block.move(self.blocks[i].old_pos)
     
     def grow(self):
-        # self.speed *= 1.1
+        if len(self.blocks) == 20 * self.counter:
+            self.speed += 1
+            self.counter += 2
         last_block = self.blocks[-1]
-        block = Block(last_block.x - 20 * last_block.new_dir[0], last_block.y - 20 * last_block.new_dir[1])
-        block.new_dir = last_block.old_dir
+        block = Block(last_block.old_pos[0], last_block.old_pos[1])
+        block.new_pos = last_block.old_pos
         self.blocks.append(block)
