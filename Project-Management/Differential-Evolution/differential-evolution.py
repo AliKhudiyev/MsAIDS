@@ -11,6 +11,14 @@ def select_goal(option):
     else:
         entry_approximationPoint.grid_forget()
 
+def select_metaheuristic(option):
+    global label_f, label_p
+
+    if option == 'Genetic':
+        label_f.config(text='Mutation probability(opt)')
+    else:
+        label_f.config(text='Scaling factor(opt)')
+
 def run():
     # print('Running')
 
@@ -26,6 +34,8 @@ def run():
     global variable_visual
     global variable_multiThread
     global variable_selfAdaptive
+    global goal_option
+    global metaheuristic_option
 
     function = entry_function.get()
     population_size = 10
@@ -132,7 +142,10 @@ def run():
     args += f' -F {function}'
     print(args)
 
-    os.system(f'./cli.sh {dimension} "{function}" "{args}" {approximation_point}')
+    metaheuristic = 'ga'
+    if metaheuristic_option.get() == 'Differential Evolution':
+        metaheuristic = 'dea'
+    os.system(f'./cli.sh {metaheuristic} "{args}" {approximation_point}')
 
     if visual:
         os.system('python src/visualizer.py')
@@ -150,6 +163,7 @@ label_f = Label(frame_main, text='Scaling factor(opt)')
 label_p = Label(frame_main, text='Crossover probability(opt)')
 label_generationCount = Label(frame_main, text='Number of generations(opt)')
 label_approximationPoint = Label(frame_main, text='Goal')
+label_metaheuristic = Label(frame_main, text='Metaheuristic')
 label_threshold = Label(frame_main, text='Error threshold(opt)')
 label_benchmarkRunCount = Label(frame_main, text='Number of benchmark runs(opt)')
 label_optimization = Label(frame_main, text='Optimization')
@@ -174,6 +188,10 @@ goal_option = StringVar(frame_main)
 goal_option.set('Global minimum')
 menu_goal = OptionMenu(frame_main, goal_option, 'Global minimum', 'Global maximum', 'Custom point', command=select_goal)
 
+metaheuristic_option = StringVar(frame_main)
+metaheuristic_option.set('Differential Evolution')
+menu_metaheuristic = OptionMenu(frame_main, metaheuristic_option, 'Differential Evolution', 'Genetic', command=select_metaheuristic)
+
 button_run = Button(frame_main, text='Run', command=run)
 
 # = = = = = = = = = = = = = = = = =
@@ -184,6 +202,7 @@ label_f.grid(row=2, column=0)
 label_p.grid(row=2, column=2)
 label_generationCount.grid(row=3, column=0)
 label_approximationPoint.grid(row=4, column=0)
+label_metaheuristic.grid(row=4, column=2)
 label_threshold.grid(row=5, column=0)
 label_benchmarkRunCount.grid(row=6, column=0)
 label_optimization.grid(row=7, column=0)
@@ -193,7 +212,6 @@ entry_populationSize.grid(row=1, column=1)
 entry_f.grid(row=2, column=1)
 entry_p.grid(row=2, column=3)
 entry_generationCount.grid(row=3, column=1)
-# entry_approximationPoint.grid(row=4, column=1)
 entry_threshold.grid(row=5, column=1)
 entry_benchmarkRunCount.grid(row=6, column=1)
 
@@ -202,6 +220,7 @@ check_optimizeSelfAdaptive.grid(row=7, column=2)
 check_visualize.grid(row=8, column=0)
 
 menu_goal.grid(row=4, column=1)
+menu_metaheuristic.grid(row=4, column=3)
 
 button_run.grid(row=10, column=0, columnspan=4)
 
