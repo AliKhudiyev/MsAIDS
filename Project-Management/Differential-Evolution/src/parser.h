@@ -132,7 +132,6 @@ struct ArgumentList{
                 std::istringstream iss(tmp);
                 while(std::getline(iss, variable, ',')){
                     ArgumentList::variables.push_back(variable);
-
                 }
             }
             break;
@@ -177,8 +176,8 @@ struct ArgumentList{
         // printf("Bencmark runs: %d\n", ArgumentList::n_benchmark_run);
         // printf("Visualization: %d\n", ArgumentList::visual_flag);
         // printf("Optimization: %d\n", ArgumentList::optimization);
-        // printf("Variables: %s\n", ArgumentList::variables[0]);
-        // printf("Function: %s\n", ArgumentList::function);
+        // printf("Variables: %s\n", ArgumentList::variables[0].c_str());
+        // printf("Function: %s\n", ArgumentList::function.c_str());
 
         if(ArgumentList::goal == NO_GOAL){
             printf("f(X) = ");

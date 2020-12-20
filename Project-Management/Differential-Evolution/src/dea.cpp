@@ -60,8 +60,6 @@ int main(int argc, char* const* argv){
     case CUSTOM_FUNCTION:
         Function::calculate = Function::_calculate_;
         n_dimension = ArgumentList::variables.size();
-        // n_dimension = N_DIMENSION;
-        // ArgumentList::n_generation = 10000;
         break;
     
     case ACKLEY_FUNCTION:
@@ -91,11 +89,11 @@ int main(int argc, char* const* argv){
     }
     /* = = = = = = = = = = = = = = */
 
-    // printf("2...\n");
     /* = = = = = = = Initializing number of threads = = = = = = = */
     size_t n_thread = 1;
     if(ArgumentList::optimization >= 2){
         n_thread = omp_get_max_threads();
+        cout<<n_thread<<'\n';
     }
     /* = = = = = = = = = = = = = = */
     
@@ -168,7 +166,10 @@ int main(int argc, char* const* argv){
             for(double j=-32; j<32; j+=0.5){
                 input[0] = i;
                 input[1] = j;
-                out<<i<<", "<<j<<", "<<Function::calculate(input)<<endl;
+                out<<i<<", ";
+                if(n_dimension == 2){ out<<j<<", "; }
+                out<<Function::calculate(input)<<endl;
+                if(n_dimension < 2){ j = 32; }
             }
         }
         out.close();

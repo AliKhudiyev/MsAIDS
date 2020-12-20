@@ -202,7 +202,7 @@ label_f.grid(row=2, column=0)
 label_p.grid(row=2, column=2)
 label_generationCount.grid(row=3, column=0)
 label_approximationPoint.grid(row=4, column=0)
-label_metaheuristic.grid(row=4, column=2)
+label_metaheuristic.grid(row=0, column=2)
 label_threshold.grid(row=5, column=0)
 label_benchmarkRunCount.grid(row=6, column=0)
 label_optimization.grid(row=7, column=0)
@@ -220,7 +220,7 @@ check_optimizeSelfAdaptive.grid(row=7, column=2)
 check_visualize.grid(row=8, column=0)
 
 menu_goal.grid(row=4, column=1)
-menu_metaheuristic.grid(row=4, column=3)
+menu_metaheuristic.grid(row=0, column=3)
 
 button_run.grid(row=10, column=0, columnspan=4)
 

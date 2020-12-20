@@ -10,44 +10,52 @@ X = []
 Y = []
 Z = []
 
-with open('build/evolution.log', 'r') as f:
-    population_size = int(f.readline())
-    raw_logs = f.readlines()
-    
-    generation_log = []
-    for i, raw_log in enumerate(raw_logs):
-        agent_log = []
+try:
+    with open('build/evolution.log', 'r') as f:
+        population_size = int(f.readline())
+        raw_logs = f.readlines()
+        
+        generation_log = []
+        for i, raw_log in enumerate(raw_logs):
+            agent_log = []
 
-        for coord in raw_log.split(','):
-            agent_log.append(float(coord))
+            for coord in raw_log.split(','):
+                agent_log.append(float(coord))
 
-        dimension = len(agent_log)
-        if dimension > 3:
-            print(agent_log)
-            print('Function has to be 2/3D!')
-            exit()
-        generation_log.append(agent_log)
+            dimension = len(agent_log)
+            if dimension > 3:
+                print(agent_log)
+                print('Function has to be 2/3D!')
+                exit()
+            generation_log.append(agent_log)
 
-        if i and i % (population_size - 1) == 0:
-            logs.append(generation_log)
-            generation_log = []
-    # print(logs)
-    # exit()
-f.close()
+            if i and i % (population_size - 1) == 0:
+                logs.append(generation_log)
+                generation_log = []
+        # print(logs)
+        # exit()
+    f.close()
+except:
+    print('Cannot open evolution.log')
+    exit(2)
 
-with open('build/function.out', 'r') as f:
-    raw_outs = f.readlines()
-    
-    for raw_out in raw_outs:
-        out = []
-        for raw_out_unit in raw_out.split(','):
-            out.append(float(raw_out_unit))
-        X.append(out[0])
-        Y.append(out[1])
-        Z.append(out[-1])
-    # print(function_out[:10])
-    # exit()
-f.close()
+try:
+    with open('build/function.out', 'r') as f:
+        raw_outs = f.readlines()
+        
+        for raw_out in raw_outs:
+            out = []
+            for raw_out_unit in raw_out.split(','):
+                out.append(float(raw_out_unit))
+            X.append(out[0])
+            Y.append(out[1])
+            Z.append(out[-1])
+        # print(function_out[:10])
+        # exit()
+    f.close()
+except:
+    print('Cannot open function.out')
+    exit(2)
 
 fig = plt.figure()
 #creating a subplot 
@@ -71,8 +79,9 @@ def animate(i):
     xs = []
     ys = []
     zs = []
-    # X, Y, Z = ackley2D_complete()
-    
+
+    if len(logs) == 0:
+        exit(1)
     if counter >= len(logs):
         counter = len(logs) - 1
     
@@ -83,11 +92,10 @@ def animate(i):
         zs.append(agent_log[-1])
     
     counter += 10
-    
     ax.clear()
 
     if dimension == 2:
-        ax.plot(X, Z)
+        ax.plot(X, Y)
         ax.plot(xs, zs, '.')
     else:
         ax.plot(X, Y, Z)
