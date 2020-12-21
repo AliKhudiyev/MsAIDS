@@ -10,6 +10,9 @@
 using input_t = std::vector<double>;
 using space_t = std::vector<input_t>;
 
+/*
+ * This function initializes the input space uniform randomly.
+*/
 void initialize_input_space(space_t& input_space, size_t dimension, size_t population_size, const double* interval){
     std::default_random_engine generator;
     std::uniform_real_distribution<double> distribution(interval[0], interval[1]);
@@ -24,6 +27,11 @@ void initialize_input_space(space_t& input_space, size_t dimension, size_t popul
     }
 }
 
+/*
+ * target, input1 and input2 are selected randomly from the input_space;
+ * all of them are different from one another;
+ * none of them can be chosen as input_space[excluded_index].
+*/
 void get_random_inputs( const space_t& input_space, 
                         size_t excluded_index, 
                         input_t& target, 
@@ -42,6 +50,11 @@ void get_random_inputs( const space_t& input_space,
     }
 }
 
+/*
+ * Returns a mutant derived from the 3 points(inputs) obtained from the function get_random_inputs(...);
+ * f - scaling factor for the mutation;
+ * interval - an array of lower and upper boundaries(i.e. interval[0] = -1, interval[1] = 1).
+*/
 input_t mutate(const input_t& target, const input_t input1, const input_t input2, double f, const double* interval){
     input_t mutant;
 
@@ -55,6 +68,10 @@ input_t mutate(const input_t& target, const input_t input1, const input_t input2
     return mutant;
 }
 
+/*
+ * Returns a trial derived from the parent and the mutant obtained from the function mutate(...);
+ * probabilitiy_crossover - crossover probability for uniform random recombination process.
+*/
 input_t crossover(const input_t& parent, const input_t& mutant, double probability_crossover){
     input_t trial = parent;
 
@@ -70,6 +87,11 @@ input_t crossover(const input_t& parent, const input_t& mutant, double probabili
     return trial;
 }
 
+/*
+ * The trial obtained from the function crossover(...) is replaced by its parent if necessary;
+ * goal - global minimum(-1) / global maximum(+1) / specific point(0)
+ * desired_y - if goal is 0 then this is the point we want to approximate
+*/
 void select(const input_t& trial, input_t& parent, int goal=-1, double desired_y=0){
     if(goal == -1){
         if(Function::calculate(trial) < Function::calculate(parent)){
@@ -86,14 +108,28 @@ void select(const input_t& trial, input_t& parent, int goal=-1, double desired_y
     }
 }
 
-size_t best_match(const space_t& input_space){
+/*
+ * Returns the index of the best candidate solution;
+ * goal - global minimum(-1) / global maximum(+1) / specific point(0)
+ * desired_y - if goal is 0 then this is the point we want to approximate
+*/
+size_t best_match(const space_t& input_space, int goal=-1, double desired_y=0){
     size_t index = 1;
     double ans = Function::calculate(input_space[0]);
 
     for(size_t i=1; i<input_space.size()-1; ++i){
         const input_t& input = input_space[i];
         double tmp = Function::calculate(input);
-        if(tmp < ans){
+        
+        if(goal == -1 && tmp < ans){
+            ans = tmp;
+            index = i;
+        }
+        else if(goal == 1 && tmp > ans){
+            ans = tmp;
+            index = i;
+        }
+        else if(!goal && abs(tmp-desired_y) < abs(ans-desired_y)){
             ans = tmp;
             index = i;
         }

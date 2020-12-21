@@ -1,6 +1,4 @@
 #include <iostream>
-#include <set>
-#include <random>
 #include <vector>
 #include <fstream>
 #include <omp.h>
@@ -9,9 +7,6 @@
 #include "dea.h"
 
 using namespace std;
-
-#define N_DIMENSION 1
-#define _DIMENSION N_DIMENSION
 
 ostream& operator<<(ostream& out, const vector<double>& vec){
     out<<"(";
@@ -117,7 +112,7 @@ int main(int argc, char* const* argv){
         if(ArgumentList::visual_flag) log<<ArgumentList::population_size<<endl;
 
         while(++n_generation){
-            best_y = Function::calculate(input_space[best_match(input_space)]);
+            best_y = Function::calculate(input_space[best_match(input_space, ArgumentList::goal, ArgumentList::expected_y)]);
 
             if(ArgumentList::visual_flag && !n_run){
                 for(const auto& input: input_space){
@@ -135,7 +130,7 @@ int main(int argc, char* const* argv){
                     }   cout<<endl;
                 }
 
-                input_t input = input_space[best_match(input_space)];
+                input_t input = input_space[best_match(input_space, ArgumentList::goal, ArgumentList::expected_y)];
                 cout<<"Best fit: "<<input<<endl;
             }
 
@@ -155,21 +150,22 @@ int main(int argc, char* const* argv){
 
         if(ArgumentList::visual_flag && !n_run){ log.close(); }
         global_mins.push_back(best_y);
-        cout<<"[ Generation "<<n_generation<<" ]: f"<<input_space[best_match(input_space)]<<" = "<<best_y<<endl;
+        cout<<"[ Generation "<<n_generation<<" ]: f"<<input_space[best_match(input_space, ArgumentList::goal, ArgumentList::expected_y)]<<" = "<<best_y<<endl;
     }
 
     cout<<"Mean: "<<mean_(global_mins)<<"\tStd: "<<std_(global_mins)<<endl;
     if(ArgumentList::visual_flag && n_dimension <= 2){
         vector<double> input(2);
+        double step = (interval[1] - interval[0]) / 128;
         ofstream out("function.out");
-        for(double i=-32; i<32; i+=0.5){
-            for(double j=-32; j<32; j+=0.5){
+        for(double i=interval[0]; i<interval[1]; i+=step){
+            for(double j=interval[0]; j<interval[1]; j+=step){
                 input[0] = i;
                 input[1] = j;
                 out<<i<<", ";
                 if(n_dimension == 2){ out<<j<<", "; }
                 out<<Function::calculate(input)<<endl;
-                if(n_dimension < 2){ j = 32; }
+                if(n_dimension < 2){ j = interval[1]; }
             }
         }
         out.close();
