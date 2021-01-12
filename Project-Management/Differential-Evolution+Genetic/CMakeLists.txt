@@ -13,9 +13,12 @@ if (OPENMP_FOUND)
 endif()
 
 link_directories(lib)
-link_libraries(expreval)
+# link_libraries(expreval)
 
 link_libraries(OpenMP::OpenMP_CXX)
 
 add_executable(dea src/dea.cpp)
 add_executable(ga src/ga.cpp)
+
+target_link_libraries(dea expreval)
+target_link_libraries(ga expreval)

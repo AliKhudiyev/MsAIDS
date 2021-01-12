@@ -4,6 +4,7 @@
 #include <vector>
 #include <set>
 #include <random>
+#include <algorithm>
 
 #include "function.h"
 
@@ -32,37 +33,35 @@ void initialize_input_space(space_t& input_space, size_t dimension, size_t popul
  * all of them are different from one another;
  * none of them can be chosen as input_space[excluded_index].
 */
-void get_random_inputs( const space_t& input_space, 
-                        size_t excluded_index, 
-                        input_t& target, 
-                        input_t& input1, 
-                        input_t& input2 ){
-    size_t size = input_space.size();
-    input_t* inputs[3] = {&target, &input1, &input2};
-    std::set<size_t> unique;
-    unique.insert(excluded_index);
-    for(size_t i=0; i<3; ){
-        size_t index = rand()%size;
-        if(!unique.count(index)){
-            *(inputs[i++]) = input_space[index];
-            unique.insert(index);
-        }
+void sort_for_fittest_inputs(space_t& input_space, int goal, double desired_y){
+    if(goal == -1){
+        sort(input_space.begin(), input_space.end(), [](const input_t& input1, const input_t& input2){
+            return Function::calculate(input1) < Function::calculate(input2);
+        });
+    } else if(goal == 1){
+        sort(input_space.begin(), input_space.end(), [](const input_t& input1, const input_t& input2){
+            return Function::calculate(input1) > Function::calculate(input2);
+        });
+    } else{
+        sort(input_space.begin(), input_space.end(), [desired_y](const input_t& input1, const input_t& input2){
+            return fabs(Function::calculate(input1)-desired_y) < fabs(Function::calculate(input2)-desired_y);
+        });
     }
 }
 
 /*
  * Returns a mutant derived from the 3 points(inputs) obtained from the function get_random_inputs(...);
- * f - scaling factor for the mutation;
+ * f - mutation probability/rate for the mutation;
  * interval - an array of lower and upper boundaries(i.e. interval[0] = -1, interval[1] = 1).
 */
-input_t mutate(const input_t& target, const input_t input1, const input_t input2, double f, const double* interval){
-    input_t mutant;
+input_t mutate(const input_t& offspring, double f, const double* interval){
+    input_t mutant = offspring;
 
-    for(size_t i=0; i<target.size(); ++i){
-        double coord = target[i] + f * (input1[i] - input2[i]);
-        if(coord < interval[0]) coord = interval[0];
-        else if(coord > interval[1]) coord = interval[1];
-        mutant.push_back(coord);
+    for(size_t i=0; i<offspring.size(); ++i){
+        if((double)rand()/(double)RAND_MAX <= f){
+            size_t index = rand() % offspring.size();
+            mutant[index] = interval[0] + (double)rand()/(double)RAND_MAX * (interval[1] - interval[0]);
+        }
     }
 
     return mutant;
@@ -72,15 +71,18 @@ input_t mutate(const input_t& target, const input_t input1, const input_t input2
  * Returns a trial derived from the parent and the mutant obtained from the function mutate(...);
  * probabilitiy_crossover - crossover probability for uniform random recombination process.
 */
-input_t crossover(const input_t& parent, const input_t& mutant, double probability_crossover){
-    input_t trial = parent;
+input_t crossover(const input_t& parent1, const input_t& parent2, double probability_crossover){
+    input_t trial = parent1;
 
     // std::default_random_engine generator;
     // std::uniform_real_distribution<double> distribution(0, 1);
 
-    for(size_t i=0; i<trial.size(); ++i){
-        if(((double)rand())/((double)RAND_MAX) <= probability_crossover){ // || rand()%(trial.size()) == i
-            trial[i] = mutant[i];
+    size_t index = rand() % parent1.size();
+    for(size_t i=0; i<parent1.size(); ++i){
+        if((double)rand() / (double)RAND_MAX < probability_crossover){
+            trial[i] = parent1[i];
+        } else{
+            trial[i] = parent2[i];
         }
     }
 
@@ -102,7 +104,7 @@ void select(const input_t& trial, input_t& parent, int goal=-1, double desired_y
             parent = trial;
         }
     } else{
-        if(fabs(Function::calculate(trial)-desired_y) < fabs(Function::calculate(parent)-desired_y)){
+        if(abs(Function::calculate(trial)-desired_y) < abs(Function::calculate(parent)-desired_y)){
             parent = trial;
         }
     }
@@ -114,7 +116,7 @@ void select(const input_t& trial, input_t& parent, int goal=-1, double desired_y
  * desired_y - if goal is 0 then this is the point we want to approximate
 */
 size_t best_match(const space_t& input_space, int goal=-1, double desired_y=0){
-    size_t index = 1;
+    size_t index = 0;
     double ans = Function::calculate(input_space[0]);
 
     for(size_t i=1; i<input_space.size()-1; ++i){

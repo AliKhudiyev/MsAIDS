@@ -22,6 +22,7 @@ double mean_(const vector<double>& vals){
     double result = 0;
     
     for(const auto& val: vals){
+        // printf("%.10lf\n", val);
         result += val;
     }
 
@@ -88,7 +89,7 @@ int main(int argc, char* const* argv){
     size_t n_thread = 1;
     if(ArgumentList::optimization >= 2){
         n_thread = omp_get_max_threads();
-        cout<<n_thread<<'\n';
+        // cout<<n_thread<<'\n';
     }
     /* = = = = = = = = = = = = = = */
     
@@ -149,6 +150,7 @@ int main(int argc, char* const* argv){
         }
 
         if(ArgumentList::visual_flag && !n_run){ log.close(); }
+        best_y = Function::calculate(input_space[best_match(input_space, ArgumentList::goal, ArgumentList::expected_y)]);
         global_mins.push_back(best_y);
         cout<<"[ Generation "<<n_generation<<" ]: f"<<input_space[best_match(input_space, ArgumentList::goal, ArgumentList::expected_y)]<<" = "<<best_y<<endl;
     }

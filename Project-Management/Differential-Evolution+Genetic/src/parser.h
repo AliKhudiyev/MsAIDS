@@ -38,6 +38,7 @@ struct ArgumentList{
     static int benchmark;
     static std::vector<std::string> variables;
     static std::string function;
+    static double elitism;
 
     static void parse(int argc, char* const* argv){
         int c;
@@ -62,12 +63,13 @@ struct ArgumentList{
             {"benchmark",       optional_argument,      0, 'b'},
             {"variables",       optional_argument,      0, 'V'},
             {"function",        optional_argument,      0, 'F'},
+            {"elitism",         optional_argument,      0, 'e'},
             {0, 0, 0, 0}
             };
         /* getopt_long stores the option index here. */
         int option_index = 0;
 
-        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:V:F:",
+        c = getopt_long (argc, argv, "f:p:t:o:r:g:s:b:V:F:e:",
                         long_options, &option_index);
 
         /* Detect the end of the options. */
@@ -139,6 +141,11 @@ struct ArgumentList{
             case 'F':
             // printf ("option -F with value [%s]\n", optarg);
             ArgumentList::function = std::string(optarg);
+            break;
+
+            case 'e':
+            // printf ("option -b with value [%s]\n", optarg);
+            ArgumentList::elitism = std::atof(optarg);
             break;
 
             case '?':
@@ -216,3 +223,4 @@ int ArgumentList::optimization = NO_OPTIMIZATION;
 int ArgumentList::benchmark = CUSTOM_FUNCTION;
 std::vector<std::string> ArgumentList::variables = std::vector<std::string>();
 std::string ArgumentList::function = std::string();
+double ArgumentList::elitism = 0.5;

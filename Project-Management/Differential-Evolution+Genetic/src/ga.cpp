@@ -43,7 +43,7 @@ int main(int argc, char* const* argv){
     // Parsing arguments from the command line and initializing the settings
     ArgumentList::parse(argc, argv);
     srand(time(nullptr));
-
+    cout << "\nGenetic Algorithm running...\n\n";
     /* = = = = = = = Initializing settings for benchmark functions = = = = = = = */
     size_t n_dimension = 30;
     double interval[2] = { -32.768, 32.768 };
@@ -88,11 +88,11 @@ int main(int argc, char* const* argv){
     size_t n_thread = 1;
     if(ArgumentList::optimization >= 2){
         n_thread = omp_get_max_threads();
-        cout<<n_thread<<'\n';
+        // cout<<n_thread<<'\n';
     }
     /* = = = = = = = = = = = = = = */
     
-    /* = = = = = = = Running the DEA = = = = = = = */
+    /* = = = = = = = Running the GA = = = = = = = */
     #pragma omp parallel for num_threads(n_thread)
     for(size_t n_run=0; n_run<ArgumentList::n_benchmark_run; ++n_run){
         space_t input_space;
@@ -100,13 +100,14 @@ int main(int argc, char* const* argv){
         if(ArgumentList::visual_flag && !n_run){ log.open("evolution.log"); }
 
         unsigned int n_generation = 0;
-        double multiplication_factor = ArgumentList::f;
+        double probability_mutation = ArgumentList::f;
         double probability_crossover = ArgumentList::p;
         double best_y = 0;
 
         set<unsigned int> indices;
         input_t target, inputs[2];
-        input_t mutant, trial;
+        input_t offspring, mutant;
+        vector<input_t> new_generation;
 
         initialize_input_space(input_space, n_dimension, ArgumentList::population_size, interval);
         if(ArgumentList::visual_flag) log<<ArgumentList::population_size<<endl;
@@ -133,15 +134,20 @@ int main(int argc, char* const* argv){
                 input_t input = input_space[best_match(input_space, ArgumentList::goal, ArgumentList::expected_y)];
                 cout<<"Best fit: "<<input<<endl;
             }
+            sort_for_fittest_inputs(input_space, ArgumentList::goal, ArgumentList::expected_y);
+            new_generation = input_space;
+            size_t elitism_count = (size_t)((double)input_space.size()*ArgumentList::elitism);
+            for(size_t i=0; i<input_space.size()-elitism_count; ++i){
+                sort_for_fittest_inputs(input_space, ArgumentList::goal, ArgumentList::expected_y);
 
-            for(size_t i=0; i<input_space.size(); ++i){
-                input_t& parent = input_space[i];
-                // TO DO
-                select(trial, parent, ArgumentList::goal, ArgumentList::expected_y);
-                trial = crossover(mutant, parent, probability_crossover);
-                mutant = mutate(target, inputs[0], inputs[1], multiplication_factor, interval);
-                // get_random_inputs(input_space, i, target, inputs[0], inputs[1]);
+                inputs[0] = input_space[i]; // rand() % input_space.size()];
+                inputs[1] = input_space[(i+1)%input_space.size()]; // rand() % input_space.size()];
+                
+                offspring = crossover(inputs[0], inputs[1], probability_crossover);
+                mutant = mutate(offspring, probability_mutation, interval);
+                new_generation[elitism_count+i] = mutant;
             }
+            input_space = new_generation;
         
             if(!ArgumentList::is_generation_driven()){
                 double error = fabs(best_y-ArgumentList::expected_y);

@@ -114,7 +114,7 @@ void select(const input_t& trial, input_t& parent, int goal=-1, double desired_y
  * desired_y - if goal is 0 then this is the point we want to approximate
 */
 size_t best_match(const space_t& input_space, int goal=-1, double desired_y=0){
-    size_t index = 1;
+    size_t index = 0;
     double ans = Function::calculate(input_space[0]);
 
     for(size_t i=1; i<input_space.size()-1; ++i){

@@ -14,7 +14,6 @@ namespace Function
     double (*calculate)(const std::vector<double>& x);
 
     double _calculate_(const std::vector<double>& x){
-        std::initializer_list<double> args;
         double result = 0;
 
         try
@@ -71,8 +70,8 @@ namespace Function
             double d = (double)x.size();
             double result = 0;
 
-            for(size_t i=0; i<x.size()-1; ++i){
-                result += (x[i]*sin(sqrt(fabs(x[i]))));
+            for(size_t i=0; i<x.size(); ++i){
+                result += (x[i]*sin(sqrt(abs(x[i]))));
             }
 
             return 418.9829*d - result;

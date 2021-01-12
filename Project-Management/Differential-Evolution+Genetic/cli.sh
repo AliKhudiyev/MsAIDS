@@ -16,11 +16,15 @@ if [[ $# == 0 || $1 == "help" ]]
 then
     echo "Usage: cli.sh [ackley/rastrigin/rosenbrock/schwefel] [dea/ga] [--visual(opt)]"
     echo "Usage: cli.sh [metaheuristic] \"[args]\" [appr. point(opt)]"
-    printf "\tmetaheuristic: dea/ga\n"
+    printf "\tmetaheuristic:\n"
+    printf "\t\tdea\n\t\tga\n"
     printf "\targs:\n"
     printf "\t\t--population\n"
     printf "\t\t-V: variables\n"
     printf "\t\t-F: function\n"
+    printf "\t\t-f: scaling factor/mutation probability\n"
+    printf "\t\t-p: crossover probability\n"
+    printf "\t\t--elitism: for GA\n"
     printf "\t\t--generation\n"
     printf "\t\t--global-min/max\n"
     printf "\t\t--threshold\n"
@@ -38,7 +42,7 @@ then
         cd build && ./dea --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b1 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
-        cd build && ./ga --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b1 $visual_flag
+        cd build && ./ga --global-min --population=30 --generation=500 -f0.15 -p0.5 -e0.25 --benchmark-run=30 -o2 -b1 $visual_flag
     fi
 elif [ $1 == "rastrigin" ]
 then
@@ -53,7 +57,7 @@ elif [ $1 == "rosenbrock" ]
 then
     if [[ $# > 1 && $2 == "dea" ]]
     then
-        cd build && ./dea --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b3 $visual_flag
+        cd build && ./dea --global-min --population=30 --generation=50000 -f0.5 -p0.5 --benchmark-run=30 -o2 -b3 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
         cd build && ./ga --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b3 $visual_flag
@@ -62,7 +66,7 @@ elif [ $1 == "schwefel" ]
 then
     if [[ $# > 1 && $2 == "dea" ]]
     then
-        cd build && ./dea --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b4 $visual_flag
+        cd build && ./dea --global-min --population=40 --generation=30000 --benchmark-run=30 -o2 -b4 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
         cd build && ./ga --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b4 $visual_flag
@@ -71,7 +75,7 @@ else
     if [ $1 == "dea" ]
     then
         cd build && (echo "$3" | ./dea $2)
-    elif [ $2 == "ga" ]
+    elif [ $1 == "ga" ]
     then
         cd build && (echo "$3" | ./ga $2)
     fi
