@@ -42,7 +42,7 @@ then
         cd build && ./dea --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b1 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
-        cd build && ./ga --global-min --population=30 --generation=500 -f0.15 -p0.5 -e0.25 --benchmark-run=30 -o2 -b1 $visual_flag
+        cd build && ./ga --global-min --population=30 --generation=5000 -f0.1 -p0.5 -e0.2 --benchmark-run=30 -o2 -b1 $visual_flag
     fi
 elif [ $1 == "rastrigin" ]
 then
@@ -51,7 +51,7 @@ then
         cd build && ./dea --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b2 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
-        cd build && ./ga --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b2 $visual_flag
+        cd build && ./ga --global-min --population=30 --generation=1000 --benchmark-run=30 -f0.1 -p0.5 -e0.2 -o2 -b2 $visual_flag
     fi
 elif [ $1 == "rosenbrock" ]
 then
@@ -60,16 +60,16 @@ then
         cd build && ./dea --global-min --population=30 --generation=50000 -f0.5 -p0.5 --benchmark-run=30 -o2 -b3 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
-        cd build && ./ga --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b3 $visual_flag
+        cd build && ./ga --global-min --population=30 --generation=1000 --benchmark-run=30 -f0.1 -p0.5 -e0.2 -o2 -b3 $visual_flag
     fi
 elif [ $1 == "schwefel" ]
 then
     if [[ $# > 1 && $2 == "dea" ]]
     then
-        cd build && ./dea --global-min --population=40 --generation=30000 --benchmark-run=30 -o2 -b4 $visual_flag
+        cd build && ./dea --global-min --population=30 --generation=70000 --benchmark-run=30 -o2 -b4 $visual_flag
     elif [[ $# > 1 && $2 == "ga" ]]
     then
-        cd build && ./ga --global-min --population=30 --generation=10000 --benchmark-run=30 -o2 -b4 $visual_flag
+        cd build && ./ga --global-min --population=30 --generation=5000 --benchmark-run=30 -f0.1 -p0.5 -e0.2 -o2 -b4 $visual_flag
     fi
 else
     if [ $1 == "dea" ]

@@ -1,0 +1,29 @@
+We have tested two metaheuristic optimization algorithms (DEA + GA) in 4 different functions. Here is the results:
+
+Ackley	       	   DEA		 	   GA
+------------------------------------------------
+Mean:		9.68114 e-15		2.58075
+Std:		2.52884 e-15		0.290775
+Run-time:	13.259			159
+
+Rastrigin      	   DEA		 	   GA
+------------------------------------------------
+Mean:		0			34.5338
+Std:		0			4.93368
+Run-time:	13.138			70.9
+
+Rosenbrock         DEA		          GA
+------------------------------------------------
+Mean:		0.0219112		791.064
+Std:		0.00822058		386.77
+Run-time:	93.5			76
+
+Schwefel	   DEA		 	   GA
+------------------------------------------------
+Mean:		43.42784		67.4668
+Std:		71.6092			24.9512
+Run-time:	92.28			104
+Best solution:	0.000381827
+
+
+Note: Although the Genetic Algorithm currently gives us horrible results, by increseasing the number of generations it tends to give better results. The current results have been obtained with a small number generations since we do not have much computation power(and also it is much slower than the DEA), however, we believe that modifying/optimizing the algorigthm itself may also give better results.
