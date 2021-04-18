@@ -1,0 +1,70 @@
+GSP:
+- 1-itemsets (initial) (k=1)
+- prune 1-itemsets
+- store it as FFI
+- loop until the final set is empty:
+    - generate (k+1)-itemsets from k-itemsets
+    - prune newly generated itemsets (according to frequencies)
+    - store it as FFI
+    - k <- k + 1
+
+Required function: is_subset(a, b)
+
+a.is_subset_of(b);
+
+<(1, 2), (3, 4), (7), (3), (5), (6)>
+<(4), (7), (3), (5)>
+<(3), (7), (3), (5)>
+
+0: <0> -1 <0> -1 <0> -1 #SUP: 10000
+: -1 | -1 | -1 #SUP: 10000
+: 0 [1, 5] 0 [2, 4] 0 -1 #SUP: 10000
+: -1 [1, 5] -1 [2, 4] -1 #SUP: 10000
+
+A A A
+[A A] A
+A [A A]
+
+ABAB
+-----
+ABC -> 5
+ABCADB -> 3, 10, 5
+BAAB -> 5, 2
+
+A [2, 10] B [?, ?] A [2, 10] B
+AB
+
+(A,0),(B,5),(C,7),(A,8),(B,12)
+(A,0),(B,5),(C,7),(B,12)
+
+A [5, 5] B
+A [5, 12] B
+
+A [4, 5] B
+A [4, 12] B
+
+ABC
+A->B->C
+A
+B
+C
+A->B
+A->C
+B->C
+
+A->BC
+BC->A
+B->AC
+AC->B
+C->AB
+AB->C
+
+A(AA)A
+
+A-(AA)
+(AA)-A
+0, 30
+
+Introduction:
+- Problem
+- Used algorithm(s)
