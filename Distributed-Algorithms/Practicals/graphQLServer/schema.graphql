@@ -1,0 +1,66 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Vehicle {
+    id: ID!
+    manufacturer: String!
+    model: String!
+    modelyear: String
+    vehicletype: String
+    gearbox: String
+    fueltype: String
+    reserved: Boolean
+    personid: ID
+}
+
+type Person {
+    id: ID!
+    name: String!
+    lastname: String!
+    vehicles: [Vehicle]
+}
+
+type VehicleResult {
+    success: Boolean!
+    errors: [String]
+    vehicle: Vehicle
+}
+
+type PersonResult {
+    success: Boolean!
+    errors: [String]
+    person: Person
+}
+
+type PersonsResult {
+    success: Boolean!
+    errors: [String]
+    persons: [Person]
+}
+
+type VehiclesResult {
+    success: Boolean!
+    errors: [String]
+    vehicles: [Vehicle]
+}
+
+type Query {
+    vehicles: VehiclesResult!
+    vehicle(vehicleId: ID!): VehicleResult!
+    persons: PersonsResult! 
+    person(personId: ID!): PersonResult!
+}
+
+type DeleteVehicleResult {
+    success: Boolean!
+    errors: [String]
+}
+
+type Mutation {
+    createVehicle(manufacturer: String!, model: String!, modelyear: String!, vehicletype: String!, gearbox: String!, fueltype: String!, personid: ID!): VehicleResult!
+    deleteVehicle(vehicleId: ID!): DeleteVehicleResult!
+    markReserved(vehicleId: ID!): VehicleResult!
+    updateVehicle(vehicleId: ID!, manufacturer: String!, model: String!, modelyear: String!, vehicletype: String!, gearbox: String!, fueltype: String!, personid: ID!): VehicleResult!
+}

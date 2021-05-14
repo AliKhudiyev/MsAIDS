@@ -1,0 +1,17 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ToDoResource {
+	private ToDoRepository repo = new ToDoRepository();
+	
+	public List<ToDo> all(){
+		List<ToDo> todos = new ArrayList<ToDo>();
+		
+		return todos;
+	}
+}

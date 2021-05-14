@@ -1,0 +1,80 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class UserRepository {
+	private Connection con = null;
+	
+	UserRepository(){
+		try {
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+			System.out.println("Success.");
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	public List<User> getAll(){
+		List<User> users = new ArrayList<User>();
+		Statement st;
+		try {
+			st = con.createStatement();
+			ResultSet res = st.executeQuery("select * from users");
+			while (res.next()) {
+				User user = new User();
+				user.setId((long)res.getInt("id"));
+				user.setFirstName(res.getString("first_name"));
+				user.setLastName(res.getString("last_name"));
+				user.setUserName(res.getString("user_name"));
+				user.setPassword(res.getString("password"));
+				users.add(user);
+			}
+//			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return users;
+	}
+	
+	public User getById(Long id){
+		ResultSet res;
+		try {
+			Statement st = con.createStatement();
+			res = st.executeQuery("select * from users where id=" + id);
+			res.next();
+			User user = new User();
+			user.setId((long)res.getInt("id"));
+			user.setFirstName(res.getString("first_name"));
+			user.setLastName(res.getString("last_name"));
+			user.setUserName(res.getString("user_name"));
+			user.setPassword(res.getString("password"));
+			return user;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new User();
+	}
+	
+	public boolean add(User user) {
+		try {
+			Statement st = con.createStatement();
+			st.executeQuery("insert into users(first_name, last_name, user_name, password) " 
+				+ "values ('" + user.getFirstName() + "', '" + user.getLastName() + "', '" 
+				+ user.getUserName() + "', '" + user.getPassword() + "')");
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+	}
+}

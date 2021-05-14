@@ -1,0 +1,48 @@
+package com.example.demo;
+
+import java.util.List;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.core.MediaType;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class UserResource {
+	private UserRepository repo = new UserRepository();
+	
+	@GetMapping("users")
+	public List<User> all(){
+		return repo.getAll();
+	}
+	
+	@GetMapping("users/{id}")
+	public User one(@PathVariable Long id) {
+		return repo.getById(id);
+	}
+	
+	@PostMapping("users/create")
+	public User create(@RequestBody User user) {
+		if(repo.add(user)) {
+			return user;
+		}
+		return new User();
+	}
+	
+	@PutMapping("users/update/{id}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public User update(@PathVariable Long id, @RequestBody User user) {
+		return repo.update(id, user);
+	}
+	
+	@DeleteMapping("users/delete/{id}")
+	public User remove(@PathVariable Long id) {
+		return new User();
+	}
+}

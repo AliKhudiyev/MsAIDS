@@ -1,0 +1,29 @@
+package com.example.demo;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ToDoResource {
+	private ToDoRepository repo = new ToDoRepository();
+	
+	@GetMapping("users/{userId}/todo")
+	public List<ToDo> all(@PathVariable Long userId, @RequestHeader Map<String, String> headers){ //@RequestHeader("username") String userName, @RequestHeader("password") String password){
+		System.out.println(headers.get("username"));
+		String uname = "", paswd = "";
+		
+		if(headers.get("username") != null) {
+			uname = headers.get("username");
+		}
+		if(headers.get("password") != null) {
+			paswd = headers.get("password");
+		}
+		
+		return repo.getToDosOfUser(userId, uname, paswd);
+	}
+}

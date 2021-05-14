@@ -1,0 +1,157 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ToDoRepository {
+	private static int IsVerified = 1;
+	private static int IsAuthorized = 2;
+	
+	private Connection con = null;
+	
+	ToDoRepository(){
+		try {
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+			System.out.println("Success.");
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	static int status(Long id, String userName, String password, Connection con) {
+		Statement st;
+		ResultSet res;
+		try {
+			st = con.createStatement();
+			try {
+				res = st.executeQuery("select * from users where id=" + id);
+			} catch(SQLException e) {
+				System.out.println("wth?!");
+				return 0;
+			}
+			while(res.next()) {
+				System.out.println(res.getString("user_name")+", "+res.getString("password"));
+				if(res.getString("user_name").compareTo(userName) == 0 && 
+						res.getString("password").compareTo(password) == 0) {
+					System.out.println("authorized...");
+					return ToDoRepository.IsAuthorized;
+				}
+				break;
+				
+			}
+		} catch(SQLException e) {
+			// TO DO
+		}
+		System.out.println("verified...");
+		return ToDoRepository.IsVerified;
+	}
+	
+	public List<ToDo> getToDosOfUser(Long id, String userName, String password){
+		List<ToDo> todos = new ArrayList<ToDo>();
+		Statement st;
+		String query = "select todo.id, todo.text, todo.visibility from user_todo, todo "
+				+ "where user_id=" + id + " and todo_id=todo.id";
+		try {
+			st = con.createStatement();
+			ResultSet res = st.executeQuery("select * from users where id=" + id);
+			res.next();
+			
+			String uname = res.getString("user_name");
+			String paswd = res.getString("password");
+			if(userName.compareTo(uname) != 0 || password.compareTo(paswd) != 0) {
+				query += " and visibility='y'";
+			}
+			
+			res = st.executeQuery(query);
+			while (res.next()) {
+				ToDo todo = new ToDo();
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(true);
+				if(res.getString("visibility").compareTo("n") == 0) {
+					todo.setVisibility(false);
+				}
+				todos.add(todo);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todos;
+	}
+	
+	public ToDo getToDoOfUser(Long userId, Long todoId, String userName, String password) {
+		ToDo todo = new ToDo();
+		Statement st;
+		String query = "select todo.id, todo.text, todo.visibility from user_todo, todo "
+				+ "where user_id=" + userId + " and todo_id=todo.id and todo.id=" + todoId;
+		try {
+			st = con.createStatement();
+			ResultSet res = st.executeQuery("select * from users where id=" + userId);
+			res.next();
+			
+			String uname = res.getString("user_name");
+			String paswd = res.getString("password");
+			if(userName.compareTo(uname) != 0 || password.compareTo(paswd) != 0) {
+				query += " and visibility='y'";
+			}
+			
+			res = st.executeQuery(query);
+			
+			while(res.next()) {
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(true);
+				if(res.getString("visibility").compareTo("n") == 0) {
+					todo.setVisibility(false);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todo;
+	}
+	
+	public ToDo add(Long userId, ToDo todo, String userName, String password) {
+		PreparedStatement st;
+		Long todoId;
+		try {
+			System.out.println(userName+" and "+password);
+			if(ToDoRepository.status(userId, userName, password, con) != ToDoRepository.IsAuthorized) {
+				System.out.println("shit!");
+				throw new SQLException();
+			}
+			
+			st = con.prepareStatement("insert into todo(text, visibility) values (?, ?)", Statement.RETURN_GENERATED_KEYS);
+			st.setString(1, todo.getText());
+			st.setString(2, todo.getVisibility()? "y" : "n");
+			
+			int rows = st.executeUpdate();
+			if(rows == 0) {
+				System.out.println("hm");
+				throw new SQLException();
+			}
+			
+			System.out.println("c'mon...");
+			ResultSet generatedKeys = st.getGeneratedKeys();
+			if (generatedKeys.next()) {
+                todoId = generatedKeys.getLong(1);
+                System.out.println("Last step");
+                st.executeUpdate("insert into user_todo(user_id, todo_id) "
+                		+ "values (" + userId + ", " + todoId + ")");
+            }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Cannot add a ToDo list!");
+			return new ToDo();
+		}
+		return todo;
+	}
+}

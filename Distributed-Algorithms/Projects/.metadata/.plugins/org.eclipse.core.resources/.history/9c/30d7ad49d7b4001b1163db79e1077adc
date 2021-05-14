@@ -1,0 +1,61 @@
+package com.example.demo;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ToDoResource {
+	private ToDoRepository repo = new ToDoRepository();
+	
+	@GetMapping("users/{userId}/todo")
+	public List<ToDo> all(@PathVariable Long userId, @RequestHeader Map<String, String> headers) {
+		String uname = "", paswd = "";
+		
+		if(headers.get("username") != null) {
+			uname = headers.get("username");
+		}
+		if(headers.get("password") != null) {
+			paswd = headers.get("password");
+		}
+		
+		return repo.getToDosOfUser(userId, uname, paswd);
+	}
+	
+	@GetMapping("users/{userId}/todo/{todoId}")
+	public ToDo one(@PathVariable Long userId, @PathVariable Long todoId, @RequestHeader Map<String, String> headers) {
+		String uname = "", paswd = "";
+		
+		if(headers.get("username") != null) {
+			uname = headers.get("username");
+		}
+		if(headers.get("password") != null) {
+			paswd = headers.get("password");
+		}
+		
+		return repo.getToDoOfUser(userId, todoId, uname, paswd);
+	}
+	
+	@PostMapping("users/{userId}/todo/create/{visibility}")
+	public ToDo create(@PathVariable Long userId, @PathVariable int visibility, @RequestBody ToDo todo, @RequestHeader Map<String, String> headers) {
+		return repo.add(userId, visibility == 0 ? false : true, todo, headers.get("user_name"), headers.get("password"));
+	}
+	
+	@PutMapping("users/{userId}/todo/{todoId}")
+	public ToDo update(@PathVariable Long userId, @PathVariable Long todoId, @RequestBody ToDo todo, @RequestHeader Map<String, String> headers) {
+		return null;
+	}
+	
+	@DeleteMapping("users/{userId}/todo/delete/{todoId}")
+	public ToDo remove(@PathVariable Long userId, @PathVariable Long todoId, @RequestHeader Map<String, String> headers) {
+		return null;
+	}
+}

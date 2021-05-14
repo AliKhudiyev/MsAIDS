@@ -31,14 +31,22 @@ var_includeIntervals = IntVar(root, value=0)
 Checkbutton(root, text='Include predictive intervals', variable=var_includeIntervals).grid(row=5, column=0)
 
 
+def reset_status_before_extract():
+    global root
+    global label_status
+
+    label_status.config(bg='gray')
+    root.after(500, extract)
+
 def set_io(set_input):
     global entry_input, entry_output
 
-    filepath = filedialog.askopenfilename()
     if set_input:
+        filepath = filedialog.askopenfilename()
         entry_input.delete(0, 'end')
         entry_input.insert(0, filepath)
     else:
+        filepath = filedialog.asksaveasfilename()
         entry_output.delete(0, 'end')
         entry_output.insert(0, filepath)
 
@@ -47,9 +55,6 @@ def extract():
     global entry_minsup, entry_maxlength
     global entry_input, entry_output
     global label_status
-
-    label_status.config(bg='gray')
-    time.sleep(0.5)
 
     minsup = 0
     maxlength = -1
@@ -80,18 +85,18 @@ def extract():
         return 1
     
     command = f'./extract {input_filepath} {minsup} {maxlength} {var_algorithm.get().lower()} {output_filepath}'
-    if var_includeIntervals.get() != '':
-        command += f'{var_includeIntervals.get()}'
-    print(command)
-    # status = os.system(command)
-    # if status == 0:
-    #     label_status.config(bg='green')
-    # else:
-    #     label_status.config(bg='red')
+    if var_includeIntervals.get():
+        command += f' {var_includeIntervals.get()}'
+    # print(command)
+    status = os.system(command)
+    if status == 0:
+        label_status.config(bg='green')
+    else:
+        label_status.config(bg='red')
 
 
 Button(root, text='Open', command=lambda: set_io(True)).grid(row=3, column=2)
 Button(root, text='Create', command=lambda: set_io(False)).grid(row=4, column=2)
-Button(root, text='Extract', command=extract).grid(row=6, column=0)
+Button(root, text='Extract', command=reset_status_before_extract).grid(row=6, column=0)
 
 root.mainloop()

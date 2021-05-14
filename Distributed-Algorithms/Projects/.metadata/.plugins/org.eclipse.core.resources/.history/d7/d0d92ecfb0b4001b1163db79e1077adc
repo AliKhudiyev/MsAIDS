@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.List;
+
+
+public class UserRepository {
+	private List<User> users;
+	private Connection con = null;
+	
+	UserRepository(){
+		try {
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+		} catch(Exception e) {
+			
+		}
+	}
+	
+	public List<User> getUsers(){
+		return users;
+	}
+}

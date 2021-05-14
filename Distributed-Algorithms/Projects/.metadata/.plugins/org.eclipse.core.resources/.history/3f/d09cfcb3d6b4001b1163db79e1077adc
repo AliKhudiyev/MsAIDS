@@ -1,0 +1,141 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ToDoRepository {
+	private static int IsVerified = 1;
+	private static int IsAuthorized = 2;
+	
+	private Connection con = null;
+	
+	ToDoRepository(){
+		try {
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+			System.out.println("Success.");
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	static int status(Long id, String userName, String password, Connection con) {
+		Statement st;
+		ResultSet res;
+		try {
+			st = con.createStatement();
+			try {
+				res = st.executeQuery("select * from users where id=" + id);
+			} catch(SQLException e) {
+				return 0;
+			}
+			while(res.next()) {
+				if(res.getString("user_name").compareTo(userName) != 0 || 
+						res.getString("password").compareTo(password) != 0) {
+					return ToDoRepository.IsVerified;
+				}
+			}
+		} catch(SQLException e) {
+			// TO DO
+		}
+		return ToDoRepository.IsAuthorized;
+	}
+	
+	public List<ToDo> getToDosOfUser(Long id, String userName, String password){
+		List<ToDo> todos = new ArrayList<ToDo>();
+		Statement st;
+		String query = "select todo.id, todo.text, todo.visibility from user_todo, todo "
+				+ "where user_id=" + id + " and todo_id=todo.id";
+		try {
+			st = con.createStatement();
+			ResultSet res = st.executeQuery("select * from users where id=" + id);
+			res.next();
+			
+			String uname = res.getString("user_name");
+			String paswd = res.getString("password");
+			if(userName.compareTo(uname) != 0 || password.compareTo(paswd) != 0) {
+				query += " and visibility='y'";
+			}
+			
+			res = st.executeQuery(query);
+			while (res.next()) {
+				ToDo todo = new ToDo();
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(true);
+				if(res.getString("visibility").compareTo("n") == 0) {
+					todo.setVisibility(false);
+				}
+				todos.add(todo);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todos;
+	}
+	
+	public ToDo getToDoOfUser(Long userId, Long todoId, String userName, String password) {
+		ToDo todo = new ToDo();
+		Statement st;
+		String query = "select todo.id, todo.text, todo.visibility from user_todo, todo "
+				+ "where user_id=" + userId + " and todo_id=todo.id and todo.id=" + todoId;
+		try {
+			st = con.createStatement();
+			ResultSet res = st.executeQuery("select * from users where id=" + userId);
+			res.next();
+			
+			String uname = res.getString("user_name");
+			String paswd = res.getString("password");
+			if(userName.compareTo(uname) != 0 || password.compareTo(paswd) != 0) {
+				query += " and visibility='y'";
+			}
+			
+			res = st.executeQuery(query);
+			
+			while(res.next()) {
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(true);
+				if(res.getString("visibility").compareTo("n") == 0) {
+					todo.setVisibility(false);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todo;
+	}
+	
+	public ToDo add(Long userId, boolean visibility, ToDo todo, String userName, String password) {
+		Statement st;
+		
+		try {			
+			if(ToDoRepository.status(userId, userName, password, con) != ToDoRepository.IsAuthorized) {
+				return new ToDo();
+			}
+			
+			st = con.createStatement();
+			ResultSet res = st.executeQuery("insert into todo(text, visibility) "
+					+ "values ()");
+			
+			while(res.next()) {
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(true);
+				if(res.getString("visibility").compareTo("n") == 0) {
+					todo.setVisibility(false);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todo;
+	}
+}
