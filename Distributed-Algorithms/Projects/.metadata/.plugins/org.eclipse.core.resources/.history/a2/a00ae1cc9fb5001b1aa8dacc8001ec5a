@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public abstract class Repository {
+	private static Connection connection = null;
+	
+	public static Connection getConnection() {
+		if(connection == null) {
+			try {
+				connection = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+				System.out.println("[ToDoRepo] Success.");
+			} catch(Exception e) {
+				System.out.println(e);
+			}
+		}
+		return connection;
+	}
+}

@@ -1,0 +1,167 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@RestController
+public class GraphResource {
+	static private Connection con;
+//	private Map<String, ArrayList<String>> graph;
+//	private ArrayList<Object> graph;
+	
+	GraphResource(){
+		try {
+			con = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+			System.out.println("[Graph] Success.");
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		
+//		graph = new ArrayList<Node<String>>();
+//		ArrayList<String> fields = new ArrayList<String>();
+//		fields.add("id");
+//		fields.add("first_name");
+//		fields.add("last_name");
+//		fields.add("user_name");
+//		fields.add("password");
+//		fields.add("todo");
+//		graph.put("users", fields);
+//		
+//		ArrayList<String> fields2 = new ArrayList<String>();
+//		fields2.add("id");
+//		fields2.add("text");
+//		fields2.add("visibility");
+//		fields2.add("users");
+//		
+//		
+//		graph.put("users", fields);
+//		graph.put("todo", fields2);
+	}
+	
+	private boolean verify(String rawQuery) {
+		// TODO
+		return false;
+	}
+	
+	private LinkedList<Node> parse(String rawQuery){
+		LinkedList<Node> linkedList = new LinkedList<Node>();
+		for(int i=0; i<rawQuery.length(); i++) {
+			if(rawQuery.charAt(i) == '{') {
+				Node node = new Node();
+				linkedList.add(node);
+			}
+		}
+		return linkedList;
+	}
+	
+	private ArrayList<String> getFields(JSONObject query){
+		ArrayList<String> fields = new ArrayList<String>();
+		// TODO
+		return fields;
+	}
+	
+	private ArrayList<String> getConditions(JSONObject query){
+		ArrayList<String> conditions = new ArrayList<String>();
+		// TODO
+		return conditions;
+	}
+	
+	private ResultSet executeQuery(String rawQuery) {
+		PreparedStatement st;
+		String query = rawQuery;
+		
+		try {
+			st = con.prepareStatement("");
+			
+			if(query.length() < 4) {
+				return st.executeQuery();
+			} else {
+				return executeQuery(query);
+			}
+		} catch(SQLException e) {
+			// TODO
+		}
+		return null;
+	}
+	
+	@PostMapping("graphql")
+	@Produces(MediaType.APPLICATION_JSON)
+	public String get(@RequestHeader Map<String, String> headers, @RequestBody String rawQuery) {
+		PreparedStatement st;
+		ResultSet res;
+		JSONObject response = new JSONObject();
+		JSONObject query = null;
+		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
+		
+		System.out.println(rawQuery);
+		try {
+			query = new JSONObject(rawQuery);
+			System.out.println(query);
+			System.out.println(query.get("users"));
+			System.out.println(query.getJSONArray("users").getJSONObject(1));
+			System.out.println(query.getJSONArray("users").getJSONObject(1).get("todo"));
+			
+			ObjectMapper objectMapper = new ObjectMapper();
+			Map<String, Object> result = objectMapper.readValue(rawQuery, new TypeReference<HashMap<String, Object>>(){});
+			
+			System.out.println(result);
+		} catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		try {
+			if(!verify(rawQuery)) {
+				throw new SQLException();
+			}
+			
+			st = con.prepareStatement("select ? from users, user_todo, todo where true?");
+			
+			ArrayList<String> fieldList = getFields(query);
+			ArrayList<String> conditionList = getConditions(query);
+			String fields = "", conditions = "";
+			
+			for(String field: fieldList) {
+				fields += field;
+			}
+			for(String condition: conditionList) {
+				conditions += " and " + condition;
+			}
+			
+			st.setString(0, fields);
+			st.setString(1, conditions);
+			res = st.executeQuery();
+			
+			while(res.next()) {
+//				response.put(query.getString(), false)
+			}
+		} catch(SQLException e) {
+			// TODO
+		}
+		
+		response.put("a", true);
+		response.put("b", new JSONObject("{\"val\": \"3a\"}"));
+		response.put("c", -2);
+//		System.out.println(jsonObj);
+		return response.toString();
+	}
+}

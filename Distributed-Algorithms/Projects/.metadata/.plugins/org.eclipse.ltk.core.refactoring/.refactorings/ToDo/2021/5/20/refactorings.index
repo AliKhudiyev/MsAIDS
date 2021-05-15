@@ -6,3 +6,10 @@
 1620997229454	Encapsulate field 'id'
 1620997245667	Encapsulate field 'text'
 1620997251981	Encapsulate field 'visibility'
+1621081163118	Encapsulate field 'name'
+1621081169224	Encapsulate field 'value'
+1621081174128	Encapsulate field 'isLeaf'
+1621084724697	Delete element
+1621097006239	Delete element
+1621097012227	Delete element
+1621098155500	Delete element

@@ -1,0 +1,6 @@
+package com.example.demo;
+
+public class Node {
+	private String name;
+	private boolean isLeaf = true;
+}

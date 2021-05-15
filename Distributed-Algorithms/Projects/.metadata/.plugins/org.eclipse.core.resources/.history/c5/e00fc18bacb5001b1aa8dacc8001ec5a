@@ -1,0 +1,160 @@
+package com.example.demo;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ToDoRepository extends Repository {
+	private Connection con = null;
+	
+	ToDoRepository(){
+		super();
+		con = Repository.getConnection();
+	}
+	
+	public List<ToDo> getToDos(String userName, String password){
+		List<ToDo> todos = new ArrayList<ToDo>();
+		Statement st;
+		ResultSet res;
+		String query = "select * from todo ";
+		
+		if(userName.compareTo("admin") != 0 || password.compareTo("admin") != 0) {
+			query += "where visibility=true";
+		}
+		try {
+			st = con.createStatement();
+			res = st.executeQuery(query);
+			
+			while (res.next()) {
+				ToDo todo = new ToDo();
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(res.getBoolean("visibility"));
+				todos.add(todo);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todos;
+	}
+	
+	public List<ToDo> getToDosOfUser(Long userId, String userName, String password){
+		List<ToDo> todos = new ArrayList<ToDo>();
+		Statement st;
+		ResultSet res;
+		String query = "select todo.id, todo.text, todo.visibility from user_todo, todo "
+				+ "where user_id=" + userId + " and todo_id=todo.id";
+		
+		try {
+			if(status(userId, userName, password, con) != IsAuthorized) {
+				query += " and visibility='y'";
+			}
+			
+			st = con.createStatement();
+			res = st.executeQuery(query);
+			
+			while (res.next()) {
+				ToDo todo = new ToDo();
+				todo.setId((long)res.getInt("id"));
+				todo.setText(res.getString("text"));
+				todo.setVisibility(res.getBoolean("visibility"));
+				todos.add(todo);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return todos;
+	}
+	
+	public ToDo getToDoOfUser(Long userId, Long todoId, String userName, String password) {
+		List<ToDo> todos = getToDosOfUser(userId, userName, password);
+		for(ToDo todo: todos) {
+			if(todoId == todo.getId()) {
+				return todo;
+			}
+		}
+		return new ToDo();
+	}
+	
+	public ToDo add(Long userId, ToDo todo, String userName, String password) {
+		PreparedStatement st;
+		Long todoId;
+		try {
+			if(status(userId, userName, password, con) != IsAuthorized) {
+				throw new SQLException();
+			}
+			
+			st = con.prepareStatement("insert into todo(text, visibility) values (?, ?)", Statement.RETURN_GENERATED_KEYS);
+			st.setString(1, todo.getText());
+			st.setBoolean(2, todo.getVisibility());
+			
+			int rows = st.executeUpdate();
+			if(rows == 0) {
+				throw new SQLException();
+			}
+			
+			ResultSet generatedKeys = st.getGeneratedKeys();
+			if (generatedKeys.next()) {
+                todoId = generatedKeys.getLong(1);
+                st = con.prepareStatement("insert into user_todo(user_id, todo_id) values (?, ?)");
+                st.setLong(1, userId);
+                st.setLong(2, todoId);
+                st.executeUpdate();
+            }
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Cannot add a ToDo list!");
+			return new ToDo();
+		}
+		return todo;
+	}
+	
+	public ToDo update(Long userId, ToDo todo, String userName, String password) {
+		PreparedStatement st;
+		try {
+			if(status(userId, userName, password, con) != IsAuthorized) {
+				throw new SQLException();
+			}
+			
+			st = con.prepareStatement("update todo set text=?, visibility=? where id=?");
+			st.setString(1, todo.getText());
+			st.setBoolean(2, todo.getVisibility());
+			st.setLong(3, todo.getId());
+			st.executeUpdate();
+			
+			return todo;
+		} catch(SQLException e) {
+			// TO DO
+		}
+		return new ToDo();
+	}
+	
+	public boolean remove(Long userId, Long todoId, String userName, String password) {
+		PreparedStatement st;
+		try {
+			if(status(userId, userName, password, con) != IsAuthorized) {
+				throw new SQLException();
+			}
+			
+			st = con.prepareStatement("delete from user_todo where user_id=? and todo_id=?");
+			st.setLong(1, userId);
+			st.setLong(2, todoId);
+			st.executeUpdate();
+			
+			st = con.prepareStatement("delete from todo where id=?");
+			st.setLong(1, todoId);
+			st.executeUpdate();
+			
+			return true;
+		} catch(SQLException e) {
+			// TO DO
+		}
+		return false;
+	}
+}

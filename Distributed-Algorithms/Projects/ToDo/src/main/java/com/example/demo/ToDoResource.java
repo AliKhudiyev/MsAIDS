@@ -30,33 +30,44 @@ public class ToDoResource {
 		return result;
 	}
 	
-	@GetMapping("users/{userId}/todo")
+	@GetMapping("api/todo")
+	public List<ToDo> all(@RequestHeader Map<String, String> headers){
+		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
+		return repo.getToDos(data.get(0), data.get(1));
+	}
+	
+	@GetMapping("api/users/{userId}/todo")
 	public List<ToDo> all(@PathVariable Long userId, @RequestHeader Map<String, String> headers) {
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		return repo.getToDosOfUser(userId, data.get(0), data.get(1));
 	}
 	
-	@GetMapping("users/{userId}/todo/{todoId}")
+	@GetMapping("api/todo/{todoId}")
+	public User getOwner(@PathVariable Long todoId) {
+		return repo.getOwner(todoId);
+	}
+	
+	@GetMapping("api/users/{userId}/todo/{todoId}")
 	public ToDo one(@PathVariable Long userId, @PathVariable Long todoId, @RequestHeader Map<String, String> headers) {
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		return repo.getToDoOfUser(userId, todoId, data.get(0), data.get(1));
 	}
 	
-	@PostMapping("users/{userId}/todo/create/{visibility}")
+	@PostMapping("api/users/{userId}/todo/create/{visibility}")
 	public ToDo create(@PathVariable Long userId, @PathVariable int visibility, @RequestBody ToDo todo, @RequestHeader Map<String, String> headers) {
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		todo.setVisibility(visibility == 0? false : true);
 		return repo.add(userId, todo, data.get(0), data.get(1));
 	}
 	
-	@PutMapping("users/{userId}/todo/update/{todoId}")
+	@PutMapping("api/users/{userId}/todo/update/{todoId}")
 	public ToDo update(@PathVariable Long userId, @PathVariable Long todoId, @RequestBody ToDo todo, @RequestHeader Map<String, String> headers) {
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		todo.setId(todoId);
 		return repo.update(userId, todo, data.get(0), data.get(1));
 	}
 	
-	@DeleteMapping("users/{userId}/todo/remove/{todoId}")
+	@DeleteMapping("api/users/{userId}/todo/remove/{todoId}")
 	public void remove(@PathVariable Long userId, @PathVariable Long todoId, @RequestHeader Map<String, String> headers) {
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		repo.remove(userId, todoId, data.get(0), data.get(1));

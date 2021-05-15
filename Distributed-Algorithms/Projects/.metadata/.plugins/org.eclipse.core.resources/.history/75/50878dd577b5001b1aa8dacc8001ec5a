@@ -1,0 +1,7 @@
+package com.example.demo;
+
+public class Node<T> extends Object {
+	private String name;
+	private T value;
+	private boolean isLeaf;
+}

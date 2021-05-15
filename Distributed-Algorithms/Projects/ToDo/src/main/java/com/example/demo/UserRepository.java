@@ -1,24 +1,18 @@
 package com.example.demo;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class UserRepository {
+public class UserRepository extends Repository {
 	private Connection con = null;
 	
 	UserRepository(){
-		try {
-			con = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
-			System.out.println("Success.");
-		} catch(Exception e) {
-			System.out.println(e);
-		}
+		super();
+		con = Repository.getConnection();
 	}
 	
 	public List<User> getAll(String userName, String password){
@@ -34,13 +28,12 @@ public class UserRepository {
 				user.setLastName(res.getString("last_name"));
 				user.setUserName(res.getString("user_name"));
 				user.setPassword(res.getString("password"));
-				if(user.getUserName().compareTo(userName) != 0 || user.getPassword().compareTo(password) != 0) {
-					user.setUserName("");
-					user.setPassword("");
+				if(status(user.getId(), userName, password, con) != IsAuthorized) {
+					user.setUserName(null);
+					user.setPassword(null);
 				}
 				users.add(user);
 			}
-//			con.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -63,7 +56,7 @@ public class UserRepository {
 			Statement st = con.createStatement();
 			st.executeUpdate("insert into users(first_name, last_name, user_name, password) " 
 				+ "values ('" + user.getFirstName() + "', '" + user.getLastName() + "', '" 
-				+ user.getUserName() + "', '" + user.getPassword() + "')");
+				+ user.getUserName() + "', '" + createHash(user.getPassword()) + "')");
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -90,10 +83,34 @@ public class UserRepository {
 	}
 	
 	// Not Working! Should first delete all (userId, todoId) from other tables!
-	public boolean remove(Long id) {
+	public boolean remove(Long id, String userName, String password) {
+		ResultSet res;
+		String query = "delete from todo where ";
+		boolean userHasProject = true;
+		
 		try {
+			if(status(id, userName, password, con) != IsAuthorized) {
+				throw new SQLException();
+			}
+			
 			Statement st = con.createStatement();
+			res = st.executeQuery("select * from user_todo where user_id=" + id);
+			
+			if(res.next()) {
+				query += "id=" + res.getLong("todo_id");
+			} else {
+				userHasProject = false;
+			}
+			while(res.next()) {
+				query += " or id=" + res.getLong("todo_id");
+			}
+			
+			st.executeUpdate("delete from user_todo where user_id=" + id);
 			st.executeUpdate("delete from users where id=" + id);
+			if(userHasProject) {
+				st.executeUpdate(query);
+			}
+			
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

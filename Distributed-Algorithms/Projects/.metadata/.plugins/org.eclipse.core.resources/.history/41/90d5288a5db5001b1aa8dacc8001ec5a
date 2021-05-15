@@ -1,0 +1,23 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GraphResource {
+	private String parse(String rawQuery) {
+		return null;
+	}
+	
+	@PostMapping("graphql")
+	public void get(@RequestHeader Map<String, String> headers) {
+		JSONObject obj;
+		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
+		;
+	}
+}

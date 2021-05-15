@@ -1,0 +1,83 @@
+package com.example.demo;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.xml.bind.DatatypeConverter;
+
+public abstract class Repository {
+	private static Connection connection = null;
+	protected static final int IsVerified = 1;
+	protected static final int IsAuthorized = 2;
+	
+	public static Connection getConnection() {
+		if(connection == null) {
+			try {
+				connection = DriverManager.getConnection("jdbc:postgresql://localhost:4444/todo_app", "postgres", null);
+				System.out.println("DB Connection Status: Success");
+			} catch(Exception e) {
+				System.out.println(e);
+			}
+		}
+		return connection;
+	}
+	
+	public static int status(Long id, String userName, String password, Connection con) {
+		Statement st;
+		ResultSet res;
+		try {
+			st = con.createStatement();
+			try {
+				res = st.executeQuery("select * from users where id=" + id);
+			} catch(SQLException e) {
+				return 0;
+			}
+			while(res.next()) {
+				if(res.getString("user_name").compareTo(userName) == 0 && 
+						res.getString("password").compareTo(UserRepository.createHash(password)) == 0) {
+					return IsAuthorized;
+				}
+				break;
+				
+			}
+		} catch(SQLException e) {
+			// TO DO
+		}
+		if(userName.compareTo("admin") == 0 && password.compareTo("admin") == 0) {
+			return IsAuthorized;
+		}
+		return IsVerified;
+	}
+	
+	public static String createHash(String password) {
+		MessageDigest md;
+		try {
+			md = MessageDigest.getInstance("MD5");
+			md.update(password.getBytes());
+			byte[] digest = md.digest();
+			String hash = DatatypeConverter
+					.printHexBinary(digest).toUpperCase();
+			
+			return hash;
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	protected void finalize() {
+		try {
+			connection.close();
+			System.out.println("DB Connection Closed.");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

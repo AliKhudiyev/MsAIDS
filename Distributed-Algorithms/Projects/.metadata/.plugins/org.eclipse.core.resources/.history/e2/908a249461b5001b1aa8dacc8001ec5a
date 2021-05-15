@@ -1,0 +1,36 @@
+package com.example.demo;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class GraphResource {
+	private String parse(String rawQuery) {
+		return null;
+	}
+	
+	@PostMapping("graphql")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String get(@RequestHeader Map<String, String> headers, @RequestBody String query) {
+		System.out.println(new JSONObject(query));
+		
+		JSONObject jsonObj = new JSONObject();
+		jsonObj.put("a", true);
+		jsonObj.put("b", "3a");
+		jsonObj.put("c", -2);
+		System.out.println(jsonObj);
+		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
+		return jsonObj.toString();
+	}
+}

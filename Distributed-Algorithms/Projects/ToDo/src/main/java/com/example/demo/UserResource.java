@@ -20,19 +20,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserResource {
 	private UserRepository repo = new UserRepository();
 	
-	@GetMapping("users")
+	@GetMapping("api/users")
 	public List<User> all(@RequestHeader Map<String, String> headers){
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		return repo.getAll(data.get(0), data.get(1));
 	}
 	
-	@GetMapping("users/{id}")
+	@GetMapping("api/users/{id}")
 	public User one(@PathVariable Long id, @RequestHeader Map<String, String> headers) {
 		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
 		return repo.getById(id, data.get(0), data.get(1));
 	}
 	
-	@PostMapping("users/create")
+	@PostMapping("api/users/create")
 	public User create(@RequestBody User user) {
 		if(repo.add(user)) {
 			return user;
@@ -40,14 +40,15 @@ public class UserResource {
 		return new User();
 	}
 	
-	@PutMapping("users/update/{id}")
+	@PutMapping("api/users/update/{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public User update(@PathVariable Long id, @RequestBody User user) {
 		return repo.update(id, user);
 	}
 	
-	@DeleteMapping("users/remove/{id}")
-	public void remove(@PathVariable Long id) {
-		repo.remove(id);
+	@DeleteMapping("api/users/remove/{id}")
+	public void remove(@PathVariable Long id, @RequestHeader Map<String, String> headers) {
+		ArrayList<String> data = ToDoResource.getUserNameAndPassword(headers);
+		repo.remove(id, data.get(0), data.get(1));
 	}
 }
