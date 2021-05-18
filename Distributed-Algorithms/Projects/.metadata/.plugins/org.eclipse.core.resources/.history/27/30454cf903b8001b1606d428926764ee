@@ -1,0 +1,8 @@
+# Alpine Linux with OpenJDK JRE
+FROM openjdk:8
+
+# Copy war file
+COPY ToDo-0.0.1-SNAPSHOT.jar /app.jar
+
+# run the app
+CMD ["java", "-jar", "/app.jar"]

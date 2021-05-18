@@ -1,0 +1,22 @@
+create table users(
+       id serial PRIMARY KEY,
+       first_name VARCHAR(25),
+       last_name VARCHAR(25),
+       user_name VARCHAR(50) UNIQUE NOT NULL,
+       password VARCHAR(35) NOT NULL
+);
+
+create table todo(
+       id serial PRIMARY KEY,
+       text TEXT NOT NULL,
+       visibility boolean NOT NULL
+);
+
+create table user_todo(
+       user_id INT NOT NULL,
+       todo_id INT NOT NULL,
+       
+       PRIMARY KEY (user_id, todo_id),
+       FOREIGN KEY (user_id) REFERENCES users (id),
+       FOREIGN KEY (todo_id) REFERENCES todo (id)
+);
