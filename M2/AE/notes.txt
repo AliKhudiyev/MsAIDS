@@ -1,0 +1,22 @@
+Ontology - determining objects
+Machine learning - determining law(s) among objects
+Artificial Evolution - doing both above
+
+Note: Time merges from the interaction of particles.
+
+3 rules:
+- Cohesion: keep closer "distance" with neighbours
+- Alignment: maintainance of similar direction and speed with others
+- Avoidance: avoiding neighbours
+Rules 1 and 3 are ago-antagonistic.
+
+Interesting stuff:
+- Nano cars
+- Simulated heart
+- Embryogenesis (Zebrafish) [Human physiome in 2040?], 4P health
+
+- Evolution strategies
+- Genetic algorithms
+- Genetic programmation
+- Evolutionary programming
+
