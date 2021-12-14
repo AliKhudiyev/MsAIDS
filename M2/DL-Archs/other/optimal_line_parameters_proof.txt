@@ -1,0 +1,15 @@
+Proof of optimal parameters for a line over 2D data.
+
+(Y(x) - y(x))^2 + ... for all x
+dY/da = 2(ax+b - y(x))x + ... for all x = 0
+2a(x^2 + ... for all x) + 2b(x + ... for all x) - 2(y(x)x + ... for all x) = 0
+a = ([sum over xy] - b[sum over x]) / [sum over x^2]
+
+dY/db = 2(ax+b - y(x)) + ... for all x = 0
+2nb + 2a(x + ... for all x) - 2(y(x) + ... for all x) = 0
+b = ([sum over y] - a[sum over x]) / n
+
+=> b = ([sum over y] - [sum over x]([sum over xy] - b[sum over x]) / [sum over x^2]) / n
+nb[sum over x^2] = [sum over y][sum over x^2] - [sum over x][sum over xy] + b[sum over x]^2
+b(n[sum over x^2] - [sum over x]^2) = [sum over y][sum over x^2] - [sum over x][sum over xy]
+b = ([sum over y][sum over x^2] - [sum over x][sum over xy]) / (n[sum over x^2] - [sum over x]^2)
