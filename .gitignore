@@ -1,4 +1,8 @@
 # Files
 .DS_Store
+*.gz
+*.out
+*.log
+*.aux
 
 # Directories

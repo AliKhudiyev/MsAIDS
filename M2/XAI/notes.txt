@@ -1,0 +1,16 @@
+Intelligent System arch:
+Knowledge base + Inference engine + Outside world interface
+
+Knowledge base = facts + rules
+
+Questions:
+	1. Doesn't context emerge from the data?
+	2. How do you couple AI with Expert System?
+
+
+Low-level knowledge objects:
+	1. Concept
+	2. Instance
+	3. Process
+	4. Rule
+	5. Relationship

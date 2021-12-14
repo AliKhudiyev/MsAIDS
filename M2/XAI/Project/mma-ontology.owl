@@ -1,0 +1,1415 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/alikhudiyev/ontologies/2021/10/mma-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/alikhudiyev/ontologies/2021/10/mma-ontology">
+    <Prefix name="" IRI="http://www.semanticweb.org/alikhudiyev/ontologies/2021/10/mma-ontology"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Simple Mixed Martial Arts (MMA) Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>https://en.wikipedia.org/wiki/Mixed_martial_arts</IRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#CEO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FightScore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fighter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Judge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonOrgWorker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OrgWorker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organizer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Referee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#buys"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#draws"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fights"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gives"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasScore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#loses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occupies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#organizes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ownedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owns"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participatesAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pays"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refersTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sells"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wins"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#worksAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#costs"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#happens"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDivision"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasScore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pays"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wasBorn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weighs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fight1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fight2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FightResult1_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FightResult1_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FightResult2_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FightResult2_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LocAkh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LocAz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LocBaku"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NonOrgWorker1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NonOrgWorker2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Org"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgCEO"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgCEO2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgFighter1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgFighter2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgFighter3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgFighter4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgJudge1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgJudge2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgOrganizer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OrgReferee"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#OrgWorker"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#worksAt"/>
+                <Class IRI="#Organization"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CEO"/>
+        <Class IRI="#OrgWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CEO"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#owns"/>
+            <Class IRI="#Organization"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fight"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Fighter"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FightScore"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#isFor"/>
+                <Class IRI="#Fighter"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#refersTo"/>
+                <Class IRI="#Fight"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fighter"/>
+        <Class IRI="#OrgWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fighter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#fights"/>
+            <Class IRI="#Fighter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Judge"/>
+        <Class IRI="#OrgWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonOrgWorker"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonOrgWorker"/>
+        <ObjectComplementOf>
+            <Class IRI="#OrgWorker"/>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#sells"/>
+            <Class IRI="#Fight"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organization"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#ownedBy"/>
+            <Class IRI="#CEO"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organizer"/>
+        <Class IRI="#OrgWorker"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Referee"/>
+        <Class IRI="#OrgWorker"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#CEO"/>
+        <Class IRI="#Fighter"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CEO"/>
+        <Class IRI="#Judge"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CEO"/>
+        <Class IRI="#Organizer"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CEO"/>
+        <Class IRI="#Referee"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fighter"/>
+        <Class IRI="#Judge"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fighter"/>
+        <Class IRI="#Organizer"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Fighter"/>
+        <Class IRI="#Referee"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Judge"/>
+        <Class IRI="#Organizer"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Judge"/>
+        <Class IRI="#Referee"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NonOrgWorker"/>
+        <Class IRI="#OrgWorker"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Organizer"/>
+        <Class IRI="#Referee"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Fight"/>
+        <NamedIndividual IRI="#Fight1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fight"/>
+        <NamedIndividual IRI="#Fight2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FightScore"/>
+        <NamedIndividual IRI="#FightResult1_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FightScore"/>
+        <NamedIndividual IRI="#FightResult1_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FightScore"/>
+        <NamedIndividual IRI="#FightResult2_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FightScore"/>
+        <NamedIndividual IRI="#FightResult2_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#LocAkh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#LocAz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Location"/>
+        <NamedIndividual IRI="#LocBaku"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonOrgWorker"/>
+        <NamedIndividual IRI="#NonOrgWorker1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NonOrgWorker"/>
+        <NamedIndividual IRI="#NonOrgWorker2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#Org"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#OrgCEO"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fighter"/>
+        <NamedIndividual IRI="#OrgFighter1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fighter"/>
+        <NamedIndividual IRI="#OrgFighter2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fighter"/>
+        <NamedIndividual IRI="#OrgFighter3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fighter"/>
+        <NamedIndividual IRI="#OrgFighter4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OrgWorker"/>
+        <NamedIndividual IRI="#OrgJudge1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#OrgJudge2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#OrgOrganizer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#OrgReferee"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#LocAkh"/>
+        <NamedIndividual IRI="#LocAz"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#LocAkh"/>
+        <NamedIndividual IRI="#LocBaku"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#LocAz"/>
+        <NamedIndividual IRI="#LocBaku"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#NonOrgWorker1"/>
+        <NamedIndividual IRI="#NonOrgWorker2"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#OrgJudge1"/>
+        <NamedIndividual IRI="#OrgJudge2"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedAt"/>
+        <NamedIndividual IRI="#LocAkh"/>
+        <NamedIndividual IRI="#LocBaku"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedAt"/>
+        <NamedIndividual IRI="#LocBaku"/>
+        <NamedIndividual IRI="#LocAz"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#OrgCEO"/>
+        <NamedIndividual IRI="#Org"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#OrgCEO2"/>
+        <NamedIndividual IRI="#Org"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#LocAkh"/>
+        <Literal>Akhmadli</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#LocAz"/>
+        <Literal>Azerbaijan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#LocBaku"/>
+        <Literal>Baku</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#NonOrgWorker1"/>
+        <Literal>Ali</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#NonOrgWorker2"/>
+        <Literal>Farid</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#Org"/>
+        <Literal>UFCA</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgCEO"/>
+        <Literal>Nihad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgCEO2"/>
+        <Literal>Elmar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#OrgFighter1"/>
+        <Literal>male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgFighter1"/>
+        <Literal>Telman</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgFighter2"/>
+        <Literal>Bashir</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasGender"/>
+        <NamedIndividual IRI="#OrgFighter3"/>
+        <Literal>female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgFighter3"/>
+        <Literal>Daniz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wasBorn"/>
+        <NamedIndividual IRI="#OrgFighter3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">1990-01-01T00:00:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#weighs"/>
+        <NamedIndividual IRI="#OrgFighter3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">63.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgFighter4"/>
+        <Literal>Narmin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgOrganizer"/>
+        <Literal>Ibrahim</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasName"/>
+        <NamedIndividual IRI="#OrgReferee"/>
+        <Literal>Kanan</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <ObjectProperty IRI="#participatesAt"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasScore"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ownedBy"/>
+        <ObjectProperty IRI="#owns"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#pays"/>
+        <ObjectProperty IRI="#worksAt"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#ownedBy"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#owns"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#locatedAt"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#occupies"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#buys"/>
+        <Class IRI="#NonOrgWorker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#draws"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fights"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gives"/>
+        <Class IRI="#Judge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasScore"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isFor"/>
+        <Class IRI="#FightScore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedAt"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#loses"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#occupies"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#organizes"/>
+        <Class IRI="#Organizer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ownedBy"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#owns"/>
+        <Class IRI="#CEO"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#participatesAt"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#pays"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class IRI="#FightScore"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sells"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wins"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#worksAt"/>
+        <Class IRI="#OrgWorker"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#buys"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#draws"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fights"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gives"/>
+        <Class IRI="#FightScore"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasScore"/>
+        <Class IRI="#FightScore"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isFor"/>
+        <Class IRI="#Fighter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedAt"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#loses"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#occupies"/>
+        <Class IRI="#Location"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#organizes"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ownedBy"/>
+        <Class IRI="#CEO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#owns"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#participatesAt"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#pays"/>
+        <Class IRI="#OrgWorker"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sells"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#wins"/>
+        <Class IRI="#Fight"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#worksAt"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#costs"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#happens"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDivision"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasGender"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasScore"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#wasBorn"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#weighs"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#costs"/>
+        <Class IRI="#Fight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#happens"/>
+        <Class IRI="#Fight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDivision"/>
+        <Class IRI="#Fight"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGender"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasScore"/>
+        <Class IRI="#FightScore"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#pays"/>
+        <Class IRI="#NonOrgWorker"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#wasBorn"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weighs"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#costs"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#happens"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDivision"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasScore"/>
+        <Datatype abbreviatedIRI="xsd:unsignedByte"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pays"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wasBorn"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#weighs"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on fight result</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightResultRule2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#FightScore"/>
+                <Variable IRI="#fr2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isFor"/>
+                <Variable IRI="#fr1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isFor"/>
+                <Variable IRI="#fr2"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#FightScore"/>
+                <Variable IRI="#fr1"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasScore"/>
+                <Variable IRI="#fr1"/>
+                <Variable IRI="#s1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasScore"/>
+                <Variable IRI="#fr2"/>
+                <Variable IRI="#s2"/>
+            </DataPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Fight"/>
+                <Variable IRI="#f"/>
+            </ClassAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#fr1"/>
+                <Variable IRI="#fr2"/>
+            </DifferentIndividualsAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#s1"/>
+                <Variable IRI="#s2"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#draws"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on participants of the fight</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightParticipantsRule</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Fight"/>
+                <Variable IRI="#f"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#y"/>
+            </ClassAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </DifferentIndividualsAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#f"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#z"/>
+                <Variable IRI="#f"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#fights"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on who can watch a fight</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightWatchRule</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Fight"/>
+                <Variable IRI="#f"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#costs"/>
+                <Variable IRI="#f"/>
+                <Variable IRI="#p"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#buys"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#f"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#pays"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#p"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on drawer -&gt; drawer</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightResultRule5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Fight"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#f1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#f2"/>
+            </ClassAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#f2"/>
+            </DifferentIndividualsAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#f2"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#draws"/>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#draws"/>
+                <Variable IRI="#f2"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on loser -&gt; winner</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightResultRule4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Fight"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#f1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#f2"/>
+            </ClassAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#f2"/>
+            </DifferentIndividualsAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#f2"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#loses"/>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#wins"/>
+                <Variable IRI="#f2"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on winner -&gt; loser</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightResultRule3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Fight"/>
+                <Variable IRI="#x"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#f1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Fighter"/>
+                <Variable IRI="#f2"/>
+            </ClassAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#f2"/>
+            </DifferentIndividualsAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#participatesAt"/>
+                <Variable IRI="#f2"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#wins"/>
+                <Variable IRI="#f1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#loses"/>
+                <Variable IRI="#f2"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on fight result</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightResultRule</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#FightScore"/>
+                <Variable IRI="#fr2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isFor"/>
+                <Variable IRI="#fr1"/>
+                <Variable IRI="#x"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isFor"/>
+                <Variable IRI="#fr2"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#FightScore"/>
+                <Variable IRI="#fr1"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasScore"/>
+                <Variable IRI="#fr1"/>
+                <Variable IRI="#s1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasScore"/>
+                <Variable IRI="#fr2"/>
+                <Variable IRI="#s2"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#s1"/>
+                <Variable IRI="#s2"/>
+            </BuiltInAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="#fr1"/>
+                <Variable IRI="#fr2"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#wins"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on genders of fighters</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightGenderRule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#fights"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGender"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#g1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#hasGender"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#g2"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#g1"/>
+                <Variable IRI="#g2"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Assertion on weights of fighters</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>FightWeightingRule</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#fights"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#y"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#weighs"/>
+                <Variable IRI="#x"/>
+                <Variable IRI="#w1"/>
+            </DataPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#weighs"/>
+                <Variable IRI="#y"/>
+                <Variable IRI="#w2"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#w1"/>
+                <Variable IRI="#w2"/>
+            </BuiltInAtom>
+        </Head>
+    </DLSafeRule>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LocAkh</IRI>
+        <Literal xml:lang="en">Akhmadli</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LocAz</IRI>
+        <Literal xml:lang="en">Azerbaijan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LocBaku</IRI>
+        <Literal xml:lang="en">Baku</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Org</IRI>
+        <Literal xml:lang="en">Ultimate Fighting Championship of Azerbaijan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#buys</IRI>
+        <Literal xml:lang="en">Any non organization worker can pay to watch an official fight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#costs</IRI>
+        <Literal xml:lang="en">Fight costs some amount of money (pay-per-view).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#draws</IRI>
+        <Literal xml:lang="en">Fighter may draw.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fights</IRI>
+        <Literal xml:lang="en">Fighter fights another fighter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#gives</IRI>
+        <Literal xml:lang="en">Judge gives the final match points.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#happens</IRI>
+        <Literal xml:lang="en">Fight happens at some date.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDivision</IRI>
+        <Literal xml:lang="en">Fight happens in one of the several weight classes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGender</IRI>
+        <Literal xml:lang="en">Person has a gender.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasName</IRI>
+        <Literal xml:lang="en">Organization, person, location have names.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasScore</IRI>
+        <Literal xml:lang="en">Fight has result (scores of each fighter).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isFor</IRI>
+        <Literal xml:lang="en">The match result belongs to a fighter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#locatedAt</IRI>
+        <Literal xml:lang="en">A location is located at its super-location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#loses</IRI>
+        <Literal xml:lang="en">Fighter may lose the fight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#occupies</IRI>
+        <Literal xml:lang="en">Organization, Person occupy some location(s) on the Earth.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#organizes</IRI>
+        <Literal xml:lang="en">Organizer mathces fighters for the championships.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#owns</IRI>
+        <Literal xml:lang="en">CEO owns an MMA organization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#participatesAt</IRI>
+        <Literal xml:lang="en">Fighter participates in a fight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#pays</IRI>
+        <Literal xml:lang="en">Organization pays salary to its workers.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sells</IRI>
+        <Literal xml:lang="en">Organization sells fights.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wasBorn</IRI>
+        <Literal xml:lang="en">Person was born at some date.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#weighs</IRI>
+        <Literal xml:lang="en">Person has some weight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wins</IRI>
+        <Literal xml:lang="en">Fighter may win the fight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#worksAt</IRI>
+        <Literal xml:lang="en">Organization workers work at the corresponding organization.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
