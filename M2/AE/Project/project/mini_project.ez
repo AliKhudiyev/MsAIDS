@@ -1,0 +1,197 @@
+/*_________________________________________________________
+
+onemax.ez // Evolve individuals containing 111111111111111111...
+__________________________________________________________*/
+
+\User declarations :
+#define NB_SIN 3 //number of sines we look for
+#define NB_SIN_DATA 2 //number of sines used to generate the data
+#define AMP 100.0 //maximum value for amplitude
+#define FREQ 10.0 //maximum value for frequency
+#define PH 6.28 //maximum value for phase
+#define X 100.0 //maximum for x values
+#define NB_SAMP 1000 //sample size
+
+#define TRAIN_SPLIT 0.7 // training split
+#define TEST_SPLIT (1-TRAIN_SPLIT) // testing split
+
+#define COST_ABS 0
+#define COST_MSE 1
+#define COST_FUNC COST_ABS
+
+float fSamp[NB_SAMP][2]; //number of rows and columns (x and y)
+float fSin[NB_SIN_DATA*3]; //we create 2 sines and each sine has 3 parameters
+
+\end
+
+\User functions:
+\end
+
+\User CUDA:
+\end
+
+\Before everything else function:
+//if we want to randomly create the sines
+/*
+for (int s=0; s<NB_SIN_DATA; ++s){
+  fSin[s*3+0] = random(0.0, AMP);
+  fSin[s*3+1] = random(0.0, FREQ);
+  fSin[s*3+2] = random(0.0, PH);
+}
+*/
+
+//If we want to define specific sines
+fSin[0*3+0]=0.5; fSin[0*3+1]=11; fSin[0*3+2]=-1; //the first sine
+fSin[1*3+0]=4; fSin[1*3+1]=1; fSin[1*3+2]=1; //the second sine
+// fSin[2*3+0]=78; fSin[2*3+1]=-3.5; fSin[2*3+2]=-4;
+// fSin[3*3+0]=-53; fSin[3*3+1]=15; fSin[3*3+2]=-3.3;
+// fSin[4*3+0]=48.3; fSin[4*3+1]=5.8; fSin[4*3+2]=2;
+// fSin[5*3+0]=10; fSin[5*3+1]=8; fSin[5*3+2]=6.1;
+// fSin[6*3+0]=92; fSin[6*3+1]=-1; fSin[6*3+2]=3.6;
+// fSin[7*3+0]=-3; fSin[7*3+1]=1; fSin[7*3+2]=4.2;
+
+//Data collection
+for (int n=0; n<NB_SAMP; n++){
+  float fSum=0.0, x=fSamp[n][0]=random(0.0, X);
+
+  for (int s=0; s<NB_SIN_DATA; ++s)
+    fSum+=fSin[s*3+0]*sin(fSin[s*3+1]*x+fSin[s*3+2]);
+
+  fSamp[n][1]=fSum;
+}
+\end
+
+\After everything else function:
+  printf("Functions looked for: y=");
+  for (int s=0; s<NB_SIN_DATA; ++s){
+    printf("(%f)*sin((%f)*x+(%f))", fSin[s*3+0], fSin[s*3+1], fSin[s*3+2]);
+    if(s<NB_SIN_DATA-1) printf("+");
+  }
+  printf("\nFunctions obtained: y=");
+  for (int s=0; s<NB_SIN; ++s){
+    printf("(%f)*sin((%f)*x+(%f))", bBest->Sin[s*3+0], bBest->Sin[s*3+1], bBest->Sin[s*3+2]);
+    if(s<NB_SIN-1) printf("+");
+  }
+
+  float fScore=0;
+  int nb_samp=NB_SAMP*TRAIN_SPLIT;
+  for (int n=0; n<NB_SAMP*TRAIN_SPLIT; ++n){
+    float x=fSamp[n][0], y=fSamp[n][1], fSum=0.0;
+    for(int s=0; s<NB_SIN; ++s)
+      fSum+=bBest->Sin[s*3+0]*sin(bBest->Sin[s*3+1]*x+bBest->Sin[s*3+2]);
+    fScore+=fabs(fSum-y)/((float)nb_samp);
+  }
+  printf("\nFitness on training: %f\n", fScore);
+
+  fScore=0;
+  nb_samp=NB_SAMP*TEST_SPLIT;
+  for (int n=NB_SAMP*TRAIN_SPLIT; n<NB_SAMP; ++n){
+    float x=fSamp[n][0], y=fSamp[n][1], fSum=0.0;
+    for(int s=0; s<NB_SIN; ++s)
+      fSum+=bBest->Sin[s*3+0]*sin(bBest->Sin[s*3+1]*x+bBest->Sin[s*3+2]);
+    fScore+=fabs(fSum-y)/((float)nb_samp);
+  }
+  printf("Fitness on testing: %f\n", fScore);
+\end
+
+\At the beginning of each generation function:
+\end
+
+\At the end of each generation function:
+\end
+
+\At each generation before reduce function:
+\end
+
+\User classes :
+GenomeClass {
+  float Sin[NB_SIN*3]; //Sin[x*3+0]=amplitude Sin[x*3+1]=frequency +2=phase
+}
+\end
+
+\GenomeClass::display:
+\end
+
+\GenomeClass::initialiser : // "initializer" is also accepted
+  for(int s=0; s<NB_SIN; s++){
+    Genome.Sin[s*3+0]=random(0.0, AMP);
+    Genome.Sin[s*3+1]=random(0.0, FREQ);
+    Genome.Sin[s*3+2]=random(0.0, PH);
+  }
+\end
+
+\GenomeClass::crossover :
+  int nLocus = random(0, NB_SIN);
+  for (int i=nLocus; i<NB_SIN; i++){
+    child.Sin[i*3+0]=parent2.Sin[i*3+0];
+    child.Sin[i*3+1]=parent2.Sin[i*3+1];
+    child.Sin[i*3+2]=parent2.Sin[i*3+2];
+  }
+\end
+
+\GenomeClass::mutator :
+float fProbMutPerGene=1.0/(float)(NB_SIN*3);
+for(int s=0;s<NB_SIN;s++){
+  if(tossCoin(fProbMutPerGene)){
+    Genome.Sin[s*3+0]+=random(-AMP, AMP)/10.0;
+    if(Genome.Sin[s*3+0]>AMP) Genome.Sin[s*3+0]=AMP;
+    else if(Genome.Sin[s*3+0]<-AMP) Genome.Sin[s*3+0]=-AMP;
+  }
+  if(tossCoin(fProbMutPerGene)){
+    Genome.Sin[s*3+1]+=random(-FREQ, FREQ)/10.0;
+    if(Genome.Sin[s*3+1]>AMP) Genome.Sin[s*3+1]=AMP;
+    else if(Genome.Sin[s*3+1]<-AMP) Genome.Sin[s*3+1]=-AMP;
+  }
+  if(tossCoin(fProbMutPerGene)){
+    Genome.Sin[s*3+2]+=random(-PH,PH)/10.0;
+    if(Genome.Sin[s*3+2]>AMP) Genome.Sin[s*3+2]=AMP;
+    else if(Genome.Sin[s*3+2]<-AMP) Genome.Sin[s*3+2]=-AMP;
+  }
+}
+\end
+
+\GenomeClass::evaluator : // Returns the score
+  float fScore=0;
+  for (int n=0; n<NB_SAMP*TRAIN_SPLIT; ++n){
+    float x=fSamp[n][0], y=fSamp[n][1], fSum=0.0;
+    for(int s=0; s<NB_SIN; ++s)
+      fSum+=Genome.Sin[s*3+0]*sin(Genome.Sin[s*3+1]*x+Genome.Sin[s*3+2]);
+    fScore+=fabs(fSum-y)/((float)NB_SAMP*TRAIN_SPLIT);
+  }
+return fScore;
+\end
+
+\User Makefile options:
+\end
+
+\Default run parameters :        // Please let the parameters appear in this order
+  Number of generations : 100   	// NB_GEN
+  Time limit: 0 			// In seconds, 0 to deactivate
+  Population size : 10000			//POP_SIZE
+  Offspring size : 10000 // 40%
+  Mutation probability : 1       // MUT_PROB
+  Crossover probability : 1      // XOVER_PROB
+  Evaluator goal : minimise      // Maximise
+  Selection operator: Tournament 2
+  Surviving parents: 100% //percentage or absolute
+  Surviving offspring: 100%
+  Reduce parents operator: Tournament 2
+  Reduce offspring operator: Tournament 2
+  Final reduce operator: Tournament 2
+
+  Elitism: Strong			//Weak or Strong
+  Elite: 1
+  Print stats: true				//Default: 1
+  Generate csv stats file:false
+  Generate gnuplot script:false
+  Generate R script:false
+  Plot stats:true				//Default: 0
+
+  Remote island model: false
+  IP file: ip.txt 			//File containing all the remote island's IP
+  Server port : 2929
+  Migration probability: 0.3
+
+  Save population: false
+  Start from file:false
+\end

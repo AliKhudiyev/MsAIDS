@@ -1,6 +1,8 @@
 #include <cmath>
 #include "dea.h"
 
+#define f_bias 0
+
 void initialize(popul_t& popul){
 	for(size_t i=0; i<popul.size(); ++i){
 		popul[i].resize(dimension);

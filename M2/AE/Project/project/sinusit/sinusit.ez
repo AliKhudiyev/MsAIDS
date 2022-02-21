@@ -1,0 +1,153 @@
+/*_________________________________________________________
+
+onemax.ez // Evolve individuals containing 111111111111111111...
+__________________________________________________________*/
+
+\User declarations :
+#define NB_SIN 3  //# of sines
+#define AMP 100.0 // max val for amplitude
+#define FREQ 10.0 // max val for frequency
+#define PH 6.28   // max val for phase
+#define X 100.0 // max for x values
+#define NB_SAMP 1000 //# of samples
+
+
+float fSamp[NB_SAMP][2]; //for x and y values
+float fSin[NB_SIN*3]; //each sine has 3 parameters
+
+\end
+
+\User functions:
+\end
+
+\User CUDA:
+\end
+
+\Before everything else function:
+
+//if we want to randomly create the sines
+for (int s=0;s<NB_SIN;s++){
+	fSin[s*3+0]=random(0.0,AMP);
+	fSin[s*3+1]=random(0.0,FREQ);
+	fSin[s*3+2]=random(0.0,PH);
+}
+
+/*
+If we want to define specific sines
+fSin[0*3+0]=20; fSin[0*3+1]=7; fSin[0*3+2]=2; the first sine
+fSin[1*3+0]=70; fSin[1*3+1]=5; fSin[1*3+2]=1; the second sine
+*/
+
+for (int n=0;n<NB_SAMP;n++){
+	float fSum=0.0, x=fSamp[n][0]=random(0.0,X);
+	for (int s=0;s<NB_SIN;s++) fSum+=fSin[s*3+0]*sin(fSin[s*3+1]*x+fSin[s*3+2]);
+	fSamp[n][1]=fSum;
+}
+
+\end
+
+\After everything else function:
+
+printf("Functions looked for: y=");
+for (int s=0; s<NB_SIN; s++) printf("%f*sin(%f*x+%f)+",fSin[s*3+0],fSin[s*3+1],fSin[s*3+2]);
+printf("\n Function obtained : y=");
+for (int s=0; s<NB_SIN; s++) printf("%f*sin(%f*x+%f)+",bBest->fSin[s*3+0], bBest->fSin[s*3+1], bBest->fSin[s*3+2]);
+printf("\n\n");
+
+\end
+
+\At the beginning of each generation function:
+\end
+
+\At the end of each generation function:
+\end
+
+\At each generation before reduce function:
+\end
+
+\User classes :
+GenomeClass {
+	float fSin[NB_SIN*3]; //fSin[x*3+0]=amplitude, fSin[x*3+1]=frequency, fSin[x*3+2]=phase,
+}
+\end
+
+\GenomeClass::display:
+\end
+
+\GenomeClass::initialiser : // "initializer" is also accepted
+for(int s=0; s<NB_SIN; s++ ){
+   Genome.fSin[s*3+0]=random(0.0,AMP);
+   Genome.fSin[s*3+1]=random(0.0,FREQ);
+   Genome.fSin[s*3+2]=random(0.0,PH);
+}
+\end
+
+\GenomeClass::crossover :
+
+  int nLocus=random(1,NB_SIN-1);
+  for (int i=nLocus;i<NB_SIN;i++){
+  	child.fSin[i*3+0]=parent2.fSin[i*3+0];
+  	child.fSin[i*3+1]=parent2.fSin[i*3+1];
+  	child.fSin[i*3+2]=parent2.fSin[i*3+2];
+  }
+
+\end
+
+\GenomeClass::mutator :
+
+float fProbMutPerGene=1.0/(float)(NB_SIN*3);
+for (int s=0; s<NB_SIN;s++){
+	if(tossCoin(fProbMutPerGene)) Genome.fSin[s*3+0]+=random(-AMP,AMP)/10.0;
+	if(tossCoin(fProbMutPerGene)) Genome.fSin[s*3+1]+=random(-FREQ,FREQ)/10.0;
+	if(tossCoin(fProbMutPerGene)) Genome.fSin[s*3+2]+=random(-PH,PH)/10.0;
+}
+
+\end
+
+\GenomeClass::evaluator : // Returns the score
+  float fScore=0;
+  
+  for (int n=0;n<NB_SAMP;n++){
+  	float x=fSamp[n][0], y=fSamp[n][1], fSum=0.0;
+  	for (int s=0;s<NB_SIN;s++)
+  	fSum+=Genome.fSin[s*3+0]*sin(Genome.fSin[s*3+1]*x+Genome.fSin[s*3+2]);
+  	fScore+=fabs(fSum-y);
+  }
+   
+  return fScore;
+\end
+
+\User Makefile options:
+\end
+
+\Default run parameters :        // Please let the parameters appear in this order
+  Number of generations : 10000   	// NB_GEN
+  Time limit: 0 			// In seconds, 0 to deactivate
+  Population size : 10000			//POP_SIZE
+  Offspring size : 10000 // 40%
+  Mutation probability : 1       // MUT_PROB
+  Crossover probability : 1      // XOVER_PROB
+  Evaluator goal : maximise      // Maximise
+  Selection operator: Tournament 2
+  Surviving parents: 100% //percentage or absolute
+  Surviving offspring: 100%
+  Reduce parents operator: Tournament 2
+  Reduce offspring operator: Tournament 2
+  Final reduce operator: Tournament 2
+
+  Elitism: Strong			//Weak or Strong
+  Elite: 1
+  Print stats: true				//Default: 1
+  Generate csv stats file:false
+  Generate gnuplot script:false
+  Generate R script:false
+  Plot stats:true				//Default: 0
+
+  Remote island model: false
+  IP file: ip.txt 			//File containing all the remote island's IP
+  Server port : 2929
+  Migration probability: 0.3
+
+  Save population: false
+  Start from file:false
+\end

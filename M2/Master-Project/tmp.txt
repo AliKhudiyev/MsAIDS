@@ -1,0 +1,36 @@
+// TODO: Better way of generating unique random numbers?
+    int a;
+    int b;
+    int c;
+	int d, e, bin = -1;
+    int j;
+    //////////////////// Random index mutation generation //////////////////
+    // select a different random number then index
+    do { a = curand(state) % popSize; } while (a == idx);
+    do { b = curand(state) % popSize; } while (b == idx || b == a);
+    do { c = curand(state) % popSize; } while (c == idx || c == a || c == b);
+    do { d = curand(state) % popSize; } while (d == idx || d == a || d == b || d == c);
+    do { e = curand(state) % popSize; } while (e == idx || e == a || e == b || e == c || e == d);
+    j = curand(state) % dim;
+
+	if(d_cost[idx] < *d_gCost){
+		*d_gCost = d_cost[idx];
+		*d_bin = idx;
+	}
+	__syncthreads();
+	bin = *d_bin;
+    
+    ///////////////////// MUTATION ////////////////
+    for (int k = 1; k <= dim; k++) {
+        if ((curand(state) % 1000) < CR || k==dim) {
+            // trial vector param comes from vector plus weighted differential
+            d_trial[(idx*dim)+j] = d_target[(idx*dim)+j] + 
+				(F[0] * (d_target[(bin*dim)+j] - d_target[(idx*dim)+j])) +
+				(F[1] * (d_target[(a*dim)+j] - d_target[(idx*dim)+j])) +
+				(F[2] * (d_target[(b*dim)+j] - d_target[(c*dim)+j])) +
+				(F[3] * (d_target[(d*dim)+j] - d_target[(e*dim)+j]));
+        } else {
+            d_trial[(idx*dim)+j] = d_target[(idx*dim)+j];
+        } // end if else for creating trial vector
+        j = (j+1) % dim;
+    } // end for loop through parameters

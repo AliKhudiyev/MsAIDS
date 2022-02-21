@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <random>
-#include <pair>
+#include <map>
 
 #define f1 mutation_rates[0]
 #define f2 mutation_rates[1]
