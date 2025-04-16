@@ -1,0 +1,308 @@
+@prefix tp: <https://ontologies.traceparts.com/> .
+@prefix gist: <https://ontologies.semanticarts.com/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ottr:  <http://ns.ottr.xyz/0.4/> .
+@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tp:Language(tp:English, "English"^^xsd:string).
+tp:Language(tp:Turkish, "Turkish"^^xsd:string).
+tp:Language(tp:French, "French"^^xsd:string).
+
+tp:ID(<https://ontologies.traceparts.com/ID-3P>, "3P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6785305951896788258>, "Combi SPU 25/50 A 3P N Surge Protection - 25 A"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-3P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-C60N>, "C60N"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6479121296446485593>, "Int. termomag. C60N 1X1â€¦63A curva B/C/D - A9N24051"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-C60N>,<https://ontologies.traceparts.com/ID-C60N>,<https://ontologies.traceparts.com/ID-C60N>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-63A>, "63A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6479121296446485593>, "Int. termomag. C60N 1X1â€¦63A curva B/C/D - A9N24051"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-63A>,<https://ontologies.traceparts.com/ID-63A>,<https://ontologies.traceparts.com/ID-63A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-A9N24051>, "A9N24051"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6479121296446485593>, "Int. termomag. C60N 1X1â€¦63A curva B/C/D - A9N24051"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-A9N24051>,<https://ontologies.traceparts.com/ID-A9N24051>,<https://ontologies.traceparts.com/ID-A9N24051>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-GBX060020>, "GBX060020"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2528560339749834691>, "Lexium GBX planetary gearboxes : GBX060020K with adaptator kit : GBK0600570A"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-GBX060020>,<https://ontologies.traceparts.com/ID-GBX060020>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-GBK0600570A>, "GBK0600570A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2528560339749834691>, "Lexium GBX planetary gearboxes : GBX060020K with adaptator kit : GBK0600570A"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-GBK0600570A>,<https://ontologies.traceparts.com/ID-GBK0600570A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB32>, "LUB32"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3547459166580388038>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCA1XB, Communication module ASILUFC51, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCA1XB>, "LUCA1XB"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3547459166580388038>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCA1XB, Communication module ASILUFC51, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCA1XB>,<https://ontologies.traceparts.com/ID-LUCA1XB>,<https://ontologies.traceparts.com/ID-LUCA1XB>,<https://ontologies.traceparts.com/ID-LUCA1XB>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-ASILUFC51>, "ASILUFC51"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3547459166580388038>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCA1XB, Communication module ASILUFC51, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-ASILUFC51>,<https://ontologies.traceparts.com/ID-ASILUFC51>,<https://ontologies.traceparts.com/ID-ASILUFC51>,<https://ontologies.traceparts.com/ID-ASILUFC51>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3547459166580388038>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCA1XB, Communication module ASILUFC51, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-W650>, "W650"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text5447944454138797832>, "PrismaSeT_LVS04926_Partition Conn. Dev>800A W650 D600"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-W650>,<https://ontologies.traceparts.com/ID-W650>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-D600>, "D600"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text5447944454138797832>, "PrismaSeT_LVS04926_Partition Conn. Dev>800A W650 D600"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-D600>,<https://ontologies.traceparts.com/ID-D600>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-GBX120012>, "GBX120012"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4274996783547678360>, "planetary gearboxes GBX120012K with adaptator kit GBK 120 140 0 F, casing diameter = 120 and reduction ratio = 12:1"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-GBX120012>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-XB5>, "XB5"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-5037934448193113827>, "Control and signalling units Ã˜ 22, HarmonyÂ® XB5 plastic, Illuminated Selector switch with standard handle, With integral LED, Head only, 2 position stay put, White handle"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-XB5>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUS12>, "LUS12"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3591334217467175325>, "Starter-controller up to 15 kW with Power base LUS12, Control unit LUCD1XB, Communication module LULC033"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUS12>,<https://ontologies.traceparts.com/ID-LUS12>,<https://ontologies.traceparts.com/ID-LUS12>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCD1XB>, "LUCD1XB"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3591334217467175325>, "Starter-controller up to 15 kW with Power base LUS12, Control unit LUCD1XB, Communication module LULC033"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCD1XB>,<https://ontologies.traceparts.com/ID-LUCD1XB>,<https://ontologies.traceparts.com/ID-LUCD1XB>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LULC033>, "LULC033"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3591334217467175325>, "Starter-controller up to 15 kW with Power base LUS12, Control unit LUCD1XB, Communication module LULC033"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LULC033>,<https://ontologies.traceparts.com/ID-LULC033>,<https://ontologies.traceparts.com/ID-LULC033>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-MTZ1>, "MTZ1"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2894187175244550630>, "Circuit breaker Masterpact MTZ1 12H3 - 1250 A - 3P fixed - w/o Micrologic"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-MTZ1>,<https://ontologies.traceparts.com/ID-MTZ1>,<https://ontologies.traceparts.com/ID-MTZ1>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-12H3>, "12H3"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2894187175244550630>, "Circuit breaker Masterpact MTZ1 12H3 - 1250 A - 3P fixed - w/o Micrologic"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-12H3>,<https://ontologies.traceparts.com/ID-12H3>,<https://ontologies.traceparts.com/ID-12H3>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-3P>, "3P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2894187175244550630>, "Circuit breaker Masterpact MTZ1 12H3 - 1250 A - 3P fixed - w/o Micrologic"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-2P>, "2P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text7460539493075474623>, "xSW Switch disconnector 2P 40/63/80A, A9S2P063"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-2P>,<https://ontologies.traceparts.com/ID-2P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-A9S2P063>, "A9S2P063"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text7460539493075474623>, "xSW Switch disconnector 2P 40/63/80A, A9S2P063"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-A9S2P063>,<https://ontologies.traceparts.com/ID-A9S2P063>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB32>, "LUB32"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3366840255254651640>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC12BL, Communication module LUFDH11, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCC12BL>, "LUCC12BL"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3366840255254651640>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC12BL, Communication module LUFDH11, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCC12BL>,<https://ontologies.traceparts.com/ID-LUCC12BL>,<https://ontologies.traceparts.com/ID-LUCC12BL>,<https://ontologies.traceparts.com/ID-LUCC12BL>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFDH11>, "LUFDH11"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3366840255254651640>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC12BL, Communication module LUFDH11, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFDH11>,<https://ontologies.traceparts.com/ID-LUFDH11>,<https://ontologies.traceparts.com/ID-LUFDH11>,<https://ontologies.traceparts.com/ID-LUFDH11>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C11>, "LUA1C11"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3366840255254651640>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC12BL, Communication module LUFDH11, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C11>,<https://ontologies.traceparts.com/ID-LUA1C11>,<https://ontologies.traceparts.com/ID-LUA1C11>,<https://ontologies.traceparts.com/ID-LUA1C11>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB12>, "LUB12"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-7879033911438617409>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCA12ES, Communication module LUFDA01, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCA12ES>, "LUCA12ES"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-7879033911438617409>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCA12ES, Communication module LUFDA01, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCA12ES>,<https://ontologies.traceparts.com/ID-LUCA12ES>,<https://ontologies.traceparts.com/ID-LUCA12ES>,<https://ontologies.traceparts.com/ID-LUCA12ES>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFDA01>, "LUFDA01"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-7879033911438617409>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCA12ES, Communication module LUFDA01, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFDA01>,<https://ontologies.traceparts.com/ID-LUFDA01>,<https://ontologies.traceparts.com/ID-LUFDA01>,<https://ontologies.traceparts.com/ID-LUFDA01>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-7879033911438617409>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCA12ES, Communication module LUFDA01, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-KRC6300EL53>, "KRC6300EL53"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-7814136786274908214>, "LONG FEED UNIT - KRC6300EL53"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-KRC6300EL53>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB32>, "LUB32"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text990100965338957315>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCD32ES, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCD32ES>, "LUCD32ES"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text990100965338957315>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCD32ES, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCD32ES>,<https://ontologies.traceparts.com/ID-LUCD32ES>,<https://ontologies.traceparts.com/ID-LUCD32ES>,<https://ontologies.traceparts.com/ID-LUCD32ES>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFN02>, "LUFN02"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text990100965338957315>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCD32ES, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text990100965338957315>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCD32ES, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-1PPN>, "1PPN"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3015508982436415197>, "iDPN Vigi 1PPN 6Aâ€¦40A Residual current circuit breaker with overcurrent protection, A9N21630"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-1PPN>,<https://ontologies.traceparts.com/ID-1PPN>,<https://ontologies.traceparts.com/ID-1PPN>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-40A>, "40A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3015508982436415197>, "iDPN Vigi 1PPN 6Aâ€¦40A Residual current circuit breaker with overcurrent protection, A9N21630"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-40A>,<https://ontologies.traceparts.com/ID-40A>,<https://ontologies.traceparts.com/ID-40A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-A9N21630>, "A9N21630"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3015508982436415197>, "iDPN Vigi 1PPN 6Aâ€¦40A Residual current circuit breaker with overcurrent protection, A9N21630"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-A9N21630>,<https://ontologies.traceparts.com/ID-A9N21630>,<https://ontologies.traceparts.com/ID-A9N21630>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-HMISTU655W>, "HMISTU655W"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1572203315512503594>, "HMISTU655W"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-HMISTU655W>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-C40>, "C40"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3233214903795439532>, "Vigi C40 3PPN 25/40A 30/300mA; Adaptable residual current device, A9N19476"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-C40>,<https://ontologies.traceparts.com/ID-C40>,<https://ontologies.traceparts.com/ID-C40>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-3PPN>, "3PPN"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3233214903795439532>, "Vigi C40 3PPN 25/40A 30/300mA; Adaptable residual current device, A9N19476"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-3PPN>,<https://ontologies.traceparts.com/ID-3PPN>,<https://ontologies.traceparts.com/ID-3PPN>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-A9N19476>, "A9N19476"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3233214903795439532>, "Vigi C40 3PPN 25/40A 30/300mA; Adaptable residual current device, A9N19476"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-A9N19476>,<https://ontologies.traceparts.com/ID-A9N19476>,<https://ontologies.traceparts.com/ID-A9N19476>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-1PN>, "1PN"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text5708539620953112733>, "ACTI 9 iCV40 1PN C 10A 4500A 30mA A type RCBO"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-1PN>,<https://ontologies.traceparts.com/ID-1PN>,<https://ontologies.traceparts.com/ID-1PN>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-10A>, "10A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text5708539620953112733>, "ACTI 9 iCV40 1PN C 10A 4500A 30mA A type RCBO"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-10A>,<https://ontologies.traceparts.com/ID-10A>,<https://ontologies.traceparts.com/ID-10A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-4500A>, "4500A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text5708539620953112733>, "ACTI 9 iCV40 1PN C 10A 4500A 30mA A type RCBO"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-4500A>,<https://ontologies.traceparts.com/ID-4500A>,<https://ontologies.traceparts.com/ID-4500A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUS32>, "LUS32"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3930278697589955372>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCB1XFU, Communication module LUFN20, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUS32>,<https://ontologies.traceparts.com/ID-LUS32>,<https://ontologies.traceparts.com/ID-LUS32>,<https://ontologies.traceparts.com/ID-LUS32>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCB1XFU>, "LUCB1XFU"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3930278697589955372>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCB1XFU, Communication module LUFN20, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCB1XFU>,<https://ontologies.traceparts.com/ID-LUCB1XFU>,<https://ontologies.traceparts.com/ID-LUCB1XFU>,<https://ontologies.traceparts.com/ID-LUCB1XFU>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFN20>, "LUFN20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3930278697589955372>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCB1XFU, Communication module LUFN20, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFN20>,<https://ontologies.traceparts.com/ID-LUFN20>,<https://ontologies.traceparts.com/ID-LUFN20>,<https://ontologies.traceparts.com/ID-LUFN20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text3930278697589955372>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCB1XFU, Communication module LUFN20, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-4P>, "4P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3035334195484882753>, "TeSys D contactor - 4P - AC-1 - <= 440 V 32 & 40 A  - AC coil - LC1DT32B7"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-4P>,<https://ontologies.traceparts.com/ID-4P>,<https://ontologies.traceparts.com/ID-4P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-AC-1>, "AC-1"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3035334195484882753>, "TeSys D contactor - 4P - AC-1 - <= 440 V 32 & 40 A  - AC coil - LC1DT32B7"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-AC-1>,<https://ontologies.traceparts.com/ID-AC-1>,<https://ontologies.traceparts.com/ID-AC-1>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LC1DT32B7>, "LC1DT32B7"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-3035334195484882753>, "TeSys D contactor - 4P - AC-1 - <= 440 V 32 & 40 A  - AC coil - LC1DT32B7"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LC1DT32B7>,<https://ontologies.traceparts.com/ID-LC1DT32B7>,<https://ontologies.traceparts.com/ID-LC1DT32B7>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-3P>, "3P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4412997320173401585>, "Acti9 iC60H 3P 0,5A...63A; Double terminal Miniature Circuit breaker, A9F06320"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-63A>, "63A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4412997320173401585>, "Acti9 iC60H 3P 0,5A...63A; Double terminal Miniature Circuit breaker, A9F06320"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-63A>,<https://ontologies.traceparts.com/ID-63A>,<https://ontologies.traceparts.com/ID-63A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-A9F06320>, "A9F06320"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4412997320173401585>, "Acti9 iC60H 3P 0,5A...63A; Double terminal Miniature Circuit breaker, A9F06320"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-A9F06320>,<https://ontologies.traceparts.com/ID-A9F06320>,<https://ontologies.traceparts.com/ID-A9F06320>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB32>, "LUB32"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8168486003187477016>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC1XB, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>,<https://ontologies.traceparts.com/ID-LUB32>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCC1XB>, "LUCC1XB"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8168486003187477016>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC1XB, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCC1XB>,<https://ontologies.traceparts.com/ID-LUCC1XB>,<https://ontologies.traceparts.com/ID-LUCC1XB>,<https://ontologies.traceparts.com/ID-LUCC1XB>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFN02>, "LUFN02"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8168486003187477016>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC1XB, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8168486003187477016>, "Starter-controller up to 15 kW with Power base LUB32, Control unit LUCC1XB, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-SH3>, "SH3"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6296113066200323758>, "Servomotor SH3 205 94,4Nm,key,multi,nobrake,str.conn,IP65/IP67,3.8k RPM"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-SH3>,<https://ontologies.traceparts.com/ID-SH3>,<https://ontologies.traceparts.com/ID-SH3>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-IP65>, "IP65"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6296113066200323758>, "Servomotor SH3 205 94,4Nm,key,multi,nobrake,str.conn,IP65/IP67,3.8k RPM"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-IP65>,<https://ontologies.traceparts.com/ID-IP65>,<https://ontologies.traceparts.com/ID-IP65>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-IP67%2C3.8k>, "IP67,3.8k"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-6296113066200323758>, "Servomotor SH3 205 94,4Nm,key,multi,nobrake,str.conn,IP65/IP67,3.8k RPM"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-IP67%2C3.8k>,<https://ontologies.traceparts.com/ID-IP67%2C3.8k>,<https://ontologies.traceparts.com/ID-IP67%2C3.8k>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-W850>, "W850"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2504990695749155478>, "PrismaSeT_LVS08253_Plain Door W850 30M IP30/4X"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-W850>,<https://ontologies.traceparts.com/ID-W850>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-IP30/4X>, "IP30/4X"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-2504990695749155478>, "PrismaSeT_LVS08253_Plain Door W850 30M IP30/4X"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-IP30/4X>,<https://ontologies.traceparts.com/ID-IP30/4X>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUS32>, "LUS32"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1900874305612570871>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCBX6FU, Communication module LUFW10, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUS32>,<https://ontologies.traceparts.com/ID-LUS32>,<https://ontologies.traceparts.com/ID-LUS32>,<https://ontologies.traceparts.com/ID-LUS32>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCBX6FU>, "LUCBX6FU"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1900874305612570871>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCBX6FU, Communication module LUFW10, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCBX6FU>,<https://ontologies.traceparts.com/ID-LUCBX6FU>,<https://ontologies.traceparts.com/ID-LUCBX6FU>,<https://ontologies.traceparts.com/ID-LUCBX6FU>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFW10>, "LUFW10"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1900874305612570871>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCBX6FU, Communication module LUFW10, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFW10>,<https://ontologies.traceparts.com/ID-LUFW10>,<https://ontologies.traceparts.com/ID-LUFW10>,<https://ontologies.traceparts.com/ID-LUFW10>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1900874305612570871>, "Starter-controller up to 15 kW with Power base LUS32, Control unit LUCBX6FU, Communication module LUFW10, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LG1D182N720>, "LG1D182N720"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text6085458538349461376>, "TeSys LG - enclosed DOL starter - LG1D182N720"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LG1D182N720>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-3P>, "3P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text131277488234255025>, "TeSys contactor - 3P - 115 to 150 A - LC1D15065K7"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LC1D15065K7>, "LC1D15065K7"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text131277488234255025>, "TeSys contactor - 3P - 115 to 150 A - LC1D15065K7"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LC1D15065K7>,<https://ontologies.traceparts.com/ID-LC1D15065K7>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB12>, "LUB12"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1515839833329504957>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCC05FU, Communication module LUFV2, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCC05FU>, "LUCC05FU"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1515839833329504957>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCC05FU, Communication module LUFV2, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCC05FU>,<https://ontologies.traceparts.com/ID-LUCC05FU>,<https://ontologies.traceparts.com/ID-LUCC05FU>,<https://ontologies.traceparts.com/ID-LUCC05FU>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFV2>, "LUFV2"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1515839833329504957>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCC05FU, Communication module LUFV2, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFV2>,<https://ontologies.traceparts.com/ID-LUFV2>,<https://ontologies.traceparts.com/ID-LUFV2>,<https://ontologies.traceparts.com/ID-LUFV2>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C11>, "LUA1C11"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1515839833329504957>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCC05FU, Communication module LUFV2, Accessories LUA1C11"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C11>,<https://ontologies.traceparts.com/ID-LUA1C11>,<https://ontologies.traceparts.com/ID-LUA1C11>,<https://ontologies.traceparts.com/ID-LUA1C11>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-W2000>, "W2000"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-9190754865252232318>, "PrismaSeT_LVS04568_Linergy Lgye Profile 4000 A W2000"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-W2000>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-AC-3>, "AC-3"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8754759310309403128>, "Contactors for motor control, 6 to 16 A in category AC-3 and 6 to 12 A in category AC-4. Control circuit: a.c. Current: 16 A, Instantaneous auxiliary contacts: 1F, Volts 50/60 Hz: 42 volts"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-AC-3>,<https://ontologies.traceparts.com/ID-AC-3>,<https://ontologies.traceparts.com/ID-AC-3>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-AC-4>, "AC-4"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8754759310309403128>, "Contactors for motor control, 6 to 16 A in category AC-3 and 6 to 12 A in category AC-4. Control circuit: a.c. Current: 16 A, Instantaneous auxiliary contacts: 1F, Volts 50/60 Hz: 42 volts"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-AC-4>,<https://ontologies.traceparts.com/ID-AC-4>,<https://ontologies.traceparts.com/ID-AC-4>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-1F>, "1F"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text8754759310309403128>, "Contactors for motor control, 6 to 16 A in category AC-3 and 6 to 12 A in category AC-4. Control circuit: a.c. Current: 16 A, Instantaneous auxiliary contacts: 1F, Volts 50/60 Hz: 42 volts"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-1F>,<https://ontologies.traceparts.com/ID-1F>,<https://ontologies.traceparts.com/ID-1F>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-TM3>, "TM3"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text2919138064523418903>, "MODULE TM3-8 INPUTS"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-TM3>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-MTZ1>, "MTZ1"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4775224455271939630>, "Circuit breaker Masterpact MTZ1 10H1 - 1000 A - 4P drawout - w/o Micrologic"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-MTZ1>,<https://ontologies.traceparts.com/ID-MTZ1>,<https://ontologies.traceparts.com/ID-MTZ1>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-10H1>, "10H1"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4775224455271939630>, "Circuit breaker Masterpact MTZ1 10H1 - 1000 A - 4P drawout - w/o Micrologic"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-10H1>,<https://ontologies.traceparts.com/ID-10H1>,<https://ontologies.traceparts.com/ID-10H1>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-4P>, "4P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-4775224455271939630>, "Circuit breaker Masterpact MTZ1 10H1 - 1000 A - 4P drawout - w/o Micrologic"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-4P>,<https://ontologies.traceparts.com/ID-4P>,<https://ontologies.traceparts.com/ID-4P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-5X3200AL>, "5X3200AL"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text9137171536974816225>, "CANALIS KT 5X3200AL PLUG-IN LENGTH 2M"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-5X3200AL>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-IC60>, "IC60"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1502816953836111108>, "Acti9 IC60 RCBO 2P 10A 300mA C 10kA A"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-IC60>,<https://ontologies.traceparts.com/ID-IC60>,<https://ontologies.traceparts.com/ID-IC60>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-2P>, "2P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1502816953836111108>, "Acti9 IC60 RCBO 2P 10A 300mA C 10kA A"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-2P>,<https://ontologies.traceparts.com/ID-2P>,<https://ontologies.traceparts.com/ID-2P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-10A>, "10A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text1502816953836111108>, "Acti9 IC60 RCBO 2P 10A 300mA C 10kA A"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-10A>,<https://ontologies.traceparts.com/ID-10A>,<https://ontologies.traceparts.com/ID-10A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUB12>, "LUB12"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-8749056861115115996>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCMX6BL, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>,<https://ontologies.traceparts.com/ID-LUB12>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUCMX6BL>, "LUCMX6BL"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-8749056861115115996>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCMX6BL, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUCMX6BL>,<https://ontologies.traceparts.com/ID-LUCMX6BL>,<https://ontologies.traceparts.com/ID-LUCMX6BL>,<https://ontologies.traceparts.com/ID-LUCMX6BL>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUFN02>, "LUFN02"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-8749056861115115996>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCMX6BL, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>,<https://ontologies.traceparts.com/ID-LUFN02>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LUA1C20>, "LUA1C20"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-8749056861115115996>, "Starter-controller up to 15 kW with Power base LUB12, Control unit LUCMX6BL, Communication module LUFN02, Accessories LUA1C20"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>,<https://ontologies.traceparts.com/ID-LUA1C20>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-2P>, "2P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text9016136955627648246>, "Acti 9 iC60H/N 2P 1Aâ€¦63A Miniature Circuit Breaker - A9F55210"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-2P>,<https://ontologies.traceparts.com/ID-2P>,<https://ontologies.traceparts.com/ID-2P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-63A>, "63A"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text9016136955627648246>, "Acti 9 iC60H/N 2P 1Aâ€¦63A Miniature Circuit Breaker - A9F55210"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-63A>,<https://ontologies.traceparts.com/ID-63A>,<https://ontologies.traceparts.com/ID-63A>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-A9F55210>, "A9F55210"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text9016136955627648246>, "Acti 9 iC60H/N 2P 1Aâ€¦63A Miniature Circuit Breaker - A9F55210"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-A9F55210>,<https://ontologies.traceparts.com/ID-A9F55210>,<https://ontologies.traceparts.com/ID-A9F55210>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LC1E40>, "LC1E40"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text4198440874587476015>, "LC1E40 to 65 - 3P contactors - LC1E65B5"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LC1E40>,<https://ontologies.traceparts.com/ID-LC1E40>,<https://ontologies.traceparts.com/ID-LC1E40>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-3P>, "3P"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text4198440874587476015>, "LC1E40 to 65 - 3P contactors - LC1E65B5"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>,<https://ontologies.traceparts.com/ID-3P>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-LC1E65B5>, "LC1E65B5"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text4198440874587476015>, "LC1E40 to 65 - 3P contactors - LC1E65B5"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-LC1E65B5>,<https://ontologies.traceparts.com/ID-LC1E65B5>,<https://ontologies.traceparts.com/ID-LC1E65B5>)).
+
+tp:ID(<https://ontologies.traceparts.com/ID-KRA5000ER31>, "KRA5000ER31"^^xsd:string).
+tp:Text(<https://ontologies.traceparts.com/Text-1193866700248126457>, "STRAIGHT FEED UNIT - KRA5000ER31"^^xsd:string, tp:English, (<https://ontologies.traceparts.com/ID-KRA5000ER31>)).
+

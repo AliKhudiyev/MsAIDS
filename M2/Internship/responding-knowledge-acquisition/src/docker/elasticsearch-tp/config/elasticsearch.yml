@@ -1,0 +1,5 @@
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
+reindex.remote.whitelist: "172.16.22.21:9200"
+discovery.type: "single-node"
+xpack.security.enabled: false

@@ -1,0 +1,531 @@
+30 500
+RelationalAI
+Katana Graph
+Accenture
+Oracle
+Amazon
+Brighthive
+Cambridge Semantics
+data.world
+Datachemist
+Datastax
+Ontotext
+OriginTrail
+Semantic Web
+Stardog
+TerminusDB
+Franz
+Lymba
+Graph Aware
+Oxford Semantic
+Ontoforce
+SeMI Technologies
+MonteCarlo
+CapGemini
+Synaptica
+ExperoInc
+LARUS Business Automation
+Sponsor_0
+Sponsor_1
+Sponsor_2
+Sponsor_3
+Fleta,Sponsor_2,Ontotext,MonteCarlo,Sponsor_1,Amazon,RelationalAI,Datastax,Stardog,Semantic Web,Ontoforce,Brighthive
+Steukers,Accenture,Katana Graph,Oxford Semantic,LARUS Business Automation,Synaptica,Oracle,SeMI Technologies,Amazon,Graph Aware,Franz,Ontoforce
+Norrell,Ontotext,Brighthive,MonteCarlo,Sponsor_0,RelationalAI,Lymba,Sponsor_1
+Pavel,Semantic Web,MonteCarlo,ExperoInc,LARUS Business Automation,OriginTrail,Ontoforce,Sponsor_1,Sponsor_0
+Bilker,Datastax,Oracle,Sponsor_0,Sponsor_3,Franz,Sponsor_2,Oxford Semantic,Synaptica,Cambridge Semantics,Ontotext,Ontoforce
+Nardone,Ontoforce,Franz,Oracle
+von Hötzendorf,Ontotext,Graph Aware,Brighthive,Franz,Sponsor_3
+Damir,Amazon,MonteCarlo,ExperoInc,Lymba
+Ahmadi,Sponsor_2,Franz
+IJpe,MonteCarlo,RelationalAI,Synaptica,CapGemini,OriginTrail,ExperoInc,SeMI Technologies,TerminusDB,Oracle,Sponsor_2,Katana Graph
+Negroponte,Amazon,Sponsor_2,CapGemini,data.world,Brighthive,Ontoforce
+van Hoogdalem,SeMI Technologies,Stardog,Franz,Oxford Semantic,Sponsor_0,Katana Graph,MonteCarlo
+Bergmanis,MonteCarlo,Sponsor_1,SeMI Technologies
+Appelfeld,CapGemini,Datastax,data.world,Ontoforce,RelationalAI
+van der Pligt,SeMI Technologies,Sponsor_3,Stardog,Sponsor_1,LARUS Business Automation,Sponsor_0,ExperoInc,MonteCarlo
+Lai,Franz,SeMI Technologies,Ontoforce,Sponsor_3,Datastax,Accenture,OriginTrail,Oxford Semantic,LARUS Business Automation
+Ódinsdóttir,LARUS Business Automation,CapGemini,Datachemist,Stardog,TerminusDB,OriginTrail,Oxford Semantic,Sponsor_1,data.world,Sponsor_2,Synaptica,Datastax
+Renus,Datachemist,Brighthive,SeMI Technologies,OriginTrail
+van Eerd,Sponsor_1,TerminusDB,Sponsor_2,Ontoforce,Graph Aware,LARUS Business Automation
+Correlli,Semantic Web,Synaptica,Oxford Semantic,TerminusDB,Accenture,Lymba
+Barbas,Ontotext,Brighthive,Sponsor_1,Oxford Semantic,Semantic Web,Franz,OriginTrail,Lymba,SeMI Technologies,Oracle,Cambridge Semantics
+Marcelje,Ontoforce,CapGemini,OriginTrail,Sponsor_0,SeMI Technologies,Datachemist,Ontotext,Amazon,Graph Aware,Stardog
+Bakes,Brighthive,Accenture,Katana Graph,Datastax,Ontoforce,Oxford Semantic,TerminusDB,Sponsor_0
+Satoro,Accenture,Ontoforce,Datastax
+Pétursdóttir,Sponsor_0,Semantic Web,Sponsor_1,RelationalAI,Sponsor_2,Datachemist,Amazon,Franz
+Tarbert,Brighthive,Datachemist,Ontoforce,Sponsor_1,Oracle,Ontotext,Lymba,Sponsor_0,Oxford Semantic,RelationalAI,LARUS Business Automation
+MacKeown,Sponsor_0,Datastax
+Neijt,ExperoInc,Sponsor_0,Franz,SeMI Technologies,Semantic Web,Ontoforce,Accenture,Oracle,Brighthive
+Zargar,Sponsor_0,Sponsor_1,TerminusDB,Ontoforce,RelationalAI
+Stoppard,Franz,MonteCarlo,data.world,Lymba,ExperoInc,Ontoforce
+Harrewijn,OriginTrail,Ontotext,Amazon,Ontoforce,Oxford Semantic
+Goud,Sponsor_3,Oracle,Oxford Semantic
+Reade,Sponsor_2,SeMI Technologies,Franz,Sponsor_3
+Joshi,SeMI Technologies,Graph Aware,Sponsor_1,Semantic Web,Oracle,Ontotext,data.world,Ontoforce,Accenture,Lymba,Katana Graph,LARUS Business Automation
+Kuwie,Sponsor_2,Graph Aware
+Guillime,Brighthive,SeMI Technologies,Amazon,Franz,Sponsor_3,data.world,Semantic Web,Oxford Semantic,RelationalAI
+Bullock,Ontoforce,Oracle,Cambridge Semantics,Brighthive,RelationalAI,CapGemini
+Oomens,data.world,Graph Aware,Cambridge Semantics,OriginTrail,MonteCarlo,CapGemini
+Devin,data.world,LARUS Business Automation,ExperoInc,Accenture
+Kempiak,Synaptica,Stardog,Amazon,MonteCarlo,Datachemist,Semantic Web,Oracle,SeMI Technologies,Lymba
+Peat,Datastax,LARUS Business Automation,Ontoforce,Oracle
+Loza,Lymba,LARUS Business Automation
+van Cranenborgh,Sponsor_0,OriginTrail,Semantic Web,Sponsor_3,Sponsor_2
+Hofs,TerminusDB,Sponsor_3,Ontotext,Oxford Semantic,Graph Aware,SeMI Technologies,Brighthive,Datachemist,Datastax,CapGemini,Synaptica,Stardog
+Gul,Sponsor_3,Oracle,Oxford Semantic,Datastax,Sponsor_2,ExperoInc,Amazon,CapGemini
+Hüpscher,RelationalAI,Datachemist,Sponsor_3,Stardog,Ontotext,Sponsor_1,Synaptica,SeMI Technologies,Ontoforce,MonteCarlo,Amazon,LARUS Business Automation
+Arntz,Sponsor_2,Sponsor_3,LARUS Business Automation,Semantic Web,Datachemist,Sponsor_1,Ontoforce,Stardog,Sponsor_0,Katana Graph,ExperoInc
+Ceauşescu,data.world,Sponsor_2,Ontoforce,Franz,Accenture,Datastax,Brighthive,RelationalAI,Amazon,LARUS Business Automation,Stardog
+Bridgett,Ontoforce,Sponsor_2,Sponsor_3,Datachemist,Accenture,Brighthive,CapGemini,Datastax,data.world,Sponsor_1,Oxford Semantic
+Treurniet,TerminusDB,RelationalAI,Accenture,Datachemist,Brighthive,OriginTrail,Katana Graph,Franz,Sponsor_2,MonteCarlo,ExperoInc
+Margolina,Graph Aware,Amazon,LARUS Business Automation,Ontoforce,Datastax,Franz,Oracle,Ontotext
+Pilatova,CapGemini,Stardog,data.world,Graph Aware,Sponsor_0,RelationalAI
+Reynvaan,Datastax,Accenture
+Tall,Brighthive,TerminusDB,Stardog,Lymba
+Šijaković,Lymba,Ontotext
+Tange,Ontoforce,RelationalAI,Sponsor_2,Amazon,Oxford Semantic,Accenture,Brighthive,Datachemist
+Otsuka,Semantic Web,Sponsor_2
+Smaling,Sponsor_1,Cambridge Semantics,Accenture,SeMI Technologies
+Maso,RelationalAI,SeMI Technologies,Lymba,Graph Aware,Semantic Web,Brighthive,Ontotext,Datastax,LARUS Business Automation
+Holcomb,Katana Graph,Lymba,Synaptica,Oracle,Brighthive,Franz,OriginTrail,SeMI Technologies
+van de List,Datachemist,Amazon,MonteCarlo,TerminusDB
+Jiun,Stardog,RelationalAI,CapGemini
+Smitsman,Franz,Oxford Semantic,Sponsor_2,CapGemini,Datastax,Datachemist,Brighthive,LARUS Business Automation,OriginTrail,ExperoInc,Accenture,MonteCarlo
+Klaasse,Sponsor_2,CapGemini,Datachemist,Lymba,TerminusDB,OriginTrail
+Valentinova,Sponsor_3,Amazon,Ontoforce,Datastax
+van Weelden,Semantic Web,Sponsor_0,OriginTrail,Oracle,Accenture,Lymba,Sponsor_3,Stardog
+Pietersz,Sponsor_1,OriginTrail,Amazon,Semantic Web,Ontoforce,Accenture,Ontotext,Synaptica
+Lario,Datachemist,data.world,Cambridge Semantics,OriginTrail,Semantic Web,ExperoInc,Sponsor_1
+Akram,Cambridge Semantics,Oxford Semantic,Franz,TerminusDB,Semantic Web,Datachemist
+La Mar,RelationalAI,Franz,Oxford Semantic,Sponsor_2,Semantic Web,OriginTrail,Datachemist,Accenture,LARUS Business Automation,Oracle
+Raska,Lymba,SeMI Technologies,Sponsor_0,LARUS Business Automation,Cambridge Semantics
+Gimpel,MonteCarlo,Ontotext,ExperoInc,Sponsor_2,Oracle,Amazon,Sponsor_1,RelationalAI,Sponsor_0
+Jollema,Cambridge Semantics,Oracle,Lymba,SeMI Technologies,Oxford Semantic,Synaptica,MonteCarlo,Datachemist,Ontoforce,Franz,OriginTrail,Sponsor_3
+Holderfield,Cambridge Semantics,MonteCarlo,Amazon,Ontoforce,Brighthive,data.world,Datastax,Ontotext,SeMI Technologies
+Rot,Oracle,Sponsor_3,Datachemist,Cambridge Semantics,data.world,Synaptica,Semantic Web,TerminusDB,OriginTrail,Stardog,LARUS Business Automation,Graph Aware
+Haddy,ExperoInc,data.world,Cambridge Semantics,Sponsor_0,Franz,MonteCarlo,Brighthive,Sponsor_3
+Chatman,Sponsor_2,Semantic Web,Sponsor_0,Sponsor_3,Stardog,Sponsor_1,ExperoInc,Graph Aware,RelationalAI
+Hancock,Ontotext,Sponsor_3
+Dorsey,Stardog,Franz,Brighthive,CapGemini,ExperoInc,Semantic Web,LARUS Business Automation,Oracle,Oxford Semantic,Accenture
+Massop,Sponsor_2,LARUS Business Automation,OriginTrail,data.world,ExperoInc,Datastax,Franz,Amazon
+Pyne,Franz,Oxford Semantic,Sponsor_1,data.world,Accenture,Sponsor_2,Semantic Web,Katana Graph,RelationalAI
+Belhafiane,Accenture,Amazon,OriginTrail,Cambridge Semantics,Sponsor_2,Sponsor_0,Oracle,Synaptica
+Priddy,ExperoInc,TerminusDB,Datachemist,Sponsor_3,Accenture,Graph Aware
+Zijl,Stardog,Datastax,Datachemist,OriginTrail
+Arditi,Amazon,ExperoInc,Ontoforce,Cambridge Semantics,Lymba,Oxford Semantic,Katana Graph,Synaptica,Franz,Datachemist
+Kumaritashvili,Synaptica,Accenture,Sponsor_2,ExperoInc,LARUS Business Automation,RelationalAI,Franz,Oracle
+Nikkels,TerminusDB,Ontoforce,CapGemini,ExperoInc,Oracle,Synaptica,Graph Aware,Lymba,LARUS Business Automation,Semantic Web
+Bains,Semantic Web,MonteCarlo,Stardog,Cambridge Semantics,LARUS Business Automation,Datachemist,Brighthive,SeMI Technologies,Oxford Semantic,Sponsor_3,Ontoforce,Sponsor_1
+Delpietro,data.world,Sponsor_2,Accenture,Sponsor_1
+Danöhl,LARUS Business Automation,Graph Aware,Lymba,Sponsor_1,CapGemini,ExperoInc,Sponsor_2,Ontotext,Katana Graph,TerminusDB,MonteCarlo,Franz
+Alison,Datachemist,Sponsor_2,data.world,LARUS Business Automation,Stardog,Brighthive,Sponsor_3
+van der Schans,Synaptica,Graph Aware,Accenture,Oxford Semantic,Stardog,TerminusDB,Sponsor_3
+al-Mansouri,Oracle,Sponsor_0,Sponsor_2,SeMI Technologies,Amazon,Lymba,Accenture,CapGemini,Brighthive
+Hattuma,Ontoforce,Semantic Web,Accenture,SeMI Technologies,Synaptica,MonteCarlo
+Atteling,TerminusDB,Sponsor_1,SeMI Technologies,Oracle,Datastax,Brighthive,RelationalAI,Accenture,Ontoforce,Sponsor_0,OriginTrail
+Mahlstedt,CapGemini,RelationalAI,Datastax,Ontoforce,Graph Aware,Katana Graph,OriginTrail,LARUS Business Automation,Stardog,Cambridge Semantics,Oxford Semantic
+Vermudi,data.world,Synaptica,Cambridge Semantics,TerminusDB,CapGemini,Semantic Web,Lymba,OriginTrail,Oracle,SeMI Technologies,RelationalAI,Sponsor_0
+Gerlach,data.world,OriginTrail
+van Hoff,Accenture,Franz,Oxford Semantic,Sponsor_3,OriginTrail,RelationalAI,Brighthive,data.world,Oracle
+Pecak,Brighthive,ExperoInc,data.world,Semantic Web,OriginTrail,TerminusDB,Franz,Sponsor_3,Ontotext,CapGemini,Ontoforce
+Neuhaus,OriginTrail,Lymba,Oxford Semantic,Synaptica,Cambridge Semantics,Datastax,Sponsor_2,RelationalAI,Accenture,Sponsor_1,data.world
+Sigurðardóttir,Stardog,Ontotext,Sponsor_0,Lymba,Datastax,CapGemini,Katana Graph,Semantic Web,TerminusDB,Datachemist
+Miguel,RelationalAI,Sponsor_0,Datastax,Amazon,Lymba
+Goering,Cambridge Semantics,Oracle
+Samarra,Franz,Semantic Web,ExperoInc,LARUS Business Automation,RelationalAI
+Venstra,Amazon,MonteCarlo,data.world,Cambridge Semantics,Oracle,OriginTrail,Sponsor_1,Sponsor_3,Oxford Semantic,Sponsor_0,ExperoInc,Datastax
+Moinard,Brighthive,LARUS Business Automation
+Levesque,Oracle,Semantic Web,Sponsor_0,Accenture,SeMI Technologies,OriginTrail,Datastax,Graph Aware,Oxford Semantic,Lymba,Amazon
+Rieger,LARUS Business Automation,OriginTrail,Graph Aware,Amazon
+Briers,Stardog,LARUS Business Automation,ExperoInc,data.world
+Sandén,Datachemist,Datastax
+Klaver,Sponsor_0,Amazon
+Theron,Katana Graph,Graph Aware,Synaptica
+Almuna,Ontotext,Ontoforce,Synaptica,Amazon,OriginTrail
+Bronks,Stardog,Accenture,SeMI Technologies,Lymba,Synaptica,ExperoInc,Katana Graph,Ontotext,Sponsor_1,Cambridge Semantics
+Walther,Oxford Semantic,Synaptica,Ontotext,Semantic Web,Datachemist,Graph Aware,Cambridge Semantics,Sponsor_1,LARUS Business Automation
+Rappas,Sponsor_2,RelationalAI,ExperoInc,Ontotext,Franz
+Sijne,Graph Aware,Cambridge Semantics,Katana Graph,Ontotext,CapGemini,Datachemist,LARUS Business Automation,RelationalAI,OriginTrail,Sponsor_1,Semantic Web
+Durmaz,Graph Aware,RelationalAI,Lymba,Sponsor_3
+Alwynn,Datastax,Oracle,Ontotext,Cambridge Semantics,Synaptica,Sponsor_2,LARUS Business Automation,Accenture,Semantic Web,SeMI Technologies
+Gerbenzon,Franz,CapGemini,Amazon,Sponsor_1,Semantic Web,OriginTrail,Sponsor_0,Datastax,Katana Graph,data.world,Cambridge Semantics,Brighthive
+McCormick,TerminusDB,Semantic Web,RelationalAI,Sponsor_1,Oxford Semantic,Sponsor_3,Synaptica,Datastax,Stardog,Graph Aware,Ontotext,Datachemist
+Balduccio,Lymba,Amazon,TerminusDB,Semantic Web,Sponsor_3
+Spitz,Oxford Semantic,OriginTrail,SeMI Technologies,Ontoforce,Stardog,TerminusDB,Cambridge Semantics,Lymba,Accenture,Oracle,ExperoInc
+MacKillon,OriginTrail,Lymba,Brighthive,Sponsor_1,Sponsor_0,Cambridge Semantics,Sponsor_2,Katana Graph
+Sjoers,Oxford Semantic,Graph Aware,Lymba,LARUS Business Automation,Synaptica,Sponsor_2
+Postma,RelationalAI,Sponsor_2,Sponsor_0,Oracle,Synaptica,Datachemist,Sponsor_1,Stardog,Datastax
+Bao,Accenture,MonteCarlo,ExperoInc,Stardog,Sponsor_3,TerminusDB
+Aldea,Ontoforce,SeMI Technologies,data.world,Semantic Web,Katana Graph,Sponsor_0,MonteCarlo,Sponsor_1,Ontotext,Datastax,TerminusDB
+Museeuw,Oxford Semantic,Datachemist,Amazon,SeMI Technologies,Datastax
+Seaton,ExperoInc,Stardog,MonteCarlo,Semantic Web,Sponsor_2,Datastax,Graph Aware
+Jongeneelen,MonteCarlo,Sponsor_1,Datastax,ExperoInc,RelationalAI,Ontotext,Ontoforce
+Korsten,Franz,Sponsor_2,Oracle,TerminusDB,data.world,Synaptica,Sponsor_0,SeMI Technologies,Brighthive
+Ulanova,Ontoforce,Sponsor_3,MonteCarlo,Graph Aware,Datastax,RelationalAI,Oracle,data.world
+Mäkinen,Stardog,Katana Graph,Oxford Semantic,data.world
+Buermann,Cambridge Semantics,Sponsor_3,Stardog,Semantic Web,Ontotext,TerminusDB
+Harkema,Franz,Sponsor_2,Sponsor_1,Stardog,LARUS Business Automation,ExperoInc,OriginTrail,SeMI Technologies,Katana Graph
+Sherm,OriginTrail,Cambridge Semantics,Synaptica,Datastax,Oxford Semantic,Semantic Web,Datachemist,Oracle,Brighthive
+D'Artagnan,Katana Graph,RelationalAI,Ontoforce,ExperoInc,Brighthive,Sponsor_3,Lymba,Accenture,Franz,Stardog
+Lürsen,Semantic Web,Lymba
+Biesen,ExperoInc,Amazon,Sponsor_0,Synaptica
+Renze,LARUS Business Automation,Amazon,Sponsor_2
+Pijman,Katana Graph,RelationalAI,OriginTrail,Stardog,Sponsor_1,Franz,Lymba,SeMI Technologies
+Allers,Amazon,Semantic Web,Sponsor_1,Sponsor_3,Sponsor_0,Graph Aware,TerminusDB,OriginTrail,Katana Graph
+van Rennes,Ontoforce,RelationalAI,Katana Graph,Datachemist,Sponsor_3,data.world
+Bendavid,Sponsor_1,Ontoforce,Ontotext,Stardog,Datastax,Graph Aware,Oracle,Oxford Semantic
+van Schoot,MonteCarlo,Sponsor_0,SeMI Technologies,Synaptica
+Waddell,data.world,Amazon,Ontotext,Franz,Oracle,Lymba,Stardog
+van Kamerijk,OriginTrail,MonteCarlo,SeMI Technologies,Accenture,Brighthive
+Jeschek,Accenture,RelationalAI,Oracle,ExperoInc
+van Dunné,Sponsor_2,Semantic Web,Stardog,Katana Graph,Sponsor_1,MonteCarlo
+Idink,CapGemini,Datastax,Cambridge Semantics,Amazon,Synaptica,Oracle,Sponsor_0
+van den Bemd,LARUS Business Automation,MonteCarlo,Synaptica,Graph Aware,OriginTrail,ExperoInc
+Shatner,Katana Graph,Oracle,LARUS Business Automation,Accenture,Graph Aware,Sponsor_0,Ontoforce,Franz
+Slaterus,Semantic Web,Ontoforce,Brighthive,Sponsor_2,Lymba,Sponsor_3,Graph Aware,Ontotext,Accenture,data.world,CapGemini,Sponsor_0
+Thijsma,ExperoInc,Oxford Semantic,Synaptica,Oracle
+Thijs,Cambridge Semantics,Sponsor_2,Ontotext,Synaptica,Datastax,SeMI Technologies,ExperoInc,OriginTrail,Datachemist,Sponsor_0,data.world,Oracle
+Landis,Sponsor_0,Brighthive,Accenture,CapGemini
+Cassimatis,Oracle,Ontotext,OriginTrail,Ontoforce,Amazon,Oxford Semantic,RelationalAI,TerminusDB
+Mathiesen,RelationalAI,ExperoInc,data.world,Katana Graph,Graph Aware
+Rajic,Sponsor_0,Datastax,Accenture,LARUS Business Automation,Brighthive,ExperoInc,SeMI Technologies,Katana Graph,Ontotext
+Thoreau,Graph Aware,Franz,Datachemist,MonteCarlo,Lymba,Oxford Semantic,TerminusDB
+Papacosta,OriginTrail,MonteCarlo,Oracle
+Othman,Oxford Semantic,Sponsor_0,Oracle,MonteCarlo,Ontotext,Sponsor_2,Semantic Web,CapGemini
+Bø,MonteCarlo,Datachemist,OriginTrail,Katana Graph
+Katrycz,Datachemist,TerminusDB,OriginTrail,Graph Aware,Katana Graph,ExperoInc,Lymba
+Boyers,Franz,TerminusDB
+Borsellino,Synaptica,Accenture,Oracle,CapGemini,Cambridge Semantics
+Edmon,ExperoInc,Amazon,Franz,Sponsor_2
+Kraijnbrink,Datastax,Ontoforce,Cambridge Semantics,Synaptica,Accenture
+Gieskens,Lymba,Sponsor_2,MonteCarlo,Katana Graph,Datachemist,Semantic Web,Sponsor_0
+Wit,Sponsor_1,Datastax,TerminusDB,data.world,OriginTrail,SeMI Technologies,MonteCarlo,Lymba,Oracle
+van Efferink,Datastax,OriginTrail,Synaptica,SeMI Technologies,Sponsor_1
+Bhugaloo,Amazon,data.world,SeMI Technologies,Katana Graph,Synaptica,RelationalAI,Datachemist,Sponsor_0,Lymba,Sponsor_3,TerminusDB
+Ossevoort,Datastax,OriginTrail
+Slijepcevic,Oracle,Amazon,TerminusDB,Franz,Synaptica
+Roters,Oracle,ExperoInc,Datastax,Brighthive,Katana Graph,Accenture,Sponsor_2,data.world,Synaptica,Amazon,Sponsor_0,SeMI Technologies
+Oden,Lymba,MonteCarlo,Amazon,Datachemist
+Pedersen,Accenture,Stardog,Sponsor_3,Synaptica,SeMI Technologies,CapGemini,MonteCarlo,Sponsor_2
+MacCaughey,Graph Aware,Sponsor_3
+Burghardt,Ontotext,MonteCarlo,Datastax,LARUS Business Automation,Semantic Web,Oracle
+Lundberg,SeMI Technologies,Ontotext,MonteCarlo,LARUS Business Automation,Oracle
+Ghiza,Stardog,Ontoforce,Accenture,Graph Aware,Semantic Web
+Hauschild,TerminusDB,SeMI Technologies,Semantic Web,Ontotext,Brighthive,Franz
+Soedja,Oxford Semantic,Brighthive,OriginTrail,Graph Aware,Katana Graph,Sponsor_0,Accenture
+Aaseby,Sponsor_3,ExperoInc,Semantic Web,Synaptica,Lymba,MonteCarlo,TerminusDB,Sponsor_1,Ontoforce,Katana Graph
+Jaspers,Sponsor_3,RelationalAI,OriginTrail,SeMI Technologies,Graph Aware,TerminusDB,CapGemini,Semantic Web,Sponsor_1,Lymba,Oxford Semantic,Datachemist
+Dos Santos,OriginTrail,ExperoInc
+van Hommel,Katana Graph,Datachemist,Cambridge Semantics,Sponsor_2
+van Poppelen,Sponsor_3,Stardog,Amazon,CapGemini,Oxford Semantic,Ontotext
+Plinck,Lymba,Datastax,CapGemini,Amazon,OriginTrail,Franz,MonteCarlo,LARUS Business Automation
+Baarda,Sponsor_2,Ontoforce,Sponsor_3,Lymba,Ontotext,Accenture,TerminusDB,Amazon,Datastax,Katana Graph,Brighthive,Oracle
+Choezom,ExperoInc,Semantic Web,Sponsor_1,Franz,Amazon,Datastax,CapGemini,Katana Graph,Lymba,data.world,RelationalAI
+Aikens,Datachemist,Sponsor_1,Synaptica,Accenture,Lymba,Datastax,RelationalAI,CapGemini,Semantic Web,TerminusDB,SeMI Technologies
+Walker,Semantic Web,Oracle,RelationalAI
+Jonze,CapGemini,Sponsor_2,Brighthive
+Hockman,RelationalAI,Ontoforce,Graph Aware,Sponsor_0,Accenture,Semantic Web
+Mantel,OriginTrail,Datachemist
+Lenci,Sponsor_3,Graph Aware,Stardog
+Collen,RelationalAI,Stardog,Ontotext,Oracle,CapGemini,data.world,Datachemist,LARUS Business Automation,Sponsor_0
+Matuch,data.world,Stardog,Sponsor_1
+Hollingworth,Ontoforce,Accenture,Ontotext,ExperoInc
+Spillane,Ontoforce,Amazon,LARUS Business Automation
+Hutchins,Accenture,Sponsor_2,Sponsor_3,Amazon,Katana Graph,Synaptica,Sponsor_0,Datastax,Ontotext,Cambridge Semantics,Oxford Semantic
+van Rey,Katana Graph,TerminusDB,Datachemist,MonteCarlo,RelationalAI
+DiPasquale,Ontotext,Brighthive,Franz,RelationalAI,Datastax,Sponsor_3,MonteCarlo,Lymba,data.world,Sponsor_1,OriginTrail
+Boon,Cambridge Semantics,Stardog,RelationalAI,Katana Graph,Oracle,Sponsor_2,MonteCarlo,Franz
+LeGate,OriginTrail,Stardog,Amazon,TerminusDB,Brighthive,Accenture,Katana Graph,Sponsor_2,RelationalAI
+Jap Tjong,Amazon,Sponsor_0,Stardog,Datastax,Ontotext,Oxford Semantic,RelationalAI,Sponsor_3,MonteCarlo
+Geersing,Oxford Semantic,Graph Aware,Brighthive,Amazon,Sponsor_1,RelationalAI,Franz,Oracle
+Oom,Sponsor_1,Lymba,RelationalAI,Oxford Semantic,Brighthive,Datachemist,Graph Aware,data.world,TerminusDB
+Pria,Accenture,Katana Graph,Sponsor_3,Amazon,Ontotext
+van der Meersche,Franz,Graph Aware,Datastax,Katana Graph,Ontotext,LARUS Business Automation,Brighthive,Accenture,Stardog,Datachemist,TerminusDB
+van 't Riet,Ontotext,Sponsor_3,Stardog,MonteCarlo,data.world,Brighthive,Graph Aware,Datachemist
+Hellemink,Sponsor_1,Ontotext,Oxford Semantic,Datastax,OriginTrail
+van Salzburg,Cambridge Semantics,data.world,CapGemini,ExperoInc,Sponsor_0
+Chanel,Semantic Web,Amazon,LARUS Business Automation,Stardog
+Moda,Sponsor_0,MonteCarlo
+Sorento,SeMI Technologies,Sponsor_3,Franz,Katana Graph,Stardog,Datachemist
+Bresser,ExperoInc,Oxford Semantic,Synaptica,MonteCarlo,CapGemini,LARUS Business Automation,Sponsor_1,Katana Graph,RelationalAI,Oracle,Amazon,Sponsor_2
+Reijenga,ExperoInc,Semantic Web,LARUS Business Automation,Sponsor_0,Katana Graph,Accenture
+Wullings,Ontoforce,MonteCarlo,Amazon
+Besselsen,Sponsor_2,LARUS Business Automation,Sponsor_0,Cambridge Semantics,Brighthive,Lymba,Datachemist
+van Am,Franz,Ontoforce,Stardog,Amazon,Katana Graph
+Richel,Franz,Lymba,Oracle,Sponsor_2,Oxford Semantic,SeMI Technologies
+Shebib,Graph Aware,Sponsor_2,ExperoInc,Katana Graph,Oracle,OriginTrail,Franz,data.world,TerminusDB,Datachemist,CapGemini
+Rain,Oracle,Sponsor_3,Lymba,Cambridge Semantics,Datachemist,CapGemini,Stardog
+Dellaert,Oxford Semantic,Katana Graph,Datachemist,RelationalAI,Cambridge Semantics,Datastax,Semantic Web,Graph Aware
+Jacobson,ExperoInc,Synaptica,Sponsor_3,Sponsor_1,CapGemini
+Masy,Katana Graph,MonteCarlo,Sponsor_0,ExperoInc,CapGemini,LARUS Business Automation,Ontoforce
+Tautou,CapGemini,Graph Aware,Ontoforce,Accenture
+Leeson,Brighthive,Ontoforce,Stardog
+Rutteman,Cambridge Semantics,Sponsor_1,Datastax,LARUS Business Automation
+McGuinty,CapGemini,TerminusDB,Semantic Web,Brighthive,Accenture,MonteCarlo,Lymba,Sponsor_2,Sponsor_1
+Polin,data.world,Sponsor_3,LARUS Business Automation,Ontotext,MonteCarlo
+Blige,Katana Graph,Stardog,Amazon,Lymba
+van Piere,TerminusDB,OriginTrail,Sponsor_2,Accenture,SeMI Technologies,data.world,LARUS Business Automation,Franz,Semantic Web,CapGemini,Graph Aware
+Segall,Cambridge Semantics,SeMI Technologies,TerminusDB,Semantic Web,CapGemini,Franz,Datachemist,LARUS Business Automation
+van Beveren,OriginTrail,Sponsor_1,Sponsor_3,MonteCarlo,Amazon,Sponsor_0,Ontoforce,Lymba,SeMI Technologies,Datachemist,CapGemini,Brighthive
+Trousseau,Lymba,Cambridge Semantics
+Holdt,Ontoforce,Datachemist,Amazon,Semantic Web,Katana Graph,Datastax,Sponsor_2
+Melotti,Synaptica,Katana Graph,Accenture,ExperoInc,data.world
+Nooijen,Synaptica,SeMI Technologies,Sponsor_3,Semantic Web,Graph Aware,Cambridge Semantics,Sponsor_1,Lymba,Katana Graph,Datastax,RelationalAI,Accenture
+Onur,Sponsor_1,LARUS Business Automation,RelationalAI,Lymba,Sponsor_0,Oxford Semantic,TerminusDB,Sponsor_3,data.world,Ontotext,Ontoforce,OriginTrail
+Bahari,Synaptica,Oracle,MonteCarlo,Semantic Web,Ontoforce,Datastax,Sponsor_0,RelationalAI,Amazon,SeMI Technologies,OriginTrail
+Rucken,Semantic Web,Lymba,Ontotext,Katana Graph,Datastax
+Ashraf,Ontoforce,TerminusDB,MonteCarlo,SeMI Technologies,Sponsor_0
+Korkis,Brighthive,Accenture,Sponsor_3,Semantic Web,Synaptica,ExperoInc,OriginTrail,Franz,Oracle,SeMI Technologies
+Swainbank,Lymba,ExperoInc,Datastax,RelationalAI
+Koek,Stardog,Brighthive
+van der Borcht,LARUS Business Automation,Brighthive,Cambridge Semantics,Amazon,CapGemini,Sponsor_2,Oracle,Oxford Semantic,Sponsor_1
+Jaye,TerminusDB,Amazon,RelationalAI,ExperoInc,MonteCarlo,Graph Aware,Lymba,data.world,Brighthive,Oracle,OriginTrail,Datastax
+Sman,Sponsor_0,Katana Graph,Sponsor_3
+Tahapary,TerminusDB,data.world,RelationalAI,Sponsor_1,Sponsor_2,MonteCarlo
+Umm'Hamed,Graph Aware,Datastax,MonteCarlo,data.world,Sponsor_3,SeMI Technologies,RelationalAI
+van Grafhorst,Stardog,Franz,ExperoInc,TerminusDB,CapGemini,SeMI Technologies,Cambridge Semantics,Synaptica,LARUS Business Automation,MonteCarlo,Sponsor_1,Oracle
+Mes,Brighthive,OriginTrail,Stardog,Ontotext,LARUS Business Automation,Semantic Web
+Hunsel,Katana Graph,Sponsor_2,Semantic Web,TerminusDB
+McAlex,Datachemist,OriginTrail,RelationalAI,Cambridge Semantics,MonteCarlo,Sponsor_0,Ontotext,Graph Aware,LARUS Business Automation,ExperoInc
+Morre,LARUS Business Automation,Ontoforce,Oxford Semantic,Ontotext,CapGemini
+Okuyucu,CapGemini,Sponsor_2,ExperoInc
+Sum,Oxford Semantic,Synaptica,Graph Aware,Sponsor_2,Sponsor_3,ExperoInc,Oracle,Cambridge Semantics,Katana Graph,data.world,TerminusDB
+Hänschen,Amazon,OriginTrail
+Kypriotis,Semantic Web,Brighthive,LARUS Business Automation,Katana Graph
+Kryznaric,Sponsor_2,CapGemini,Brighthive,MonteCarlo,Oracle,Sponsor_1,Stardog,TerminusDB
+Storms,Datastax,MonteCarlo,Amazon,TerminusDB,LARUS Business Automation,Brighthive,CapGemini,Sponsor_1
+Conradt,CapGemini,Datastax,Datachemist,Sponsor_2,data.world,OriginTrail,Amazon,ExperoInc
+Salley,LARUS Business Automation,Accenture,Graph Aware,Franz,data.world,Datastax,ExperoInc,CapGemini,Sponsor_2
+Gilks,data.world,Ontoforce,Cambridge Semantics,Sponsor_1,MonteCarlo,Datastax,Semantic Web,CapGemini
+Kuizenga,Synaptica,LARUS Business Automation,Datachemist,Datastax,Cambridge Semantics,data.world
+Gauder,Semantic Web,CapGemini,ExperoInc,Katana Graph,MonteCarlo,Sponsor_0,Oxford Semantic,Datastax,Amazon,Stardog,data.world,Datachemist
+Broña,Brighthive,Amazon,Synaptica,Datachemist,Lymba,Oracle
+Whiting,MonteCarlo,Oxford Semantic,Ontotext,ExperoInc,Stardog,Sponsor_2,Graph Aware,Semantic Web
+de Leeuw,Ontotext,OriginTrail,Oracle,TerminusDB,SeMI Technologies,Brighthive,Lymba
+Ourikh,Stardog,RelationalAI,Franz,Ontoforce,Brighthive,LARUS Business Automation,data.world,Amazon,Datachemist,Synaptica
+Diep,data.world,Ontotext,Datastax,LARUS Business Automation,Sponsor_0,Sponsor_3,CapGemini,Franz,Semantic Web,Cambridge Semantics,Accenture
+Crombez,Ontoforce,Semantic Web,Oracle,Lymba,Accenture,Katana Graph,Oxford Semantic,ExperoInc,Franz,Stardog,SeMI Technologies
+Olivier,Sponsor_3,Sponsor_0,MonteCarlo,data.world,TerminusDB,ExperoInc,Sponsor_2,Franz,Graph Aware,OriginTrail,Amazon
+McLachlan,Oxford Semantic,Stardog,Sponsor_0,Amazon,Datachemist,Sponsor_2,LARUS Business Automation,Brighthive,Lymba,Franz,Oracle,MonteCarlo
+Mavrozomi,Lymba,Ontotext,Cambridge Semantics,Amazon,SeMI Technologies,Oxford Semantic,Datastax,LARUS Business Automation
+Zwaanstra,Ontotext,Franz,Oracle
+van Dalsum,Datachemist,Stardog
+Stoef,LARUS Business Automation,TerminusDB,Katana Graph,Cambridge Semantics,Sponsor_3,Sponsor_0,Graph Aware,Ontoforce,Sponsor_2,Accenture,Brighthive
+Karathanasos,ExperoInc,Sponsor_1,Cambridge Semantics
+Thiels,Katana Graph,Graph Aware,Ontotext,Semantic Web
+Chaara,RelationalAI,Sponsor_2,TerminusDB,Oracle
+Holsten,Datastax,Graph Aware,Ontotext,Semantic Web,Brighthive,Oracle,TerminusDB,MonteCarlo,OriginTrail
+van Vlaanderen,SeMI Technologies,TerminusDB,CapGemini,Sponsor_0,Accenture,Cambridge Semantics,Katana Graph,data.world,Semantic Web
+Timosjenko,data.world,Franz,Sponsor_1,Sponsor_3
+Nola,RelationalAI,Franz,Sponsor_3,Semantic Web,TerminusDB,Synaptica,Oracle
+Redishetty,Graph Aware,ExperoInc,Brighthive,LARUS Business Automation,Synaptica,CapGemini
+Mounir,Graph Aware,Lymba,Ontotext,TerminusDB,ExperoInc
+McQueen,RelationalAI,Sponsor_2
+Stewart,Sponsor_1,Oracle,MonteCarlo,Stardog
+Schvan,Oxford Semantic,Ontoforce,LARUS Business Automation,RelationalAI,OriginTrail,Datastax,ExperoInc,Brighthive
+Salemink,RelationalAI,ExperoInc,TerminusDB,Ontoforce,Synaptica,Sponsor_2
+Kone Guei,Semantic Web,Sponsor_2,OriginTrail,Stardog,Sponsor_3,Oracle,LARUS Business Automation,Ontoforce
+Ferris,Semantic Web,TerminusDB,Oracle,Sponsor_3,Ontotext,Amazon
+Bouchant,Ontoforce,ExperoInc,CapGemini,RelationalAI,TerminusDB,Synaptica,Ontotext,OriginTrail,LARUS Business Automation,Sponsor_3
+Stubbs,RelationalAI,Graph Aware,Brighthive
+Muskolaj,data.world,Synaptica,Oracle,LARUS Business Automation,Semantic Web,Oxford Semantic,Sponsor_0,MonteCarlo,Graph Aware,TerminusDB
+van der Meijden,Sponsor_0,LARUS Business Automation
+Kalizsky,RelationalAI,SeMI Technologies,Ontotext,OriginTrail,Datachemist,Cambridge Semantics,MonteCarlo
+Dervisoglü,RelationalAI,Amazon,Sponsor_3,Oxford Semantic,Stardog,Ontoforce,Semantic Web,LARUS Business Automation,MonteCarlo,Brighthive,Cambridge Semantics
+Neshat,Datastax,Cambridge Semantics,ExperoInc
+van Uijen,SeMI Technologies,TerminusDB,data.world,Accenture,LARUS Business Automation,Datachemist,Oxford Semantic
+Kelley,Sponsor_1,Stardog,Ontoforce,LARUS Business Automation
+Balder,Graph Aware,LARUS Business Automation,Brighthive
+Gantzler,Cambridge Semantics,Datachemist,Brighthive,Ontoforce,MonteCarlo,Franz,RelationalAI,Oxford Semantic,LARUS Business Automation,Sponsor_2,TerminusDB,Amazon
+Ŭdris,LARUS Business Automation,Graph Aware,Datastax,Stardog,Sponsor_2,Oracle,Oxford Semantic,Sponsor_1
+Edwards,Graph Aware,Katana Graph,Oracle,Ontoforce,Sponsor_0,Ontotext,Lymba,Franz
+Heeresmans,Stardog,Cambridge Semantics,Synaptica,Datastax,Datachemist,Lymba,Sponsor_0
+van Dendermond,TerminusDB,Ontoforce,Oxford Semantic,Cambridge Semantics,SeMI Technologies,Lymba,Franz,Sponsor_1
+Hertzberger,Datastax,Graph Aware,OriginTrail,Datachemist,Stardog,data.world,Amazon,Sponsor_2,LARUS Business Automation,Oracle
+Lockheed,Ontotext,Sponsor_2,Synaptica,Ontoforce,Accenture,ExperoInc,TerminusDB,Stardog,Sponsor_3,Datastax,Oracle,Katana Graph
+Rocio,Sponsor_1,Ontotext,OriginTrail,ExperoInc,data.world,TerminusDB,Datastax,Graph Aware
+Bernante,Katana Graph,Oracle,Amazon,Synaptica,SeMI Technologies
+Scherz,Semantic Web,Datastax,RelationalAI,LARUS Business Automation,Brighthive,Synaptica,Ontotext,Franz,Sponsor_0
+van der Kloot,RelationalAI,Brighthive,Semantic Web,Cambridge Semantics
+Hummeling,Amazon,Stardog,Graph Aware,OriginTrail,Sponsor_0,Datachemist,data.world,Franz,Sponsor_3,Katana Graph,Sponsor_1,CapGemini
+Margetts,Stardog,Brighthive,OriginTrail,Sponsor_3,Sponsor_2,MonteCarlo
+Willmuth,Franz,LARUS Business Automation,Accenture
+Cicretto,MonteCarlo,ExperoInc,Semantic Web,Franz
+Jane,Datastax,Katana Graph,Oracle,data.world
+Ryckholt,Franz,Sponsor_1,Sponsor_3,ExperoInc,data.world,Graph Aware,Oxford Semantic,Ontotext,OriginTrail,Brighthive
+Fabias,RelationalAI,Amazon,Graph Aware,OriginTrail,Sponsor_3
+Salou,CapGemini,Franz,TerminusDB
+Lathouwers,Amazon,Sponsor_3,data.world,Stardog,Sponsor_0,Sponsor_2,Katana Graph
+Kunc,Accenture,RelationalAI,Lymba
+Draisma,Sponsor_1,Cambridge Semantics,Datastax,Lymba,OriginTrail,RelationalAI,data.world,Katana Graph,LARUS Business Automation
+Izzard,TerminusDB,Oracle,data.world,SeMI Technologies,Cambridge Semantics,Ontotext,Stardog
+Boellaard,Synaptica,SeMI Technologies,Graph Aware,Ontoforce
+Natani,Franz,SeMI Technologies,Accenture,Ontoforce,Sponsor_2,Cambridge Semantics,Synaptica,Sponsor_1
+van Logchem,Franz,ExperoInc,Stardog,Amazon,data.world,Oracle,MonteCarlo,TerminusDB,SeMI Technologies,Synaptica
+Plamenov,Accenture,data.world,Graph Aware,OriginTrail,TerminusDB,Datachemist
+Raybert,LARUS Business Automation,Datastax,Lymba,Katana Graph,Cambridge Semantics,CapGemini,TerminusDB,Accenture,Datachemist,Semantic Web
+Agnel,Datachemist,Datastax,Oracle,MonteCarlo,Ontoforce,Graph Aware,Sponsor_0,Lymba,SeMI Technologies,RelationalAI
+Jurkiewicz,data.world,Cambridge Semantics,Graph Aware
+Lemmeke,Lymba,Brighthive,Sponsor_0,RelationalAI,Katana Graph,Cambridge Semantics,ExperoInc,Datachemist,SeMI Technologies,Sponsor_1
+Bindraban,Graph Aware,ExperoInc
+Hammoudi,LARUS Business Automation,Semantic Web,Sponsor_1,Amazon,ExperoInc,Lymba,Oracle
+van Leuven,Synaptica,Datastax,Ontoforce,Datachemist,OriginTrail
+Barolli,Datachemist,Stardog,data.world,Brighthive,Synaptica,Ontoforce,LARUS Business Automation,Sponsor_2,Cambridge Semantics,Amazon,Sponsor_1,TerminusDB
+Fujida,Datastax,Oracle,Ontotext
+Ricardo,Sponsor_1,CapGemini,ExperoInc,OriginTrail,Amazon,Accenture,Semantic Web,Graph Aware,RelationalAI,Lymba,Datachemist
+van Mens,Stardog,Oracle,SeMI Technologies
+Pera,TerminusDB,Oracle,MonteCarlo,Graph Aware,Sponsor_1,Oxford Semantic,ExperoInc,SeMI Technologies,RelationalAI
+Boshuis,Datastax,RelationalAI,Sponsor_3,Cambridge Semantics,MonteCarlo,Lymba
+van Heel,ExperoInc,Ontoforce,Synaptica,Sponsor_0,Oxford Semantic,Sponsor_2,Franz,Sponsor_3
+Mulray,LARUS Business Automation,Franz,TerminusDB,CapGemini,Accenture,Oracle,MonteCarlo
+Straatman,Ontotext,Ontoforce
+Rengers,Ontoforce,Oracle
+van Ogten,Oracle,Brighthive,CapGemini,OriginTrail,RelationalAI,Ontoforce,Lymba,Stardog,Franz,SeMI Technologies
+McGee,CapGemini,TerminusDB,data.world,Oxford Semantic,RelationalAI,Accenture,Sponsor_0,MonteCarlo,Lymba,OriginTrail,Cambridge Semantics
+Huurmans,Cambridge Semantics,Stardog
+Stoffelsen,TerminusDB,RelationalAI,Synaptica,ExperoInc,OriginTrail,MonteCarlo
+Brashier,Franz,Accenture,OriginTrail,Datastax,Amazon,CapGemini,Ontoforce,Semantic Web
+Burrows,Oxford Semantic,Katana Graph,SeMI Technologies,Graph Aware,Sponsor_3,Accenture,Franz,OriginTrail
+Keyser,Lymba,Synaptica
+Koklin,TerminusDB,Synaptica,Stardog,CapGemini,Accenture,Semantic Web,Cambridge Semantics,OriginTrail,Datachemist,Franz,Graph Aware
+Kalksma,Lymba,OriginTrail,Datastax,Sponsor_3
+Aants,Sponsor_1,Franz
+Hatunen,Amazon,Sponsor_2,Sponsor_0
+Wensing,Ontotext,Cambridge Semantics,Lymba,Oracle,Stardog,MonteCarlo,Oxford Semantic,Franz,Datastax,Sponsor_0
+Carline,Lymba,Datastax,OriginTrail,Semantic Web,Sponsor_0,Cambridge Semantics,Sponsor_3,Graph Aware
+Arel,Sponsor_3,Oxford Semantic
+Ergis,SeMI Technologies,Ontotext,Amazon,Franz,Oxford Semantic,MonteCarlo,TerminusDB,Sponsor_3,Datastax,LARUS Business Automation,Synaptica
+Juszt,Graph Aware,Sponsor_3,Brighthive,Sponsor_2,data.world,SeMI Technologies,RelationalAI,Franz,TerminusDB
+Santegoed,Datachemist,Ontotext,Stardog,Accenture
+Wiels,Sponsor_2,Amazon,Accenture,MonteCarlo,Ontoforce,Katana Graph,Sponsor_1,ExperoInc,TerminusDB,Oracle
+Mikajlovitsj,Katana Graph,Cambridge Semantics,TerminusDB,MonteCarlo,Semantic Web
+van Doorslaar,data.world,Accenture,SeMI Technologies,Sponsor_3,Lymba,Synaptica,Sponsor_1,TerminusDB,Ontotext,Graph Aware,OriginTrail
+Canet,Ontoforce,TerminusDB,Oracle,Semantic Web,Lymba,Datachemist,Ontotext,Cambridge Semantics,data.world,Stardog
+Papanikolaou,Sponsor_2,Synaptica,Cambridge Semantics,Ontoforce,Franz
+van Simmeren,Ontotext,MonteCarlo,TerminusDB,ExperoInc,Sponsor_3,RelationalAI,Datastax,CapGemini,Oracle,data.world,Semantic Web,Sponsor_1
+Simmy,Stardog,Oxford Semantic,Datachemist,Sponsor_1,Brighthive
+Piranesi,Oxford Semantic,Katana Graph,Oracle,CapGemini,Franz,RelationalAI,Sponsor_0,Cambridge Semantics,MonteCarlo
+Luden,TerminusDB,Graph Aware,Accenture,Datachemist,SeMI Technologies,data.world,Sponsor_2,Katana Graph,Ontoforce,Lymba,Stardog
+Kemperman,Cambridge Semantics,SeMI Technologies
+Hickock,Stardog,RelationalAI,Sponsor_1,Ontoforce,Semantic Web,Franz,Sponsor_2,Amazon,Oxford Semantic
+Terleth,SeMI Technologies,MonteCarlo
+Alesha,Synaptica,Lymba,LARUS Business Automation,Amazon
+Rijpkema,Ontoforce,RelationalAI,Graph Aware,CapGemini,Datachemist,Oracle,Datastax,Sponsor_1
+Boele,Sponsor_0,MonteCarlo
+Aaldriks,MonteCarlo,data.world,Sponsor_3,Sponsor_2,LARUS Business Automation,Semantic Web,Amazon,SeMI Technologies,Sponsor_1,Brighthive,CapGemini,Stardog
+Faracha,Brighthive,Lymba,Graph Aware,Datastax,Datachemist,Oxford Semantic,Ontoforce
+Brando,RelationalAI,Cambridge Semantics,ExperoInc
+Gajewski,RelationalAI,Sponsor_0,Brighthive,Datachemist
+Fernandez,Sponsor_0,Amazon,Stardog,Datastax,RelationalAI,Sponsor_1,Katana Graph,ExperoInc,Graph Aware,Accenture,Lymba
+Martijnse,Amazon,Sponsor_3,Accenture,TerminusDB,OriginTrail,Cambridge Semantics,Brighthive,MonteCarlo,Sponsor_2,Datastax,Oracle,Ontotext
+Tankink,Stardog,ExperoInc,CapGemini,Accenture,Graph Aware,Datastax
+Ternan,LARUS Business Automation,TerminusDB,CapGemini,Cambridge Semantics,SeMI Technologies,Sponsor_1,Oxford Semantic,Datastax,OriginTrail,Stardog,Graph Aware
+van Eijden,Ontoforce,Synaptica
+Emery,Lymba,Brighthive,Datachemist,RelationalAI,Sponsor_0
+Vollaers,Oxford Semantic,Sponsor_1,Sponsor_0,ExperoInc,RelationalAI,Brighthive,Amazon,Ontoforce
+Jon,data.world,Sponsor_1,Amazon,Datastax,Ontoforce,MonteCarlo,Stardog
+Hanona,TerminusDB,CapGemini,Oracle,Sponsor_3,Datachemist,Graph Aware,Semantic Web
+Marchand,Stardog,CapGemini,Sponsor_2
+Roggen,LARUS Business Automation,TerminusDB,Semantic Web,SeMI Technologies,Ontotext,OriginTrail
+Magalhaes,data.world,RelationalAI,CapGemini,Datachemist,LARUS Business Automation,Katana Graph,SeMI Technologies,OriginTrail,Ontoforce,Cambridge Semantics,Brighthive
+van Reenen,Oracle,Sponsor_0,Datachemist,ExperoInc,Datastax,RelationalAI,Franz
+Cattrall,Sponsor_0,Datastax,Accenture,Katana Graph,Graph Aware,SeMI Technologies,LARUS Business Automation,TerminusDB,Ontotext,data.world
+Altig,Brighthive,Sponsor_3,OriginTrail,Ontotext,Ontoforce,Datachemist
+Serkel,SeMI Technologies,Brighthive,Franz,Stardog,Sponsor_0,Sponsor_1,ExperoInc,LARUS Business Automation,Katana Graph,Oxford Semantic,MonteCarlo
+Bial,Sponsor_0,CapGemini,Accenture,Brighthive,Lymba,Sponsor_2,OriginTrail,Ontoforce,Datastax
+Dreesman,Synaptica,OriginTrail,Cambridge Semantics,Franz,Datastax,Sponsor_2,Sponsor_3,Oracle,Stardog
+Slager,Ontoforce,Brighthive,Cambridge Semantics
+Di'Anno,Sponsor_3,Katana Graph,RelationalAI,Sponsor_0,Lymba,Oracle,Synaptica
+Bould,Synaptica,Oracle,Sponsor_2,Cambridge Semantics
+Kalia,Lymba,SeMI Technologies,CapGemini,ExperoInc,Amazon,Accenture,Graph Aware,Sponsor_3,Ontoforce,MonteCarlo
+Prospero,Lymba,Sponsor_0,Franz,RelationalAI,SeMI Technologies,Oracle,MonteCarlo,TerminusDB
+Jagadeesan,Semantic Web,Accenture,RelationalAI,Oxford Semantic
+Kappers,Lymba,Sponsor_1,MonteCarlo,Sponsor_2,Franz,ExperoInc
+Skavinsky,Stardog,Accenture,ExperoInc,Brighthive,Synaptica,Sponsor_1,Graph Aware,LARUS Business Automation
+Viyer,Stardog,Sponsor_2
+Ringertz,Oracle,Datachemist,CapGemini,Graph Aware,Accenture,Lymba,ExperoInc,RelationalAI,Cambridge Semantics
+Demant,LARUS Business Automation,Katana Graph,SeMI Technologies,Lymba,Brighthive
+Bellemare,Stardog,SeMI Technologies,TerminusDB,Datachemist,Sponsor_2,ExperoInc,data.world,CapGemini,Lymba,Katana Graph
+Sips,Oxford Semantic,Oracle
+Burkett,ExperoInc,Oxford Semantic,data.world,CapGemini,Synaptica,Ontoforce,Ontotext
+Gijsberts,OriginTrail,ExperoInc,Oracle,CapGemini,Stardog,Cambridge Semantics,Amazon,Datachemist,Graph Aware,Franz,Synaptica
+Borren,RelationalAI,CapGemini,Stardog,Datastax,Semantic Web,Amazon,Ontoforce,data.world,Lymba,TerminusDB,SeMI Technologies
+Willaard,Datachemist,Katana Graph,SeMI Technologies,Cambridge Semantics,Brighthive,Datastax,Stardog,Franz,LARUS Business Automation,CapGemini,Sponsor_3,Sponsor_2
+Ahmadpour,Semantic Web,OriginTrail,TerminusDB,Datastax,CapGemini,Franz,Sponsor_0,Datachemist,Oracle,data.world,Katana Graph
+McGurran,Brighthive,Datastax,data.world
+Burgius,Stardog,Ontoforce,Graph Aware,Semantic Web,Accenture,OriginTrail,Cambridge Semantics,Synaptica
+Volt,Sponsor_2,Oracle,Sponsor_3,Graph Aware,Semantic Web,Ontoforce,Franz,Lymba,OriginTrail,Synaptica,Katana Graph
+Kafka,Graph Aware,TerminusDB,ExperoInc,Amazon,Cambridge Semantics,Datachemist,Datastax
+Katgert,Sponsor_3,Amazon,Accenture,CapGemini
+Metodiev,Cambridge Semantics,Sponsor_3,Oracle
+DiFabrizio,Synaptica,Amazon
+Crosbie,Stardog,Accenture,Lymba,TerminusDB,Datachemist,Datastax,Graph Aware,Sponsor_3,Semantic Web,Oxford Semantic
+Tchaikov,Sponsor_1,Accenture,Synaptica,data.world,SeMI Technologies,Katana Graph
+van Slooten,ExperoInc,Sponsor_2,Katana Graph,LARUS Business Automation,Sponsor_0,Sponsor_1,CapGemini,RelationalAI,Sponsor_3
+Pollie,Stardog,Oracle,LARUS Business Automation,SeMI Technologies,Amazon,RelationalAI,Lymba,Sponsor_3,Ontotext,Sponsor_1,CapGemini,Oxford Semantic
+Vanni,Semantic Web,LARUS Business Automation,Oracle,Amazon,Accenture,CapGemini
+Rasul,OriginTrail,Katana Graph,LARUS Business Automation,Sponsor_2,Oxford Semantic
+Samawi,Lymba,Datastax
+Bar-Pereg,Sponsor_2,Cambridge Semantics,Stardog,Franz,CapGemini,Oxford Semantic,Brighthive,Ontotext,data.world,TerminusDB,Accenture
+Zeynep,Stardog,Oracle,Sponsor_1,Franz,Amazon,Ontotext,Graph Aware,Datachemist,ExperoInc
+van Eijnatten,Sponsor_1,RelationalAI,Graph Aware,Stardog
+van Vaijen,Sponsor_0,Accenture,Sponsor_3,Sponsor_1,Cambridge Semantics,LARUS Business Automation,Oxford Semantic,Ontotext,Amazon,Semantic Web,Katana Graph,ExperoInc
+Norbert,Stardog,Franz,data.world,MonteCarlo,Datastax
+Abby,data.world,Sponsor_3,Sponsor_1,LARUS Business Automation,Lymba,Oracle,Datastax,Synaptica,Graph Aware
+Cummins,Stardog,Semantic Web,TerminusDB
+van Bolhuis,Semantic Web,data.world,Datachemist,Sponsor_1,OriginTrail
+van de Brand,Oxford Semantic,Franz,Katana Graph,Lymba,Amazon,Synaptica,ExperoInc,CapGemini,Datachemist,Sponsor_0,TerminusDB
+Besselink,Ontotext,RelationalAI,Semantic Web,data.world,Sponsor_0,LARUS Business Automation,TerminusDB,Brighthive,Datastax
+Philipps,Semantic Web,Synaptica,Graph Aware,Datachemist,Amazon,Sponsor_2,LARUS Business Automation,OriginTrail,CapGemini,Ontotext,Sponsor_3,Oxford Semantic
+Wynia,Sponsor_1,Oracle,Synaptica,Franz,Cambridge Semantics,Stardog,Sponsor_3,Graph Aware,Semantic Web,Ontoforce
+van der Want,Graph Aware,Amazon,Sponsor_3
+Lanz,Sponsor_2,CapGemini
+Gruen,Cambridge Semantics,Oracle,LARUS Business Automation,data.world,Semantic Web
+Ghormley,Accenture,ExperoInc,RelationalAI,Sponsor_3,Sponsor_0,MonteCarlo,Amazon,Oracle,OriginTrail,Lymba
+Geurtz,Franz,Stardog,Sponsor_2,Lymba,ExperoInc,Sponsor_3,Katana Graph,CapGemini,Oxford Semantic,data.world,Semantic Web
+Gaddie,Graph Aware,RelationalAI,SeMI Technologies,TerminusDB,Oracle,Sponsor_3,Synaptica,Datastax,Semantic Web,Amazon,Franz
+Sallmen,LARUS Business Automation,Ontoforce,SeMI Technologies,Stardog,Cambridge Semantics,Graph Aware
+Braem,Sponsor_0,Oracle,RelationalAI,Franz,Semantic Web,Graph Aware,ExperoInc,Brighthive,data.world,Datastax,Ontotext
+Geraffo,Sponsor_0,MonteCarlo,CapGemini,ExperoInc,LARUS Business Automation,SeMI Technologies
+Tsiris,Cambridge Semantics,Datastax,RelationalAI,Katana Graph,Stardog,Oracle
+Grooters,Lymba,Datastax,MonteCarlo,Sponsor_2,Synaptica,Accenture,Amazon,Ontoforce,Semantic Web,Franz,Datachemist
+Djurkovic,Stardog,Synaptica,RelationalAI,ExperoInc,Sponsor_3,Katana Graph
+Ertas,Sponsor_1,Ontotext,OriginTrail,Ontoforce
+Feld,Datachemist,Amazon,Oxford Semantic,Graph Aware,Lymba,Cambridge Semantics,Sponsor_3
+Schamus,Stardog,OriginTrail,Amazon,Semantic Web
+Accardo,Lymba,OriginTrail,Amazon,Sponsor_1,SeMI Technologies,Sponsor_2,Franz,data.world,TerminusDB,Sponsor_0,Synaptica
+Colombeen,data.world,ExperoInc,Cambridge Semantics
+Map,Datachemist,Stardog,Katana Graph,Brighthive,RelationalAI,Synaptica,ExperoInc,MonteCarlo,Semantic Web,Accenture,CapGemini
+Ellzey,Cambridge Semantics,LARUS Business Automation,Semantic Web,Ontotext,Katana Graph,MonteCarlo,ExperoInc,Sponsor_0,Franz
+Akhlal,TerminusDB,ExperoInc,RelationalAI,Amazon,Datachemist,Semantic Web
+Evenblij,ExperoInc,Franz,Graph Aware,CapGemini,Oxford Semantic,Amazon,Semantic Web,Datachemist,Sponsor_0
+MacNorton,RelationalAI,Ontotext
+Moliére,Graph Aware,Cambridge Semantics
+Salah,Sponsor_3,Sponsor_0,Lymba,MonteCarlo,Synaptica,RelationalAI
+Nealy,Franz,Semantic Web,Lymba,Cambridge Semantics,Datastax,Graph Aware
+Sierens,Sponsor_1,Datachemist,OriginTrail,TerminusDB
+Jansa,Amazon,Ontoforce,Oracle,Sponsor_2,data.world,TerminusDB,SeMI Technologies,Katana Graph,Brighthive,MonteCarlo
+Sandow,Ontotext,Accenture,Cambridge Semantics,Amazon,LARUS Business Automation,Sponsor_0,Semantic Web,Stardog,MonteCarlo,Synaptica
+Darin,Cambridge Semantics,Synaptica,Sponsor_1,data.world,Oxford Semantic,LARUS Business Automation,ExperoInc,Lymba,Stardog,Amazon,Accenture,Datastax
+Anastasiades,Synaptica,OriginTrail,Datachemist,Sponsor_1,LARUS Business Automation,SeMI Technologies,Brighthive
+MacCachern,Cambridge Semantics,RelationalAI,Amazon,Brighthive,LARUS Business Automation,OriginTrail,Datastax,MonteCarlo,Sponsor_0,Ontoforce,Accenture
+Eshton,Stardog,Ontoforce,TerminusDB,Graph Aware,Ontotext,Oracle
+Larink,CapGemini,Accenture,Ontoforce,Datastax,Ontotext,Oracle,MonteCarlo,Sponsor_0,Brighthive
+Lean,RelationalAI,Datachemist,TerminusDB,ExperoInc,Graph Aware,MonteCarlo,Synaptica,Sponsor_0,Oxford Semantic,Ontotext,Sponsor_1
+Laers,RelationalAI,Amazon,TerminusDB,Sponsor_2,Sponsor_3,Oracle,Cambridge Semantics,Franz,Ontoforce,data.world
+Durant,Oracle,Ontoforce,Brighthive,Graph Aware,Sponsor_3,Cambridge Semantics
+Sara,Datachemist,Sponsor_2
+Ashli,ExperoInc,Semantic Web,TerminusDB,Sponsor_3,Ontoforce,Amazon,MonteCarlo,Datastax
+Majieti,SeMI Technologies,Accenture,Cambridge Semantics,Datastax,RelationalAI
+Chôshû,Stardog,data.world,Lymba
+Wesselinck,Synaptica,Sponsor_1,Oracle,ExperoInc,Stardog,Cambridge Semantics,Ontoforce,Amazon
+Davi,Sponsor_0,Accenture,Graph Aware,RelationalAI,SeMI Technologies,TerminusDB,Ontotext
+Hektiyar,Datastax,Amazon,Sponsor_3,LARUS Business Automation,TerminusDB
+Persaud,TerminusDB,Oracle,Lymba,Accenture,SeMI Technologies,Franz,data.world,Stardog,Brighthive,CapGemini,ExperoInc
+Loonen,Sponsor_1,Lymba,Datachemist,Amazon,Oracle,Sponsor_2,Semantic Web,LARUS Business Automation,Sponsor_3,Oxford Semantic,Datastax
+Bertoni,Amazon,Semantic Web,Sponsor_2
+Munnik,Accenture,Franz
+Helder,Graph Aware,MonteCarlo
+Helmer,TerminusDB,OriginTrail,Sponsor_0
+Al-Edani,Cambridge Semantics,Synaptica,Oxford Semantic,Amazon,Lymba,Datachemist,Sponsor_0,LARUS Business Automation,Sponsor_1,Sponsor_2,Stardog

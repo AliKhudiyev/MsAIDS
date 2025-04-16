@@ -1,0 +1,2235 @@
+{
+  "settings": {
+    "index": {
+      "refresh_interval": "5m",
+      "number_of_shards": "12",
+      "requests": {
+        "cache": {
+          "enable": "true"
+        }
+      },
+      "analysis": {
+        "filter": {
+          "french_asciifolding": {
+            "type": "asciifolding",
+            "preserve_original": "false"
+          },
+          "french_stop": {
+            "type": "stop",
+            "stopwords": [
+              "_french_"
+            ]
+          },
+          "code_tokenfilter": {
+            "type": "edge_ngram",
+            "min_gram": "3",
+            "max_gram": "10"
+          },
+          "french_stemmer": {
+            "type": "stemmer",
+            "language": "light_french"
+          },
+          "french_elision": {
+            "type": "elision",
+            "articles": [
+              "l",
+              "m",
+              "t",
+              "qu",
+              "n",
+              "s",
+              "j",
+              "d",
+              "c",
+              "jusqu",
+              "quoiqu",
+              "lorsqu",
+              "puisqu"
+            ]
+          },
+          "french_keywords": {
+            "ignore_case": "true",
+            "keywords": [
+              "vis"
+            ],
+            "type": "keyword_marker"
+          }
+        },
+        "analyzer": {
+          "code_exact_analyzer": {
+            "filter": [
+              "lowercase"
+            ],
+            "type": "custom",
+            "tokenizer": "keyword"
+          },
+          "code_partials_analyzer": {
+            "filter": [
+              "lowercase",
+              "code_tokenfilter"
+            ],
+            "char_filter": [
+              "code_charfilter"
+            ],
+            "type": "custom",
+            "tokenizer": "keyword"
+          },
+          "code_simplified_analyzer": {
+            "filter": [
+              "lowercase"
+            ],
+            "char_filter": [
+              "code_charfilter"
+            ],
+            "type": "custom",
+            "tokenizer": "keyword"
+          },
+          "french": {
+            "filter": [
+              "lowercase",
+              "french_elision",
+              "french_stop",
+              "french_asciifolding",
+              "french_keywords",
+              "french_stemmer"
+            ],
+            "type": "custom",
+            "tokenizer": "standard"
+          },
+          "path_analyzer": {
+            "type": "custom",
+            "tokenizer": "path_hierarchy"
+          }
+        },
+        "char_filter": {
+          "code_charfilter": {
+            "pattern": "[^A-Za-z0-9]",
+            "type": "pattern_replace",
+            "replacement": ""
+          }
+        }
+      },
+      "number_of_replicas": "0"
+    }
+  },
+  "mappings": {
+    "dynamic": "false",
+    "properties": {
+      "Catalogs": {
+        "properties": {
+          "CategoryAttributes": {
+            "type": "nested",
+            "properties": {
+              "ID": {
+                "type": "keyword"
+              },
+              "Level": {
+                "type": "short"
+              },
+              "N": {
+                "type": "scaled_float",
+                "scaling_factor": 100.0
+              },
+              "Name": {
+                "properties": {
+                  "bg": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "br": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "cs": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "da": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "de": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "def": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "el": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "en": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "es": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fi": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "hu": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "it": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ja": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ko": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "nl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "no": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pt": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ru": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sk": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sv": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "tr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "us": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "zh": {
+                    "type": "keyword",
+                    "index": false
+                  }
+                }
+              },
+              "Order": {
+                "type": "short",
+                "index": false
+              },
+              "Path": {
+                "type": "text",
+                "analyzer": "path_analyzer",
+                "search_analyzer": "keyword"
+              },
+              "T": {
+                "properties": {
+                  "bg": {
+                    "type": "keyword"
+                  },
+                  "br": {
+                    "type": "keyword"
+                  },
+                  "cs": {
+                    "type": "keyword"
+                  },
+                  "da": {
+                    "type": "keyword"
+                  },
+                  "de": {
+                    "type": "keyword"
+                  },
+                  "el": {
+                    "type": "keyword"
+                  },
+                  "en": {
+                    "type": "keyword"
+                  },
+                  "es": {
+                    "type": "keyword"
+                  },
+                  "fi": {
+                    "type": "keyword"
+                  },
+                  "fr": {
+                    "type": "keyword"
+                  },
+                  "hu": {
+                    "type": "keyword"
+                  },
+                  "it": {
+                    "type": "keyword"
+                  },
+                  "ja": {
+                    "type": "keyword"
+                  },
+                  "ko": {
+                    "type": "keyword"
+                  },
+                  "nl": {
+                    "type": "keyword"
+                  },
+                  "no": {
+                    "type": "keyword"
+                  },
+                  "pl": {
+                    "type": "keyword"
+                  },
+                  "pt": {
+                    "type": "keyword"
+                  },
+                  "ru": {
+                    "type": "keyword"
+                  },
+                  "sk": {
+                    "type": "keyword"
+                  },
+                  "sl": {
+                    "type": "keyword"
+                  },
+                  "sr": {
+                    "type": "keyword"
+                  },
+                  "sv": {
+                    "type": "keyword"
+                  },
+                  "tr": {
+                    "type": "keyword"
+                  },
+                  "us": {
+                    "type": "keyword"
+                  },
+                  "zh": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "CategoryNames": {
+            "properties": {
+              "bg": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "bulgarian"
+              },
+              "br": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "brazilian"
+              },
+              "cs": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "czech"
+              },
+              "da": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "danish"
+              },
+              "de": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "german"
+              },
+              "el": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "greek"
+              },
+              "en": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "es": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "spanish"
+              },
+              "fi": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "fr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "french"
+              },
+              "hu": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "hungarian"
+              },
+              "it": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "italian"
+              },
+              "ja": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "kuromoji"
+              },
+              "ko": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "cjk"
+              },
+              "nl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "dutch"
+              },
+              "no": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "norwegian"
+              },
+              "pl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "pt": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "portuguese"
+              },
+              "ru": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "russian"
+              },
+              "sk": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sv": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "swedish"
+              },
+              "tr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "turkish"
+              },
+              "us": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "zh": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "smartcn"
+              }
+            }
+          },
+          "CategoryPaths": {
+            "type": "text",
+            "fields": {
+              "raw": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "path_analyzer",
+            "search_analyzer": "keyword"
+          },
+          "IDs": {
+            "type": "keyword"
+          },
+          "IDsAndVersions": {
+            "type": "keyword",
+            "doc_values": false
+          },
+          "IDsWithCustomOrdering": {
+            "type": "keyword",
+            "index": false
+          },
+          "Types": {
+            "type": "keyword",
+            "doc_values": false
+          }
+        }
+      },
+      "DataFirstPublishingDate": {
+        "type": "date",
+        "index": false
+      },
+      "DataLastPublishingDate": {
+        "type": "date",
+        "index": false
+      },
+      "DataProvider": {
+        "properties": {
+          "ID": {
+            "type": "keyword"
+          },
+          "Name": {
+            "properties": {
+              "bg": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "bulgarian"
+              },
+              "br": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "brazilian"
+              },
+              "cs": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "czech"
+              },
+              "da": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "danish"
+              },
+              "de": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "german"
+              },
+              "el": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "greek"
+              },
+              "en": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "es": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "spanish"
+              },
+              "fi": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "fr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "french"
+              },
+              "hu": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "hungarian"
+              },
+              "it": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "italian"
+              },
+              "ja": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "kuromoji"
+              },
+              "ko": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "cjk"
+              },
+              "nl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "dutch"
+              },
+              "no": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "norwegian"
+              },
+              "pl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "pt": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "portuguese"
+              },
+              "ru": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "russian"
+              },
+              "sk": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sv": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "swedish"
+              },
+              "tr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "turkish"
+              },
+              "us": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "zh": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "smartcn"
+              }
+            }
+          },
+          "NameAliases": {
+            "type": "text",
+            "analyzer": "standard"
+          },
+          "Type": {
+            "type": "keyword"
+          },
+          "Version": {
+            "type": "keyword",
+            "doc_values": false
+          }
+        }
+      },
+      "Family": {
+        "properties": {
+          "Description": {
+            "properties": {
+              "bg": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "bulgarian"
+              },
+              "br": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "brazilian"
+              },
+              "cs": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "czech"
+              },
+              "da": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "danish"
+              },
+              "de": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "german"
+              },
+              "el": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "greek"
+              },
+              "en": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "es": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "spanish"
+              },
+              "fi": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "fr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "french"
+              },
+              "hu": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "hungarian"
+              },
+              "it": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "italian"
+              },
+              "ja": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "kuromoji"
+              },
+              "ko": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "cjk"
+              },
+              "nl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "dutch"
+              },
+              "no": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "norwegian"
+              },
+              "pl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "pt": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "portuguese"
+              },
+              "ru": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "russian"
+              },
+              "sk": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sv": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "swedish"
+              },
+              "tr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "turkish"
+              },
+              "us": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "zh": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "smartcn"
+              }
+            }
+          },
+          "ID": {
+            "type": "keyword"
+          },
+          "Languages": {
+            "properties": {
+              "Default": {
+                "type": "keyword",
+                "index": false
+              },
+              "List": {
+                "type": "keyword",
+                "index": false
+              }
+            }
+          },
+          "Name": {
+            "properties": {
+              "bg": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "bulgarian"
+              },
+              "br": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "brazilian"
+              },
+              "cs": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "czech"
+              },
+              "da": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "danish"
+              },
+              "de": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "german"
+              },
+              "el": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "greek"
+              },
+              "en": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "es": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "spanish"
+              },
+              "fi": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "fr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "french"
+              },
+              "hu": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "hungarian"
+              },
+              "it": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "italian"
+              },
+              "ja": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "kuromoji"
+              },
+              "ko": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "cjk"
+              },
+              "nl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "dutch"
+              },
+              "no": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "norwegian"
+              },
+              "pl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "pt": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "portuguese"
+              },
+              "ru": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "russian"
+              },
+              "sk": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sv": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "swedish"
+              },
+              "tr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "turkish"
+              },
+              "us": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "zh": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "smartcn"
+              }
+            }
+          },
+          "StandardNumbers": {
+            "type": "text",
+            "fields": {
+              "partials": {
+                "type": "text",
+                "analyzer": "code_partials_analyzer",
+                "search_analyzer": "code_simplified_analyzer"
+              },
+              "raw": {
+                "type": "keyword"
+              },
+              "simplified": {
+                "type": "text",
+                "analyzer": "code_simplified_analyzer"
+              }
+            },
+            "analyzer": "code_exact_analyzer"
+          },
+          "Version": {
+            "type": "keyword",
+            "doc_values": false
+          }
+        }
+      },
+      "PartNumber": {
+        "properties": {
+          "Attributes": {
+            "type": "nested",
+            "properties": {
+              "ID": {
+                "type": "keyword"
+              },
+              "N": {
+                "type": "scaled_float",
+                "scaling_factor": 100.0
+              },
+              "Name": {
+                "properties": {
+                  "bg": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "br": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "cs": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "da": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "de": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "def": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "el": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "en": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "es": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fi": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "hu": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "it": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ja": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ko": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "nl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "no": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pt": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ru": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sk": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sv": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "tr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "us": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "zh": {
+                    "type": "keyword",
+                    "index": false
+                  }
+                }
+              },
+              "Order": {
+                "type": "short",
+                "index": false
+              },
+              "T": {
+                "properties": {
+                  "bg": {
+                    "type": "keyword"
+                  },
+                  "br": {
+                    "type": "keyword"
+                  },
+                  "cs": {
+                    "type": "keyword"
+                  },
+                  "da": {
+                    "type": "keyword"
+                  },
+                  "de": {
+                    "type": "keyword"
+                  },
+                  "el": {
+                    "type": "keyword"
+                  },
+                  "en": {
+                    "type": "keyword"
+                  },
+                  "es": {
+                    "type": "keyword"
+                  },
+                  "fi": {
+                    "type": "keyword"
+                  },
+                  "fr": {
+                    "type": "keyword"
+                  },
+                  "hu": {
+                    "type": "keyword"
+                  },
+                  "it": {
+                    "type": "keyword"
+                  },
+                  "ja": {
+                    "type": "keyword"
+                  },
+                  "ko": {
+                    "type": "keyword"
+                  },
+                  "nl": {
+                    "type": "keyword"
+                  },
+                  "no": {
+                    "type": "keyword"
+                  },
+                  "pl": {
+                    "type": "keyword"
+                  },
+                  "pt": {
+                    "type": "keyword"
+                  },
+                  "ru": {
+                    "type": "keyword"
+                  },
+                  "sk": {
+                    "type": "keyword"
+                  },
+                  "sl": {
+                    "type": "keyword"
+                  },
+                  "sr": {
+                    "type": "keyword"
+                  },
+                  "sv": {
+                    "type": "keyword"
+                  },
+                  "tr": {
+                    "type": "keyword"
+                  },
+                  "us": {
+                    "type": "keyword"
+                  },
+                  "zh": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "Name": {
+            "properties": {
+              "bg": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "bulgarian"
+              },
+              "br": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "brazilian"
+              },
+              "cs": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "czech"
+              },
+              "da": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "danish"
+              },
+              "de": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "german"
+              },
+              "el": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "greek"
+              },
+              "en": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "es": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "spanish"
+              },
+              "fi": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "fr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "french"
+              },
+              "hu": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "hungarian"
+              },
+              "it": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "italian"
+              },
+              "ja": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "kuromoji"
+              },
+              "ko": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "cjk"
+              },
+              "nl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "dutch"
+              },
+              "no": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "norwegian"
+              },
+              "pl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "pt": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "portuguese"
+              },
+              "ru": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "russian"
+              },
+              "sk": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sl": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "standard"
+              },
+              "sv": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "swedish"
+              },
+              "tr": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "turkish"
+              },
+              "us": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "english"
+              },
+              "zh": {
+                "type": "text",
+                "fields": {
+                  "raw": {
+                    "type": "keyword",
+                    "doc_values": false
+                  }
+                },
+                "analyzer": "smartcn"
+              }
+            }
+          },
+          "Number": {
+            "type": "text",
+            "fields": {
+              "partials": {
+                "type": "text",
+                "analyzer": "code_partials_analyzer",
+                "search_analyzer": "code_simplified_analyzer"
+              },
+              "raw": {
+                "type": "keyword",
+                "doc_values": false
+              },
+              "simplified": {
+                "type": "text",
+                "analyzer": "code_simplified_analyzer"
+              }
+            },
+            "analyzer": "code_exact_analyzer"
+          },
+          "SelectionPath": {
+            "type": "keyword",
+            "doc_values": false
+          }
+        }
+      },
+      "SortBy": {
+        "properties": {
+          "OrderInCategory": {
+            "type": "nested",
+            "properties": {
+              "Path": {
+                "type": "keyword",
+                "doc_values": false
+              },
+              "Value": {
+                "type": "integer",
+                "index": false
+              }
+            }
+          },
+          "Title": {
+            "properties": {
+              "Default": {
+                "properties": {
+                  "bg": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "br": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "cs": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "da": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "de": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "el": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "en": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "es": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fi": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "hu": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "it": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ja": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ko": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "nl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "no": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pt": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ru": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sk": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sv": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "tr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "us": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "zh": {
+                    "type": "keyword",
+                    "index": false
+                  }
+                }
+              },
+              "Family": {
+                "properties": {
+                  "bg": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "br": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "cs": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "da": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "de": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "el": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "en": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "es": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fi": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "fr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "hu": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "it": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ja": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ko": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "nl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "no": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "pt": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "ru": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sk": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sl": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "sv": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "tr": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "us": {
+                    "type": "keyword",
+                    "index": false
+                  },
+                  "zh": {
+                    "type": "keyword",
+                    "index": false
+                  }
+                }
+              }
+            }
+          },
+          "UpdateDate": {
+            "type": "date",
+            "index": false
+          }
+        }
+      },
+      "Tags": {
+        "type": "keyword"
+      }
+    }
+  }
+}

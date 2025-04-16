@@ -1,0 +1,58 @@
+@prefix tp: <http://ontologies.traceparts.com/ontology/>.
+@prefix ottr: <http://ns.ottr.xyz/0.4/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/>.
+@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+ 
+ 
+tp:textIDs[owl:Class ?text, xsd:string ?text_str, owl:Class ?language, 
+NEList<owl:Class> ?ids, NEList<xsd:string> ?id_strs] :: {
+	tp:Text(?text, ?text_str, ?language),
+	zipMin | tp:ID(++?ids, ++?id_strs, ?text),
+	tp:Language(?language)
+}.
+
+tp:ID[owl:Class ?id, xsd:string ?str, owl:Class ?text] :: {
+	ax:SubClassOf(?id, tp:ID),
+	tp:hasUniqueText(?id, ?str),
+	tp:containedIn(?id, ?text),
+	ax:SubObjectSomeValuesFrom(tp:ID, tp:containedIn, tp:Text)
+}.
+
+tp:Text[owl:Class ?text, xsd:string ?str, owl:Class ?language] :: {
+	ax:SubClassOf(?text, tp:Text),
+	tp:hasUniqueText(?text, ?str),
+	tp:representedIn(?text, ?language)
+}.
+
+tp:Languages[NEList<owl:Class> ?languages] :: {
+	rstr:ObjectUnionOf(_:b, ?languages),
+	ax:SubObjectAllValuesFrom(tp:Text, tp:representedIn, _:b),
+	ax:SubObjectSomeValuesFrom(tp:Text, tp:representedIn, _:b),
+	cross | tp:Language(++?languages)
+}.
+
+tp:Language[owl:Class ?language] :: {
+	ax:SubClassOf(?language, tp:Language)
+}.
+
+tp:containedIn[owl:Class ?id, owl:Class ?text] :: {
+	ottr:Triple(?id, tp:containedIn, ?text)
+}.
+
+tp:hasUniqueText[owl:Class ?sbj, xsd:string ?str] :: {
+	ottr:Triple(?sbj, tp:hasUniqueText, ?str)
+}.
+
+tp:representedIn[owl:Class ?text, owl:Class ?language] :: {
+	# rstr:ObjectUnionOf(_:b, ?languages),
+	# ax:SubObjectAllValuesFrom(?text, tp:representedInLanguage, _:b),
+	# ottr:Triple(?text, rdfs:subClassOf, _:b1),
+	# rstr:ObjectAllValuesFrom(_:b1, tp:representedIn, ?language),
+	ottr:Triple(?text, tp:representedIn, ?language)
+}.
+

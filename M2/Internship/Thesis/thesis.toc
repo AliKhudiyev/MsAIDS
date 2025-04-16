@@ -1,0 +1,82 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Introduction}{1}{chapter*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Importance of the research.}{1}{chapter*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Statement of problem.}{3}{chapter*.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Research questions.}{4}{figure.caption.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Research methodology.}{5}{Item.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Practical significance of the thesis.}{5}{Item.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Literature Review}{6}{chapter.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Development}{9}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Data}{9}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Database Schema}{9}{subsection.2.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Methods}{10}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Ontology Concerning The Search Engine}{12}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Concepts.}{14}{figure.caption.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Relations.}{14}{table.caption.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}Developing OTTR Template Library}{15}{subsection.2.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Software Architecture}{17}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Diagrams.}{18}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Sequential and Parallel Architecture.}{21}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}Specification and Implementation}{24}{subsection.2.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{ETL Pipeline.}{24}{Item.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Extractor.}{29}{algorithm.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Transformer.}{31}{algorithm.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Loader.}{33}{algorithm.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}Testing}{35}{subsection.2.2.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Results and Discussion}{36}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Results}{36}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}Library}{36}{subsection.3.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.2}Command-Line Interface}{37}{subsection.3.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.3}Tests}{38}{subsection.3.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Invalid Configuration Handling.}{38}{subsection.3.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Invalid Document Handling.}{38}{figure.caption.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Discussion}{39}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Conclusion}{41}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{About LITIS Laboratory}{43}{chapter*.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendices}{49}{chapter*.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Gist}{49}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}OTTR}{50}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}ETL}{50}{section.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Responding Knowledge Acquisition Software}{51}{section.3.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.6.1}Library usage}{51}{subsection.3.6.1}%

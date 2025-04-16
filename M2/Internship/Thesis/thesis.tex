@@ -1,0 +1,334 @@
+\documentclass[14pt]{extreport}
+% \usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{mathptmx}
+\usepackage{indentfirst}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,topsep=0pt}
+\setlist[enumerate]{noitemsep,topsep=0pt}
+% \usepackage[nottoc]{tocbibind}
+
+% - - Centering Sections/Subsections/Subsubsections - - %
+\usepackage{titlesec}
+\titleformat{\chapter}[block]{\Large\bfseries\filcenter}{\thechapter}{1em}{}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]{\large\bfseries\filcenter}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[hang]{\bfseries\filcenter}{\thesubsubsection}{1em}{}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+% - Spacing Below Sections/Subsections/Subsubsections - %
+% \titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+\titlespacing{\section}{0pt}{15pt plus 1pt minus 1pt}{0pt plus 1pt minus 1pt}
+\titlespacing{\subsection}{0pt}{15pt plus 1pt minus 1pt}{0pt plus 1pt minus 1pt}
+\titlespacing{\subsubsection}{0pt}{15pt plus 1pt minus 1pt}{0pt plus 1pt minus 1pt}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+% - - - - - - - - - Centering chapters - - - - - - - - - %
+\usepackage{xpatch}
+
+\makeatletter
+
+\xpatchcmd{\@makeschapterhead}{%
+  \Huge \bfseries  #1\par\nobreak%
+}{%
+  \Huge \bfseries\centering #1\par\nobreak%
+}{\typeout{Patched makeschapterhead}}{\typeout{patching of @makeschapterhead failed}}
+
+
+\xpatchcmd{\@makechapterhead}{%
+  \huge\bfseries \@chapapp\space \thechapter
+}{%
+  \huge\bfseries\centering \@chapapp\space \thechapter
+}{\typeout{Patched @makechapterhead}}{\typeout{Patching of @makechapterhead failed}}
+
+\makeatother
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+\usepackage{floatrow}
+\floatsetup[table]{capposition=top}
+
+\usepackage{graphicx}
+% \usepackage[tableposition=top]{caption}
+\usepackage{caption}
+\usepackage{subcaption}
+\graphicspath{ {resources/} }
+ 
+% - - - - - - Setting up the document layout - - - - - - %
+\usepackage[a4paper,left=30mm,right=10mm,top=20mm,bottom=20mm]{geometry} % REQUIRED
+% \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+
+\usepackage{setspace}
+\setstretch{1.5} % REQUIRED
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+% - - - - - - - Setting up the page layout - - - - - - - %
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{17.0pt}
+% usage: \fancyhead[<position specifiers>]{<text>}
+
+\fancyhf{}
+% \fancyhf[rh]{\thepage}
+\fancyhead[R]{\thepage}
+% \rhead{\thepage}
+% \fancyhead[RO,LE]{Knowledge Formalization With Domain Experts In The Loop}
+% \fancyfoot{}
+% \fancyfoot[R]{\thepage}
+% \fancyfoot[LO,CE]{Chapter \thechapter}
+% \fancyfoot[CO,RE]{Ali Khudiyev}
+\renewcommand\headrulewidth{0pt}% remove if you want a rule beneath the header
+\patchcmd{\chapter}{plain}{fancy}{}{}
+
+% To change the thickness of the lines in the headers/footers, use this code entering a size in points:
+% \renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0.4pt}
+
+% To clear the page of headers and footers
+% \pagestyle{empty}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\usepackage{csquotes}
+\addbibresource{chapters/references.bib}
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+
+% - - - - - - - - - Additonal packages - - - - - - - - - %
+\usepackage{amsmath}					% for additional math symbols
+
+\usepackage{listings}					% for writing code
+\usepackage{algorithm}					% for writing pseudo-code
+\usepackage{algcompatible}				% for writing pseudo-code
+\usepackage{algpseudocode}				% for writing pseudo-code
+% \usepackage{algorithm2e}				% for writing pseudo-code
+
+\usepackage{tikz}						% for drawing
+\usepackage{multirow}					% for multi-row tables
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - %
+
+\title{
+{Knowledge Formalization With Domain Experts In The Loop}\\
+{\large French-Azerbaijani University}\\
+{\includegraphics[width=0.75\textwidth]{ufaz.png}}
+}
+\author{Ali Khudiyev}
+\date{27 June 2022}
+
+\begin{document}
+% \maketitle
+\thispagestyle{empty}
+% \begin{titlepage}
+%    \begin{center}
+%        \vspace{0.8cm}
+% 
+% 	   \Large
+% 	   \textbf{Ministry Of Education Of The Azerbaijan Republic}
+% 
+%        \vspace*{1cm}
+% 
+% 	   \begin{figure}[H]
+% 		\centering
+% 		\begin{subfigure}{.5\textwidth}
+% 			\centering
+% 			\includegraphics[height=.4\linewidth]{ufaz.png}
+% 			\caption*{ADNSU}
+% 		\end{subfigure}%
+% 		\begin{subfigure}{.5\textwidth}
+% 			\centering
+% 			\includegraphics[height=.4\linewidth]{litis.png}
+% 			\caption*{LITIS}
+% 		\end{subfigure}
+% 		\end{figure}
+% 
+% 	   \Large
+%        \textbf{Ali Khudiyev}
+% 
+% 	   \vspace{1.0cm}
+% 
+%        A thesis presented for the degree of\\
+%        Master of Science
+% 
+%        \vspace{1.0cm}
+% 
+% 	   \Large
+%        \textbf{Knowledge Formalization With Domain Experts In The Loop}
+% 
+%        \vspace{0.5cm}
+% 	   \large
+% 	   \textbf{Developing OTTR Templates}
+% 
+% 	   \vspace{0.5cm}
+% 	   Speciality: Data Science and Artificial Intelligence
+% 	   Supervisors: Prof. Cecilia Zanni-Merk, Ph.D. Matthias Sesbo\"u\'e
+% 
+%        \vfill
+% 
+% 
+% 	   \Large
+% 	   Applied Computer Science\\
+%        French-Azerbaijani University\\
+%        Azerbaijan\\
+%        21 February 2022 - 27 June 2022
+% 
+%    \end{center}
+% \end{titlepage}
+
+\begin{titlepage}
+	\begin{center}
+		\textbf{MINISTRY OF EDUCATION OF THE AZERBAIJAN REPUBLIC} \\ 
+		\textbf{AZERBAIJAN STATE OIL AND INDUSTRY UNIVERSITY}
+	\end{center}
+
+	\hspace{9cm}
+	\textit{on the right of manuscript}
+
+	\vspace{1.5cm}
+
+	\begin{center}
+		\textbf{ALI KHUDIYEV ROVSHAN}
+		
+		\vspace{1.5cm}
+
+		\textbf{KNOWLEDGE FORMALIZATION WITH DOMAIN EXPERTS IN THE LOOP} \\
+		\textbf{DEVELOPING OTTR TEMPLATES}
+	\end{center}
+
+	\vspace{0.75cm}
+
+	\textbf{Speciality: 060509.6} - Intelligent Systems
+
+	\vspace{1.5cm}
+
+	\begin{center}
+		\textbf{MASTER THESIS}
+	\end{center}
+
+	\vspace{1.75cm}
+	% \vfill
+
+	% \hspace{9cm}
+	\begin{figure}[H]
+		\centering
+		\hspace{9cm}
+		Scientific leader: 
+		\includegraphics[width=0.25\textwidth]{Cecilia_signature.png}
+	\end{figure}
+
+	\hspace{9cm}
+	Prof. Cecilia Zanni-Merk
+
+	\vspace{1.25cm}
+
+	The master's thesis was checked by the Antiplagiarism System.
+
+	\hfill
+	Associate Prof. C.R. Damirova
+
+	\vfill
+
+	\begin{center}
+		\textbf{Baku - 2022}
+	\end{center}
+\end{titlepage}
+
+% \pagenumbering{roman}
+\pagenumbering{gobble}
+
+\chapter*{Abstract}
+\textbf{Topic: } Knowledge formalization with domain experts in the loop
+
+\indent
+\textbf{Object of the research: }
+The use of ontologies has already been shown to be helpful and beneficial in several different domains 
+such as search engines, recommender systems, adaptive controlling, and so on. Knowledge formalization 
+is one of the main processes used for converting tacit knowledge to explicit knowledge for further 
+use by the machines with the primary goal of yielding autonomy.
+Several aspects of formalizing human knowledge are discussed in this thesis as well as a 
+brief introduction to O/ontology, its applications in Computer Science, and the potential benefit of 
+formalizing knowledge in the domain of search engines. 
+
+\textbf{Purpose of the research: }
+The main goal of this thesis work is to automate 
+the knowledge acquisition process by creating an ontology and building a knowledge graph (KG) 
+in the domain of a search engine. I also describe an already-existing database structure and propose 
+methodologies to ultimately improve search engine efficiency and/or quality through knowledge 
+acquisition. Building a KG is an essential first part of making 
+the data more semantically accessible and searchable by the search engines.  
+Ontological concepts and relations as well as software architecture and 
+different programming paradigms are discussed thoroughly in the thesis by sharing important 
+implementation details. Multiple UML diagrams 
+and demonstrative examples are also given for better readability with the least amount of 
+ambiguity. 
+
+\textbf{Results of the research: }
+Final (experimental) results as well as discussions about the 
+robustness and efficiency of the architecture and implemented algorithms are shared. Finally, 
+I share my conclusions on the use of ontologies or knowledge graphs and the use of OTTR 
+language to build them.
+ 
+% \chapter*{Acknowledgements}
+% \setcounter{page}{4}
+% 
+% I would like to thank my supervisors Prof. Cecilia Zanni-Merk, Ph.D. Matthias Sesbo\"u\'e for 
+% letting me use my own creativity and propose solutions to the encountered problems during the 
+% internship. I would like to also thank Postdoc Mathieu Bourgais, Ph.D. Matthieu Bellucci for 
+% interesting discussions about AI, explainability, knowledge graphs, etc.
+% 
+% I would like to thank Prof. Benoit Gauzere for sharing his insights and intuitions based on his 
+% previous experiences during the interview process and others with whom I shared internship and life 
+% experiences. 
+% 
+% Besides the LITIS laboratory I would like to thank some professors and assistant professors at UFAZ with 
+% whom I had very intriguing and insightful lectures and/or sessions.
+
+% \chapter*{Abbreviations}
+% \input{chapters/abbreviation_list.tex}
+
+\newpage
+% \pagestyle{empty}
+\listoffigures
+\listoftables
+\newpage
+\tableofcontents
+\newpage
+% \pagestyle{fancy}
+\pagenumbering{arabic}
+
+\chapter*{Introduction}								% 5 pages
+\addcontentsline{toc}{chapter}{Introduction}
+\input{chapters/00_introduction}
+
+\chapter{Literature Review}							% 2 pages
+\input{chapters/01_literature_review.tex}
+
+\chapter{Development}								% 20 pages - should be Data and Methods for UFAZ
+\input{chapters/02_data_and_methods.tex}
+
+\chapter{Results and Discussion}					% 20 pages
+\input{chapters/03_results_and_discussion.tex}
+
+% \chapter{Conclusion}								% 3 pages
+\newpage
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+\input{chapters/04_conclusion.tex}
+
+\chapter*{About LITIS Laboratory}					% for ASOUI
+\addcontentsline{toc}{chapter}{About LITIS Laboratory}
+\input{chapters/about_lab.tex}
+
+% \chapter{References}								% 2 pages
+% \bibliographystyle{unsrt}
+\printbibliography
+
+% \appendix
+\chapter*{Appendices}								% 10 pages
+\addcontentsline{toc}{chapter}{Appendices}
+\input{chapters/appendix}
+
+\end{document}

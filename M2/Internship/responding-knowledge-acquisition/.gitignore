@@ -1,0 +1,13 @@
+# Directories
+__pycache__/
+logs/
+data/fuseki
+data/fuseki-data/
+data/es-apollo-data/
+
+# Files
+tmp/
+
+# Files
+*.stottr
+*.rdf

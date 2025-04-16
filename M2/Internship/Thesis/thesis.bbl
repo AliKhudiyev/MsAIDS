@@ -1,0 +1,984 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{enwiki:1094572512}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 21-June-2022]}
+      \field{title}{Search engine results page --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Search_engine_results_page&oldid=1094572512
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Search_engine_results_page&oldid=1094572512
+      \endverb
+    \endentry
+    \entry{enwiki:1082281684}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 14-June-2022]}
+      \field{title}{Web crawler --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Web_crawler&oldid=1082281684
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Web_crawler&oldid=1082281684
+      \endverb
+    \endentry
+    \entry{enwiki:1088909238}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 14-June-2022]}
+      \field{title}{Search engine indexing --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Search_engine_indexing&oldid=1088909238
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Search_engine_indexing&oldid=1088909238
+      \endverb
+    \endentry
+    \entry{enwiki:1088145469}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{4}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 14-June-2022]}
+      \field{title}{Web query --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Web_query&oldid=1088145469
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Web_query&oldid=1088145469
+      \endverb
+    \endentry
+    \entry{enwiki:1058506896}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 14-June-2022]}
+      \field{title}{Proximity search (text) --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Proximity_search_(text)\&oldid=1058506896
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Proximity_search_(text)%5C&oldid=1058506896
+      \endverb
+    \endentry
+    \entry{enwiki:1093304368}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{6}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 14-June-2022]}
+      \field{title}{Concept search --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Concept_search&oldid=1093304368
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Concept_search&oldid=1093304368
+      \endverb
+    \endentry
+    \entry{samek2017}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=7f49b6382ab4ca917a2aa2249f875f79}{%
+           family={Samek},
+           familyi={S\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+        {{hash=0a42920957ef8d58a2d10f5d46385a09}{%
+           family={Wiegand},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9f1b6144a45b1967e989e74552e37ada}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Klaus-Robert},
+           giveni={K\bibinithyphendelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{760c674238f3a7c170a8c47a1bd8fe6d}
+      \strng{fullhash}{760c674238f3a7c170a8c47a1bd8fe6d}
+      \strng{bibnamehash}{760c674238f3a7c170a8c47a1bd8fe6d}
+      \strng{authorbibnamehash}{760c674238f3a7c170a8c47a1bd8fe6d}
+      \strng{authornamehash}{760c674238f3a7c170a8c47a1bd8fe6d}
+      \strng{authorfullhash}{760c674238f3a7c170a8c47a1bd8fe6d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Explainable Artificial Intelligence: Understanding, Visualizing and Interpreting Deep Learning Models}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.48550/ARXIV.1708.08296
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1708.08296
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1708.08296
+      \endverb
+      \keyw{Artificial Intelligence (cs.AI),Computers and Society (cs.CY),Neural and Evolutionary Computing (cs.NE),Machine Learning (stat.ML),FOS: Computer and information sciences,FOS: Computer and information sciences}
+    \endentry
+    \entry{trokanas2018471}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9eb0a20ef922094835121757926457f6}{%
+           family={Trokanas},
+           familyi={T\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=79cb845ada8de52bf1af247bd73f3fa3}{%
+           family={Koo},
+           familyi={K\bibinitperiod},
+           given={Linsey},
+           giveni={L\bibinitperiod}}}%
+        {{hash=70a54e3a7ee80b3ea1372503e09add3d}{%
+           family={Cecelja},
+           familyi={C\bibinitperiod},
+           given={Franjo},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=465c69c846176228977fbb912491d084}{%
+           family={Friedl},
+           familyi={F\bibinitperiod},
+           given={Anton},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0f7f0e42221499e6719c50eacec4d38d}{%
+           family={Klemeš},
+           familyi={K\bibinitperiod},
+           given={Jiří\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ccd4c64141a761588ec39c1c7556aee3}{%
+           family={Radl},
+           familyi={R\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ecb2379f588e97acf50c03d95bd5304f}{%
+           family={Varbanov},
+           familyi={V\bibinitperiod},
+           given={Petar\bibnamedelima S.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=338c66a9bd09d775a21f0a3039e23c54}{%
+           family={Wallek},
+           familyi={W\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{7727a015535a8501d45acadbc3501473}
+      \strng{fullhash}{7727a015535a8501d45acadbc3501473}
+      \strng{bibnamehash}{7727a015535a8501d45acadbc3501473}
+      \strng{authorbibnamehash}{7727a015535a8501d45acadbc3501473}
+      \strng{authornamehash}{7727a015535a8501d45acadbc3501473}
+      \strng{authorfullhash}{7727a015535a8501d45acadbc3501473}
+      \strng{editorbibnamehash}{dee293d0331139a8e0e6dbebcfd1b0a8}
+      \strng{editornamehash}{dee293d0331139a8e0e6dbebcfd1b0a8}
+      \strng{editorfullhash}{e15efecdc185e541a1de12735e8bb5bc}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a methodology for ontological engineering with an aim to develop reusable ontologies. The proposed methodology combines experience of developing ontology engineering using a ‘good’ practice with established methodologies and concomitantly implementing reusability in the eSymbiosis ontology.}
+      \field{booktitle}{28th European Symposium on Computer Aided Process Engineering}
+      \field{issn}{1570-7946}
+      \field{series}{Computer Aided Chemical Engineering}
+      \field{title}{Towards a Methodology for Reusable Ontology Engineering: Application to the Process Engineering Domain}
+      \field{volume}{43}
+      \field{year}{2018}
+      \field{pages}{471\bibrangedash 476}
+      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.1016/B978-0-444-64235-6.50084-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/B978044464235650084X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/B978044464235650084X
+      \endverb
+      \keyw{Ontological Engineering,Methodology,Ontology Reuse}
+    \endentry
+    \entry{reinanda2020knowledge}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=ce4e94fc243c2f65886db62071a66436}{%
+           family={Reinanda},
+           familyi={R\bibinitperiod},
+           given={Ridho},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ef08b7988f402602ac28dc308198d4ec}{%
+           family={Meij},
+           familyi={M\bibinitperiod},
+           given={Edgar},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ce8500c4435316ca20758d1f88f330bb}{%
+           family={Rijke},
+           familyi={R\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Now Publishers, Inc.}%
+      }
+      \strng{namehash}{30d1d035a6af17a0abc095266147c658}
+      \strng{fullhash}{30d1d035a6af17a0abc095266147c658}
+      \strng{bibnamehash}{30d1d035a6af17a0abc095266147c658}
+      \strng{authorbibnamehash}{30d1d035a6af17a0abc095266147c658}
+      \strng{authornamehash}{30d1d035a6af17a0abc095266147c658}
+      \strng{authorfullhash}{30d1d035a6af17a0abc095266147c658}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Foundations and Trends{®} in Information Retrieval}
+      \field{number}{4}
+      \field{title}{Knowledge graphs: An information retrieval perspective}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{pages}{289\bibrangedash 444}
+      \range{pages}{156}
+    \endentry
+    \entry{dietz2018utilizing}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=db179beaf4f961c32a3d25b809a8209d}{%
+           family={Dietz},
+           familyi={D\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=173c67b380267cf3212cc41befe179fd}{%
+           family={Kotov},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ef08b7988f402602ac28dc308198d4ec}{%
+           family={Meij},
+           familyi={M\bibinitperiod},
+           given={Edgar},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9b79dc277c255e1eabc24b24ab0279e}
+      \strng{fullhash}{c9b79dc277c255e1eabc24b24ab0279e}
+      \strng{bibnamehash}{c9b79dc277c255e1eabc24b24ab0279e}
+      \strng{authorbibnamehash}{c9b79dc277c255e1eabc24b24ab0279e}
+      \strng{authornamehash}{c9b79dc277c255e1eabc24b24ab0279e}
+      \strng{authorfullhash}{c9b79dc277c255e1eabc24b24ab0279e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The 41st international ACM SIGIR conference on research \& development in information retrieval}
+      \field{title}{Utilizing knowledge graphs for text-centric information retrieval}
+      \field{year}{2018}
+      \field{pages}{1387\bibrangedash 1390}
+      \range{pages}{4}
+    \endentry
+    \entry{chen2020review}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5e41c5baeca4c6c9d7fc2b5a7d279daa}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiaojun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=7939e2cd1d6d192c8c1be41d58a22c13}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Shengbin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=baa983e0769e57b7f9a497fc98e9a245}{%
+           family={Xiang},
+           familyi={X\bibinitperiod},
+           given={Yang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{feccb489132a66eaefdef66684f8be8b}
+      \strng{fullhash}{feccb489132a66eaefdef66684f8be8b}
+      \strng{bibnamehash}{feccb489132a66eaefdef66684f8be8b}
+      \strng{authorbibnamehash}{feccb489132a66eaefdef66684f8be8b}
+      \strng{authornamehash}{feccb489132a66eaefdef66684f8be8b}
+      \strng{authorfullhash}{feccb489132a66eaefdef66684f8be8b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{title}{A review: Knowledge reasoning over knowledge graph}
+      \field{volume}{141}
+      \field{year}{2020}
+      \field{pages}{112948}
+      \range{pages}{1}
+    \endentry
+    \entry{baeza1999modern}{book}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=14e9e2c7e918f62ba13b9e040fb7f468}{%
+           family={Baeza-Yates},
+           familyi={B\bibinithyphendelim Y\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f25e271e4c06cb466719bf923801707f}{%
+           family={Ribeiro-Neto},
+           familyi={R\bibinithyphendelim N\bibinitperiod},
+           given={Berthier},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM press New York}%
+      }
+      \strng{namehash}{16f8be43ee702636f61f100736d38170}
+      \strng{fullhash}{16f8be43ee702636f61f100736d38170}
+      \strng{bibnamehash}{16f8be43ee702636f61f100736d38170}
+      \strng{authorbibnamehash}{16f8be43ee702636f61f100736d38170}
+      \strng{authornamehash}{16f8be43ee702636f61f100736d38170}
+      \strng{authorfullhash}{16f8be43ee702636f61f100736d38170}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modern information retrieval}
+      \field{volume}{463}
+      \field{year}{1999}
+    \endentry
+    \entry{brin1998anatomy}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ade8269d287e9c1531e4a1cbad0b4b82}{%
+           family={Brin},
+           familyi={B\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5ca20489809aaab392f875d6bc785086}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{fullhash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{bibnamehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{authorbibnamehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{authornamehash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \strng{authorfullhash}{67f006a7ae882b83a187215c4e9bdf2f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computer networks and ISDN systems}
+      \field{number}{1-7}
+      \field{title}{The anatomy of a large-scale hypertextual web search engine}
+      \field{volume}{30}
+      \field{year}{1998}
+      \field{pages}{107\bibrangedash 117}
+      \range{pages}{11}
+    \endentry
+    \entry{enwiki:1094315386}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 20-June-2022]}
+      \field{title}{Bayes' theorem --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Bayes%27_theorem&oldid=1094315386
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Bayes%27_theorem&oldid=1094315386
+      \endverb
+    \endentry
+    \entry{enwiki:1082522144}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.wikipedia.org/w/index.php?title=Search_engine_optimization\&oldid=1082522144}}
+      \field{note}{[Online; accessed 15-June-2022]}
+      \field{title}{Search engine optimization --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+    \endentry
+    \entry{6007378}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=5f0ed43446d9bd7a1c1adb5eb7c8b6af}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Lien-Fu},
+           giveni={L\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=8a0432a0b28809def1b9fa5ca2d701c2}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chao-Chin},
+           giveni={C\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=abca676044dcf1843034be47330d5e04}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Pei-Ying},
+           giveni={P\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=297e6f5acfe092721d6704f558b5208c}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Liang-Tsung},
+           giveni={L\bibinithyphendelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0012b67887879fe25212599c06213f74}
+      \strng{fullhash}{f9f24616a74db017e72d73ca854a59e6}
+      \strng{bibnamehash}{0012b67887879fe25212599c06213f74}
+      \strng{authorbibnamehash}{0012b67887879fe25212599c06213f74}
+      \strng{authornamehash}{0012b67887879fe25212599c06213f74}
+      \strng{authorfullhash}{f9f24616a74db017e72d73ca854a59e6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 IEEE International Conference on Fuzzy Systems (FUZZ-IEEE 2011)}
+      \field{title}{Developing a fuzzy search engine based on fuzzy ontology and semantic search}
+      \field{year}{2011}
+      \field{pages}{2684\bibrangedash 2689}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/FUZZY.2011.6007378
+      \endverb
+    \endentry
+    \entry{enwiki:1092578440}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.wikipedia.org/w/index.php?title=Tf\%E2\%80\%93idf\&oldid=1092578440}}
+      \field{note}{[Online; accessed 10-June-2022]}
+      \field{title}{Tf–idf --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+    \endentry
+    \entry{enwiki:1094205204}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{10}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.wikipedia.org/w/index.php?title=PageRank\&oldid=1094205204}}
+      \field{note}{[Online; accessed 12-June-2022]}
+      \field{title}{PageRank --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+    \endentry
+    \entry{bonino2004ontology}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1a7495bdc03f1e6203e113b2449a1403}{%
+           family={Bonino},
+           familyi={B\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e9c3bc719936b201011d6c83c436eede}{%
+           family={Corno},
+           familyi={C\bibinitperiod},
+           given={Fulvio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=986f5ab843dc16561220bb72b214b4e1}{%
+           family={Farinetti},
+           familyi={F\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=636027fec5ac9f004daa45e53096474e}{%
+           family={Bosca},
+           familyi={B\bibinitperiod},
+           given={Alessio},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{1da37d83e9d1b5b4e805e331753ffcea}
+      \strng{fullhash}{253e77ba8032189e6a193ebb5624ddef}
+      \strng{bibnamehash}{1da37d83e9d1b5b4e805e331753ffcea}
+      \strng{authorbibnamehash}{1da37d83e9d1b5b4e805e331753ffcea}
+      \strng{authornamehash}{1da37d83e9d1b5b4e805e331753ffcea}
+      \strng{authorfullhash}{253e77ba8032189e6a193ebb5624ddef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WSEAS Transaction on Information Science and Application}
+      \field{number}{6}
+      \field{title}{Ontology driven semantic search}
+      \field{volume}{1}
+      \field{year}{2004}
+      \field{pages}{1597\bibrangedash 1605}
+      \range{pages}{9}
+    \endentry
+    \entry{tudorache2013webprotege}{article}{}
+      \name{author}{4}{}{%
+        {{hash=919a9c101fe03e693b5cdd78e861c8be}{%
+           family={Tudorache},
+           familyi={T\bibinitperiod},
+           given={Tania},
+           giveni={T\bibinitperiod}}}%
+        {{hash=cb7ce3ec19b354dd69bf3c473f6a3742}{%
+           family={Nyulas},
+           familyi={N\bibinitperiod},
+           given={Csongor},
+           giveni={C\bibinitperiod}}}%
+        {{hash=459277a9c8ad3e369a89c831df64a660}{%
+           family={Noy},
+           familyi={N\bibinitperiod},
+           given={Natalya\bibnamedelima F},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=daa3f61cc04957ea4bf038da94584e07}{%
+           family={Musen},
+           familyi={M\bibinitperiod},
+           given={Mark\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOS Press}%
+      }
+      \strng{namehash}{adc2bcfe877a9d3eb0d256a388f9b63a}
+      \strng{fullhash}{5f301899fa5b3c3ebb382718ff96618b}
+      \strng{bibnamehash}{adc2bcfe877a9d3eb0d256a388f9b63a}
+      \strng{authorbibnamehash}{adc2bcfe877a9d3eb0d256a388f9b63a}
+      \strng{authornamehash}{adc2bcfe877a9d3eb0d256a388f9b63a}
+      \strng{authorfullhash}{5f301899fa5b3c3ebb382718ff96618b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Semantic web}
+      \field{number}{1}
+      \field{title}{WebProtégé: A collaborative ontology editor and knowledge acquisition tool for the web}
+      \field{volume}{4}
+      \field{year}{2013}
+      \field{pages}{89\bibrangedash 99}
+      \range{pages}{11}
+    \endentry
+    \entry{fitting2012first}{book}{}
+      \name{author}{1}{}{%
+        {{hash=533b346eeb7ea507c4d021d51c403ff7}{%
+           family={Fitting},
+           familyi={F\bibinitperiod},
+           given={Melvin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{533b346eeb7ea507c4d021d51c403ff7}
+      \strng{fullhash}{533b346eeb7ea507c4d021d51c403ff7}
+      \strng{bibnamehash}{533b346eeb7ea507c4d021d51c403ff7}
+      \strng{authorbibnamehash}{533b346eeb7ea507c4d021d51c403ff7}
+      \strng{authornamehash}{533b346eeb7ea507c4d021d51c403ff7}
+      \strng{authorfullhash}{533b346eeb7ea507c4d021d51c403ff7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{First-order logic and automated theorem proving}
+      \field{year}{2012}
+    \endentry
+    \entry{pease2007first}{article}{}
+      \name{author}{2}{}{%
+        {{hash=260e9fa8167353d5831beba641c3bf03}{%
+           family={Pease},
+           familyi={P\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dd1c8983ac85362d3aa2a529a62b0620}{%
+           family={Sutcliffe},
+           familyi={S\bibinitperiod},
+           given={Geoff},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6323874c8a62bd34ac0ff5a3a69b1ca3}
+      \strng{fullhash}{6323874c8a62bd34ac0ff5a3a69b1ca3}
+      \strng{bibnamehash}{6323874c8a62bd34ac0ff5a3a69b1ca3}
+      \strng{authorbibnamehash}{6323874c8a62bd34ac0ff5a3a69b1ca3}
+      \strng{authornamehash}{6323874c8a62bd34ac0ff5a3a69b1ca3}
+      \strng{authorfullhash}{6323874c8a62bd34ac0ff5a3a69b1ca3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ESARLT}
+      \field{title}{First Order Reasoning on a Large Ontology.}
+      \field{volume}{257}
+      \field{year}{2007}
+    \endentry
+    \entry{LAUR}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=b788579184536f07fce41176fb989d98}{%
+           family={Laurent},
+           familyi={L\bibinitperiod},
+           given={Jean-Pierre},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons, Inc.}%
+      }
+      \strng{namehash}{b788579184536f07fce41176fb989d98}
+      \strng{fullhash}{b788579184536f07fce41176fb989d98}
+      \strng{bibnamehash}{b788579184536f07fce41176fb989d98}
+      \strng{authorbibnamehash}{b788579184536f07fce41176fb989d98}
+      \strng{authornamehash}{b788579184536f07fce41176fb989d98}
+      \strng{authorfullhash}{b788579184536f07fce41176fb989d98}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 10th European Conference on Artificial Intelligence}
+      \field{isbn}{0471936081}
+      \field{series}{ECAI '92}
+      \field{title}{Proposals for a Valid Terminology in KBS Validation}
+      \field{year}{1992}
+      \field{pages}{829\bibrangedash 834}
+      \range{pages}{6}
+    \endentry
+    \entry{Owoc1999}{inbook}{}
+      \name{author}{3}{}{%
+        {{hash=439d1c1b7222646768b8a17390eefd90}{%
+           family={Owoc},
+           familyi={O\bibinitperiod},
+           given={Mieczyslaw\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=15ffb304b0a0fa085f5fdcb4d5722430}{%
+           family={Ochmanska},
+           familyi={O\bibinitperiod},
+           given={Malgorzata},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c72dece520807a3d4df94e183722d7d2}{%
+           family={Gladysz},
+           familyi={G\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=0710b0f666ba73cf78425249495349fc}{%
+           family={Vermesan},
+           familyi={V\bibinitperiod},
+           given={Anca},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1ae60227008ca25c93f265bee1720c4c}{%
+           family={Coenen},
+           familyi={C\bibinitperiod},
+           given={Frans},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, MA}%
+      }
+      \list{publisher}{1}{%
+        {Springer US}%
+      }
+      \strng{namehash}{7e1319669b8dcf5a4b988c94d541f6d7}
+      \strng{fullhash}{7e1319669b8dcf5a4b988c94d541f6d7}
+      \strng{bibnamehash}{7e1319669b8dcf5a4b988c94d541f6d7}
+      \strng{authorbibnamehash}{7e1319669b8dcf5a4b988c94d541f6d7}
+      \strng{authornamehash}{7e1319669b8dcf5a4b988c94d541f6d7}
+      \strng{authorfullhash}{7e1319669b8dcf5a4b988c94d541f6d7}
+      \strng{editorbibnamehash}{865a12772f131080189398d0480f0e7c}
+      \strng{editornamehash}{865a12772f131080189398d0480f0e7c}
+      \strng{editorfullhash}{865a12772f131080189398d0480f0e7c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Validation is a critical process in the whole knowledge-based system life cycle. A knowledge base incorporated into such systems has to be verified or (more generally) validated. There have been many approaches to develop specialised procedures and techniques, aimed at assuring the highest level of knowledge quality. Keeping in mind ``knowledge validation mappings'', we believe a more global view is necessary to facilitate applying the proper techniques, so the paper deals with practical guidelines of knowledge validation (KV). Facing the most popular techniques of KV: decision tables-based, decision trees-based or nets-based with the criteria set to be utilised, we try to define certain principles useful in the validation procedures referring to two levels: general and detailed. The first one refers to paradigms, which arise from interrelationships among the crucial components of the KV process (procedures, approaches and criteria). The detailed principles are addressed to specific forms used for knowledge representations: rules, frames, neural nets and others.}
+      \field{booktitle}{Validation and Verification of Knowledge Based Systems: Theory, Tools and Practice}
+      \field{isbn}{978-1-4757-6916-6}
+      \field{title}{On Principles of Knowledge Validation}
+      \field{year}{1999}
+      \field{pages}{25\bibrangedash 35}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1007/978-1-4757-6916-6_2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4757-6916-6_2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4757-6916-6_2
+      \endverb
+    \endentry
+    \entry{enwiki:1085831526}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{11}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 18-June-2022]}
+      \field{title}{Ontology (information science) --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Ontology_(information_science)\&oldid=1085831526
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Ontology_(information_science)%5C&oldid=1085831526
+      \endverb
+    \endentry
+    \entry{enwiki:1092767429}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{extraname}{12}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.wikipedia.org/w/index.php?title=Line_(geometry)\&oldid=1092767429}}
+      \field{note}{[Online; accessed 22-June-2022]}
+      \field{title}{Line (geometry) --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+    \endentry
+    \entry{cmariakeet}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b2f0bf03a133aa6ed58497941d58a802}{%
+           family={C.\bibnamedelimi Maria\bibnamedelima Keet},
+           familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={University\bibnamedelimb of\bibnamedelimb Cape\bibnamedelima Town},
+           giveni={U\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Maria Keet}%
+      }
+      \strng{namehash}{b2f0bf03a133aa6ed58497941d58a802}
+      \strng{fullhash}{b2f0bf03a133aa6ed58497941d58a802}
+      \strng{bibnamehash}{b2f0bf03a133aa6ed58497941d58a802}
+      \strng{authorbibnamehash}{b2f0bf03a133aa6ed58497941d58a802}
+      \strng{authornamehash}{b2f0bf03a133aa6ed58497941d58a802}
+      \strng{authorfullhash}{b2f0bf03a133aa6ed58497941d58a802}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction To Ontology Engineering}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://people.cs.uct.ac.za/~mkeet/files/OEbook
+      \endverb
+      \verb{url}
+      \verb https://people.cs.uct.ac.za/~mkeet/files/OEbook
+      \endverb
+    \endentry
+    \entry{gist}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{gist}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.semanticarts.com/gist/
+      \endverb
+      \verb{url}
+      \verb https://www.semanticarts.com/gist/
+      \endverb
+    \endentry
+    \entry{unclebob}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{The Clean Architecture}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+      \endverb
+      \verb{url}
+      \verb https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+      \endverb
+    \endentry
+    \entry{ontotext}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{What are ontologies?}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.ontotext.com/knowledgehub/fundamentals/what-are-ontologies/
+      \endverb
+      \verb{url}
+      \verb https://www.ontotext.com/knowledgehub/fundamentals/what-are-ontologies/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,59 @@
+\label{chap:conclusions}
+
+\begin{enumerate}[wide=0pt]
+% \section{On the use of ontologies}
+
+\item Ontologies are used in different applications with mainly the unified goal of having a shared vocabulary 
+with agreed-upon semantics. Such applications have emerged from domains such as fraud detection, 
+web mining, search engines, legacy system integration, e-learning, data-level data integration, semantic 
+publishing, and so on \cite{cmariakeet,ontotext}. You can imagine how having a shared vocabulary could 
+potentially help to create more easily integratable systems and therefore, an ecosystem. Ontologies are 
+very useful for such purposes.
+
+\item Although developing and using ontologies can be very helpful for many real-world applications, they can 
+also be painful to deal with in other areas of interest. The first problem is that it is not probably 
+practically possible to define everything very rigorously by using some subset of the first-order logic. 
+For example, how could one try to solve an image classification problem with the help of an ontology, or 
+play chess, or solve a maze? Such problems require different solutions than using pure ontologies.
+The second issue with using ontologies is that they have their own limitations in terms of the 
+expressivity. To make the inference process tractable and decidable, there are different types of 
+\textit{profiles} that are suitable for different use cases. The trade-off is obvious - more expressivity, 
+less tractablity. For example, if you worked with the RDF framework, it would be impossible for you to 
+express ``a class being a subclass of some another class'' since there is no such object property 
+defined, and to be able to do it, RDFS would be one of the options to choose. However, as mentioned 
+earlier, every framework has the trade-off between expressivity and tractability.
+
+% \section{On the use of OTTR}
+
+\item The idealogy behind OTTR is simple and powerful - \textit{using templates to build knowledge bases with 
+better readability, maintainability and usability}. What it gives to its users is a more efficient 
+process 
+of dealing with ontologies and knowledge bases. Templates used in OTTR language prevent many potential 
+repetitions by making the whole process more modular. Such separation between the design and the content 
+allows one to develop a template library once and use it as much as needed to add new instances to the 
+knowledge base.
+
+Serialization of OTTR templates into RDF/OWL format is another benefit of using them. Imagine you have 
+built a template library that can be used to add instances to the KB and the library itself could be 
+loaded to the same KB. You would not need to store the library file separately on your local machine or 
+some separate database than the one which contains the instances. So, the library file can be fetched 
+from the same database either to check the validity of the triples or add new instances more reliably and 
+easily.
+
+% \section{Experiences gained during the internship}
+
+\item To be able to solve the knowledge acquisition task, we encountered many problems along the way. These 
+problems included thinking individually and brainstorming as a team with my supervisor. Communication 
+and shared vocabulary played an important role during such times since when having a discussion about 
+ontologies, people can easily misunderstand each other due to ambiguously defined and/or used words. 
+However, because of such situations the need for rigor became very obvious to me. I understood the 
+non-triviality of building a good ontology, building trustfulness by centeralization\footnote{KG has 
+been built to play the role of single unified information source.}, decreasing performance issues 
+when scaling up the database size, etc. These real-world problems made me realize the importance of 
+scientific methods, differences between theory(thinking without constraints) and practice(engineering 
+- thinking with constraints), communication and organization.
+\end{enumerate}
+
+% \section{Side notes}
+% 
+% Artificial Intelligence

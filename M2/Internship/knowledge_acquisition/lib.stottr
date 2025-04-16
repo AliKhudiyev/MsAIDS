@@ -1,0 +1,44 @@
+@prefix tp: <https://ontologies.traceparts.com/> .
+@prefix gist: <https://ontologies.semanticarts.com/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ottr:  <http://ns.ottr.xyz/0.4/> .
+@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tp:ID[tp:ID ?id, xsd:string ?id_str] :: {
+	ottr:Triple(?id, rdf:type, gist:ID),
+	ottr:Triple(?id, gist:uniqueText, ?id_str)
+}.
+
+tp:isPartOf[tp:ID ?id, tp:Text ?text] :: {
+	ottr:Triple(?id, gist:isPartOf, ?text)
+}.
+
+tp:Language[tp:Language ?language, xsd:string ?language_str] :: {
+	ottr:Triple(?language, rdf:type, tp:Language),
+	ottr:Triple(?language, tp:hasName, ?language_str)
+}.
+
+tp:Text[tp:Text ?text, xsd:string ?text_str, tp:Language ?language, NEList<tp:ID> ?ids] :: {
+	ottr:Triple(?text, rdf:type, gist:Text),
+	ottr:Triple(?text, gist:isExpressedIn, ?language),
+	ottr:Triple(?text, gist:containedText, ?text_str),
+	cross | tp:isPartOf(++?ids, ?text)
+}.
+
+tp:PartNumber[tp:PartNumber ?pn, gist:ID ?id, tp:PartFamily ?pf, tp:Text ?text] :: {
+	ottr:Triple(?pn, rdf:type, tp:PartNumber),
+	ottr:Triple(?pn, gist:isIdentifiedBy, ?id),
+	ottr:Triple(?pn, tp:hasPartFamily, ?pf),
+	ottr:Triple(?pn, gist:isDescribedIn, ?text)
+}.
+
+tp:PartFamily[tp:PartFamily ?pf, gist:ID ?id, gist:Text ?text] :: {
+	ottr:Triple(?pf, rdf:type, tp:PartFamily),
+	ottr:Triple(?pf, gist:isIdentifiedBy, ?id),
+	ottr:Triple(?pf, gist:isDescribedIn, ?text)
+}.
+

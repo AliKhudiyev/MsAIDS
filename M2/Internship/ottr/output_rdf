@@ -1,0 +1,91 @@
+@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ottr:  <http://ns.ottr.xyz/0.4/> .
+@prefix ax:    <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rstr:  <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix tp:    <http://ontologies.traceparts.com/ontology/> .
+
+tp:ID0  tp:containedIn  tp:Text0 .
+
+_:b0    owl:someValuesFrom  tp:Text ;
+        owl:onProperty      tp:containedIn .
+
+tp:containedIn  rdf:type  owl:ObjectProperty .
+
+tp:ID0  tp:hasUniqueText  "F4GG5" ;
+        rdfs:subClassOf   tp:ID .
+
+_:b1    owl:someValuesFrom  tp:Text .
+
+tp:Text  rdf:type  owl:Class .
+
+tp:Text0  tp:representedIn  tp:English .
+
+tp:containedIn  rdf:type  owl:ObjectProperty .
+
+_:b1    rdf:type  owl:Restriction .
+
+tp:Text0  rdfs:subClassOf  tp:Text .
+
+tp:English  rdfs:subClassOf  tp:Language .
+
+tp:ID1  tp:containedIn  tp:Text0 .
+
+_:b1    owl:onProperty  tp:containedIn .
+
+tp:ID   rdfs:subClassOf  _:b0 ;
+        rdfs:subClassOf  _:b1 .
+
+tp:Text0  tp:hasUniqueText  "Hammer F4GG5 Nail AX88D-2M" .
+
+tp:Text  rdf:type  owl:Class .
+
+tp:ID1  tp:hasUniqueText  "AX88D-2M" .
+
+_:b0    rdf:type  owl:Restriction .
+
+tp:ID1  rdfs:subClassOf  tp:ID .
+
+tp:French  rdfs:subClassOf  tp:Language .
+
+_:b2    rdf:type  owl:Class .
+
+tp:representedIn  rdf:type  owl:ObjectProperty .
+
+tp:Turkish  rdfs:subClassOf  tp:Language .
+
+_:b3    rdf:type  owl:Restriction .
+
+tp:Text  rdfs:subClassOf  _:b3 .
+
+_:b2    owl:unionOf  _:b4 .
+
+_:b5    rdf:rest   rdf:nil ;
+        rdf:first  tp:Turkish .
+
+_:b6    rdf:rest   _:b5 ;
+        rdf:first  tp:English .
+
+_:b4    rdf:rest   _:b6 ;
+        rdf:first  tp:French .
+
+tp:English  rdfs:subClassOf  tp:Language .
+
+_:b3    owl:onProperty  tp:representedIn .
+
+tp:Text  rdfs:subClassOf  _:b7 .
+
+tp:representedIn  rdf:type  owl:ObjectProperty .
+
+_:b7    owl:allValuesFrom  _:b2 ;
+        owl:onProperty     tp:representedIn .
+
+_:b2    rdf:type  owl:Class ;
+        rdf:type  owl:Class .
+
+_:b7    rdf:type  owl:Restriction .
+
+_:b3    owl:someValuesFrom  _:b2 .

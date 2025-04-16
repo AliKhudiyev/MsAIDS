@@ -1,0 +1,23 @@
+@prefix ottr: <http://ns.ottr.xyz/0.4/> .
+@prefix tp: <http://ontologies.traceparts.com/ontology/> .
+@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+ottr:Triple(tp:ID1, tp:containedIn, tp:Text0) .
+ottr:Triple(tp:ID0, tp:containedIn, tp:Text0) .
+ottr:Triple(tp:ID1, tp:hasUniqueText, "AX88D-2M") .
+ottr:Triple(tp:Text0, rdfs:subClassOf, tp:Text) .
+ottr:Triple(tp:ID0, tp:hasUniqueText, "F4GG5") .
+ottr:Triple(tp:English, rdfs:subClassOf, tp:Language) .
+ottr:Triple(tp:ID1, rdfs:subClassOf, tp:ID) .
+ottr:Triple(tp:ID0, rdfs:subClassOf, tp:ID) .
+ottr:Triple(tp:Text0, tp:hasUniqueText, "Hammer F4GG5 Nail AX88D-2M") .
+ottr:Triple(tp:Text0, tp:representedInLanguage, tp:English) .
+ottr:Triple(tp:Turkish, rdfs:subClassOf, tp:Language) .
+ottr:Triple(tp:Russian, rdfs:subClassOf, tp:Language) .
+ottr:Triple(tp:French, rdfs:subClassOf, tp:Language) .

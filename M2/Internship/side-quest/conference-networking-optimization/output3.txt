@@ -1,0 +1,271 @@
+slot, attendee, sponsor
+0, Neeling, RelationalAI
+0, Siddharta, Amazon
+0, Marini, Datastax
+0, Krüger, data.world
+0, Hilbolling, Ontoforce
+0, LaRose, ExperoInc
+0, Winding, OriginTrail
+0, van op Zeeland, Sponsor_1
+0, Abdelraouf, CapGemini
+0, Cavanaugh, Datachemist
+0, Wijering, Franz
+0, Webbink, Oxford Semantic
+0, Tolmachova, Sponsor_2
+0, Bakri, MonteCarlo
+0, Dyan, SeMI Technologies
+0, Huberman, Accenture
+0, Izetbegovic, Graph Aware
+0, Ronday, Sponsor_3
+1, Neeling, Sponsor_1
+1, Siddharta, Datachemist
+1, Buddhu, Oxford Semantic
+1, Hilbolling, Semantic Web
+1, LaRose, SeMI Technologies
+1, Winding, Graph Aware
+1, van 't Oever, RelationalAI
+1, Wiessink, Sponsor_3
+1, Abdelraouf, Ontotext
+1, Jasperse, Oracle
+1, Cavanaugh, Accenture
+1, Feller, Stardog
+1, Jostema, Synaptica
+1, Wijering, Sponsor_2
+1, Webbink, Datastax
+1, Tolmachova, Sponsor_0
+1, Khrystin, Franz
+1, Bakri, CapGemini
+1, Mirzynski, Brighthive
+1, del Cerro, MonteCarlo
+1, van der Reijt, TerminusDB
+1, Hendrix, Amazon
+1, Kreiter, LARUS Business Automation
+1, Odink, Katana Graph
+1, Dyan, data.world
+1, Tamil, Lymba
+1, Kovacs, Ontoforce
+1, Patie, Cambridge Semantics
+2, Neeling, Stardog
+2, Siddharta, TerminusDB
+2, Hilbolling, Synaptica
+2, LaRose, Oracle
+2, Winding, Sponsor_2
+2, van 't Oever, Cambridge Semantics
+2, Abdelraouf, ExperoInc
+2, Jasperse, Accenture
+2, Cavanaugh, OriginTrail
+2, Balthazar, Semantic Web
+2, Herrera, Katana Graph
+2, Wijering, data.world
+2, Webbink, Ontotext
+2, Tolmachova, Amazon
+2, Khrystin, Lymba
+2, Bakri, Datastax
+2, del Cerro, Graph Aware
+2, Hendrix, Datachemist
+2, Jimmy, Brighthive
+2, Kreiter, RelationalAI
+2, Odink, Ontoforce
+2, Dyan, Sponsor_1
+2, Izetbegovic, Sponsor_0
+3, Neeling, Datachemist
+3, Siddharta, LARUS Business Automation
+3, Marini, Cambridge Semantics
+3, Hilbolling, Sponsor_1
+3, Winding, Ontotext
+3, van 't Oever, Ontoforce
+3, Abdelraouf, Lymba
+3, Herrera, Franz
+3, Feller, Datastax
+3, Webbink, Stardog
+3, Tolmachova, data.world
+3, Bakri, Synaptica
+3, Paauw, Oracle
+3, Jimmy, SeMI Technologies
+3, Odink, RelationalAI
+3, Dyan, Amazon
+3, Huberman, Sponsor_3
+3, Ronday, OriginTrail
+3, McGouch, Sponsor_2
+3, Pijpers, Accenture
+4, Neeling, OriginTrail
+4, Siddharta, Sponsor_1
+4, Hilbolling, data.world
+4, LaRose, CapGemini
+4, Winding, Stardog
+4, Wiessink, Datachemist
+4, Abdelraouf, Semantic Web
+4, Jasperse, Sponsor_3
+4, Cavanaugh, Franz
+4, Balthazar, Brighthive
+4, Herrera, Accenture
+4, Jostema, MonteCarlo
+4, Webbink, Amazon
+4, Tolmachova, Oxford Semantic
+4, Khrystin, Ontoforce
+4, Paauw, TerminusDB
+4, Hendrix, Sponsor_0
+4, Jimmy, LARUS Business Automation
+4, Odink, Lymba
+4, Dyan, Oracle
+4, Tamil, Sponsor_2
+4, McGouch, Graph Aware
+5, Neeling, CapGemini
+5, Buddhu, data.world
+5, Krüger, TerminusDB
+5, Hilbolling, Sponsor_2
+5, Winding, LARUS Business Automation
+5, van 't Oever, Lymba
+5, Wiessink, MonteCarlo
+5, Abdelraouf, Oracle
+5, Jasperse, OriginTrail
+5, Balthazar, Amazon
+5, Herrera, Datachemist
+5, Feller, Ontoforce
+5, Wijering, Sponsor_1
+5, Webbink, SeMI Technologies
+5, Tolmachova, Accenture
+5, Khrystin, Datastax
+5, Bakri, Katana Graph
+5, Hendrix, Synaptica
+5, Jimmy, Sponsor_3
+5, Dyan, RelationalAI
+5, Izetbegovic, Franz
+5, McGouch, Ontotext
+5, Pijpers, Sponsor_0
+6, Neeling, Oracle
+6, Buddhu, Franz
+6, Hilbolling, TerminusDB
+6, LaRose, data.world
+6, Winding, Amazon
+6, van op Zeeland, SeMI Technologies
+6, van 't Oever, Oxford Semantic
+6, Wiessink, Graph Aware
+6, Abdelraouf, Accenture
+6, Jasperse, Datastax
+6, Feller, Sponsor_3
+6, Wijering, Ontoforce
+6, Webbink, Synaptica
+6, Tolmachova, Lymba
+6, Bakri, Sponsor_1
+6, van der Reijt, Stardog
+6, Paauw, Ontotext
+6, Kreiter, MonteCarlo
+6, Dyan, CapGemini
+6, van de Bent, LARUS Business Automation
+7, Neeling, Katana Graph
+7, Marini, Lymba
+7, Hilbolling, LARUS Business Automation
+7, LaRose, Stardog
+7, Orlov, Ontoforce
+7, Winding, Brighthive
+7, van 't Oever, Synaptica
+7, Cavanaugh, Amazon
+7, Herrera, Sponsor_1
+7, Jostema, Semantic Web
+7, Wijering, Datastax
+7, Webbink, MonteCarlo
+7, Tolmachova, Datachemist
+7, Paauw, SeMI Technologies
+7, Hendrix, TerminusDB
+7, Jimmy, Cambridge Semantics
+7, Kreiter, Franz
+7, Odink, data.world
+7, Wiradimedja, RelationalAI
+7, Dyan, Graph Aware
+7, Tamil, Sponsor_0
+7, Patie, Oxford Semantic
+8, Neeling, Franz
+8, Hilbolling, Cambridge Semantics
+8, LaRose, Semantic Web
+8, Orlov, Graph Aware
+8, Winding, MonteCarlo
+8, van op Zeeland, Katana Graph
+8, van 't Oever, ExperoInc
+8, Wiessink, SeMI Technologies
+8, Abdelraouf, RelationalAI
+8, Jasperse, data.world
+8, Cavanaugh, Synaptica
+8, Balthazar, Sponsor_2
+8, Feller, Accenture
+8, Jostema, Sponsor_1
+8, Webbink, Datachemist
+8, Tolmachova, Brighthive
+8, Bakri, Amazon
+8, Mirzynski, LARUS Business Automation
+8, Paauw, Sponsor_3
+8, Hendrix, Stardog
+8, Dyan, Sponsor_0
+8, Kovacs, Oxford Semantic
+8, McGouch, CapGemini
+9, Neeling, data.world
+9, Krüger, ExperoInc
+9, Orlov, Semantic Web
+9, Winding, Accenture
+9, Abdelraouf, Sponsor_3
+9, Feller, Graph Aware
+9, Wijering, Synaptica
+9, Webbink, Cambridge Semantics
+9, Tolmachova, TerminusDB
+9, Bakri, Datachemist
+9, Mirzynski, Stardog
+9, del Cerro, Oxford Semantic
+9, Paauw, Sponsor_1
+9, Hendrix, Ontoforce
+9, Jimmy, Franz
+9, Kreiter, Sponsor_0
+9, Odink, Oracle
+9, Dyan, Katana Graph
+9, Tamil, CapGemini
+9, Capaldi, LARUS Business Automation
+9, Ronday, Sponsor_2
+9, Patie, Amazon
+10, Neeling, Sponsor_3
+10, Buddhu, TerminusDB
+10, Hilbolling, Sponsor_0
+10, LaRose, Katana Graph
+10, Winding, data.world
+10, van 't Oever, Franz
+10, Abdelraouf, Brighthive
+10, Jasperse, Sponsor_1
+10, Balthazar, Accenture
+10, Feller, Amazon
+10, Wijering, ExperoInc
+10, Webbink, CapGemini
+10, Tolmachova, Cambridge Semantics
+10, Khrystin, Graph Aware
+10, Mirzynski, Datachemist
+10, del Cerro, Lymba
+10, van der Reijt, LARUS Business Automation
+10, Paauw, Ontoforce
+10, Jimmy, Sponsor_2
+10, Kreiter, Oxford Semantic
+10, Odink, MonteCarlo
+10, Wiradimedja, OriginTrail
+10, Dyan, Stardog
+10, Tamil, RelationalAI
+10, Izetbegovic, Semantic Web
+10, Kovacs, Synaptica
+10, Verdel, SeMI Technologies
+11, Neeling, Synaptica
+11, Siddharta, RelationalAI
+11, Buddhu, Datachemist
+11, LaRose, TerminusDB
+11, Winding, Franz
+11, van 't Oever, Sponsor_0
+11, Abdelraouf, SeMI Technologies
+11, Jasperse, Amazon
+11, Balthazar, Ontoforce
+11, Jostema, Oxford Semantic
+11, Wijering, LARUS Business Automation
+11, Webbink, Sponsor_1
+11, Tolmachova, Graph Aware
+11, Khrystin, Ontotext
+11, Bakri, Oracle
+11, Mirzynski, Datastax
+11, Jimmy, Stardog
+11, Kreiter, data.world
+11, Dyan, Accenture
+11, Izetbegovic, Brighthive
+11, van de Bent, Semantic Web
+11, Kovacs, OriginTrail

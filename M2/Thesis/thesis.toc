@@ -1,0 +1,11 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}{}%
+\contentsline {chapter}{\numberline {2}Litrature Review}{4}{}%
+\contentsline {chapter}{\numberline {3}On Theory of Intelligence}{5}{}%
+\contentsline {chapter}{\numberline {4}Knowledge Formalization}{6}{}%
+\contentsline {chapter}{\numberline {5}Development}{7}{}%
+\contentsline {chapter}{\numberline {6}Results and Discussions}{8}{}%
+\contentsline {chapter}{\numberline {7}Conclusion}{9}{}%
+\contentsline {chapter}{\numberline {8}References}{10}{}%
+\contentsline {chapter}{\numberline {A}Appendix}{11}{}%
+\contentsline {section}{\numberline {A.1}Appendix A}{11}{}%
+\contentsline {section}{\numberline {A.2}Appendix B}{11}{}%

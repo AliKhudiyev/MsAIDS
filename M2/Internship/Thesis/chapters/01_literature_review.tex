@@ -1,0 +1,71 @@
+\label{chap:literature}
+Information Retrieval (IR) is a process of obtaining relevant information from a database according to 
+the given query. User queries are usually provided in a text format, however, there is no theoretical 
+limit or restriction for other formats. IR systems should not be confused with database systems; 
+although they perform searching processes on entities(i.e., documents), the key difference remains in 
+the ranking process. Ranking documents to compute their relevancy is required by the IR system and 
+therefore, it may be the case that the system will output results that do not match the query. In 
+contrast, classical databases search for and output documents that always match the given query.
+
+Different models can be used by IR systems. Although the strategies differ, the main goal 
+is always to find the most relevant information \cite{baeza1999modern,brin1998anatomy}. 
+To achieve this goal, the models transform documents 
+into an appropriate representation and this is where different models can utilize different 
+representations. There are three types of models which are shown below:
+
+\begin{enumerate}
+	\item \textit{Set-theoretic}. 
+		Models of this type use the set representation to describe documents; a document can be viewed 
+		as a set of phrases, words or even letters. Operations used to find similarities are set 
+		operations.
+	\item \textit{Algebraic}.
+		Such models usually use vector or matrix representation for documents and the similarity 
+		between the given query and a document is a scalar value yielded by some relevant algebraic 
+		operation(i.e., dot product for vectors).
+	\item \textit{Probabilistic}.
+		The core idea behind these models is the probabilistic inference used for document retrieval. 
+		Baye's theorem \cite{enwiki:1094315386} plays a very important role for such models. Similarities 
+		are computed as a probability for the relevancy of a document if given a query.
+\end{enumerate}
+
+Some of the most popular search engines that have been able to utilize IR systems more than others are 
+\textit{Google}, \textit{YouTube}, \textit{Amazon}, \textit{Microsoft Bing}, and so on. However, such 
+big companies usually develop relatively very complex systems that are the best fit for very large-scale  
+problems. Although most of such systems are commercially available, it may be too much of an overhead 
+to try to adapt and use them in small or medium-scale projects. Instead, one should try to observe 
+the key concepts and come up with specialized methodologies or strategies which will maximize 
+the expected outcome/value of the project.
+
+Search Engine Optimization (SEO) is a process of efficiency of a search engine (SE) or website traffic 
+by applying a set of methods such as indexing, crawling, cross linking, etc \cite{enwiki:1082522144}. 
+There are different SEO methods used to attract more and more users to websites by providing more 
+appropriately ranked content.
+
+There are many SEs that consider little or no semantics to find relevant results for a given user 
+query; most of these systems perform text-based searches across the database. Adding semantics in 
+order to guide the search algorithms is not a new idea and has been implemented by many researchers. 
+Lai et al. have developed a fuzzy ontology for their fuzzy search engine Fuzzy-Go \cite{6007378}. 
+Their ontology uses fuzzy logic to represent semantic distances between tokens(i.e., keywords, words) 
+which enables Fuzzy-Go to go beyond text-only search by also being able to consider the synonyms of 
+terms. 
+
+Modern SEs index contents of web pages by searching and matching the resources with the user query 
+which is usually enriched by one or more Information Retrieval (IR) techniques. Some of the well-known 
+IR techniques are the TF-IDF ranking model \cite{enwiki:1092578440} and 
+PageRank \cite{enwiki:1094205204}. 
+Bonino et al. have proposed an automatic search refinement mechanism based on ontology navigation for 
+which computing semantic query refinement requires focalization and generalization 
+\cite{bonino2004ontology}. 
+
+% Source \cite{baeza1999modern}
+
+Knowledge acquisition has always been a bottleneck for large-scale systems. Since such systems require 
+a significant amount of human expert knowledge to operate, scalability becomes a problem. 
+Tudorache et al. have developed a lightweight web-based knowledge acquisition tool and ontology editor 
+called WebProt\'eg\'e \cite{tudorache2013webprotege}. They have adopted the infrastructure of 
+Prot\'eg\'e which enables collaboration on the back-end and using Google Web Toolkit on the front-end. 
+Although it is useful to have such knowledge acquisition tools, one downside is usually an intermediate 
+interface through which human experts convey their knowledge. Currently, experts are required to 
+have some degree of understanding in FoL\footnote{First-order logic} \cite{fitting2012first} to be 
+able to express their knowledge of some domain. A subset of FoL is used by ontologies due to their 
+reasoning capabilities \cite{pease2007first}.

@@ -1,0 +1,200 @@
+slot, attendee, sponsor
+0, Fleta, Sponsor_2
+0, Steukers, Accenture
+0, Bilker, Ontoforce
+0, Nardone, Oracle
+0, IJpe, OriginTrail
+0, Bergmanis, MonteCarlo
+0, van der Pligt, Stardog
+0, Lai, SeMI Technologies
+0, Ódinsdóttir, Datastax
+0, Barbas, Franz
+0, Marcelje, Graph Aware
+0, Pétursdóttir, Amazon
+0, Tarbert, Ontotext
+1, Fleta, Sponsor_1
+1, Steukers, Oracle
+1, Norrell, Sponsor_0
+1, Bilker, Sponsor_2
+1, von Hötzendorf, Graph Aware
+1, Damir, MonteCarlo
+1, IJpe, CapGemini
+1, Negroponte, Amazon
+1, van Hoogdalem, Franz
+1, Ódinsdóttir, Oxford Semantic
+1, Correlli, Semantic Web
+1, Marcelje, Stardog
+1, Bakes, Accenture
+1, Satoro, Ontoforce
+1, Tarbert, Lymba
+2, Fleta, Ontoforce
+2, Steukers, Amazon
+2, Norrell, Lymba
+2, Pavel, Sponsor_0
+2, Bilker, Datastax
+2, Ahmadi, Franz
+2, IJpe, Oracle
+2, Negroponte, data.world
+2, van Hoogdalem, SeMI Technologies
+2, Bergmanis, Sponsor_1
+2, van der Pligt, LARUS Business Automation
+2, Lai, Sponsor_3
+2, Ódinsdóttir, Stardog
+2, Barbas, Oxford Semantic
+2, Pétursdóttir, Semantic Web
+2, Tarbert, RelationalAI
+2, Zargar, TerminusDB
+2, Harrewijn, OriginTrail
+3, Fleta, RelationalAI
+3, Steukers, Franz
+3, Pavel, OriginTrail
+3, Bilker, Ontotext
+3, von Hötzendorf, Brighthive
+3, Damir, Lymba
+3, IJpe, ExperoInc
+3, Lai, LARUS Business Automation
+3, Ódinsdóttir, Datachemist
+3, van Eerd, Ontoforce
+3, Barbas, Sponsor_1
+3, Marcelje, SeMI Technologies
+3, Bakes, Oxford Semantic
+3, Pétursdóttir, Sponsor_0
+3, Tarbert, Oracle
+4, Fleta, Semantic Web
+4, Steukers, Graph Aware
+4, Norrell, Ontotext
+4, Pavel, ExperoInc
+4, Bilker, Oracle
+4, von Hötzendorf, Franz
+4, IJpe, Sponsor_2
+4, van Hoogdalem, MonteCarlo
+4, Appelfeld, CapGemini
+4, van der Pligt, SeMI Technologies
+4, Ódinsdóttir, Synaptica
+4, van Eerd, Sponsor_1
+4, Correlli, Oxford Semantic
+4, Barbas, OriginTrail
+4, Marcelje, Ontoforce
+4, Bakes, Katana Graph
+4, Tarbert, Brighthive
+4, MacKeown, Sponsor_0
+5, Fleta, Stardog
+5, Steukers, Oxford Semantic
+5, Norrell, Brighthive
+5, Pavel, MonteCarlo
+5, Damir, ExperoInc
+5, IJpe, TerminusDB
+5, Negroponte, CapGemini
+5, van Hoogdalem, Katana Graph
+5, Appelfeld, Ontoforce
+5, van der Pligt, Sponsor_3
+5, Lai, Franz
+5, Ódinsdóttir, LARUS Business Automation
+5, Barbas, Semantic Web
+5, Marcelje, Sponsor_0
+5, Bakes, Datastax
+6, Fleta, Ontotext
+6, Steukers, Ontoforce
+6, Pavel, LARUS Business Automation
+6, Bilker, Sponsor_3
+6, IJpe, RelationalAI
+6, Negroponte, Brighthive
+6, Bergmanis, SeMI Technologies
+6, van der Pligt, Sponsor_1
+6, Lai, Datastax
+6, Ódinsdóttir, CapGemini
+6, Renus, OriginTrail
+6, van Eerd, Graph Aware
+6, Correlli, TerminusDB
+6, Barbas, Oracle
+6, Bakes, Sponsor_0
+6, Tarbert, Datachemist
+6, Stoppard, MonteCarlo
+7, Fleta, Amazon
+7, Steukers, SeMI Technologies
+7, Norrell, MonteCarlo
+7, Bilker, Franz
+7, Ahmadi, Sponsor_2
+7, IJpe, Synaptica
+7, Negroponte, Ontoforce
+7, van Hoogdalem, Oxford Semantic
+7, Ódinsdóttir, TerminusDB
+7, Barbas, Brighthive
+7, Marcelje, Datachemist
+7, Pétursdóttir, RelationalAI
+7, Tarbert, Sponsor_1
+7, Neijt, Sponsor_0
+8, Fleta, Brighthive
+8, Steukers, Synaptica
+8, Bilker, Oxford Semantic
+8, Nardone, Franz
+8, von Hötzendorf, Sponsor_3
+8, Damir, Amazon
+8, van Hoogdalem, Stardog
+8, Appelfeld, Datastax
+8, van der Pligt, Sponsor_0
+8, Lai, Ontoforce
+8, Ódinsdóttir, Sponsor_2
+8, Renus, Datachemist
+8, Correlli, Lymba
+8, Barbas, Ontotext
+8, Marcelje, CapGemini
+8, Pétursdóttir, Sponsor_1
+8, Tarbert, LARUS Business Automation
+8, Neijt, SeMI Technologies
+9, Fleta, MonteCarlo
+9, Steukers, LARUS Business Automation
+9, Norrell, RelationalAI
+9, Pavel, Sponsor_1
+9, Bilker, Sponsor_0
+9, von Hötzendorf, Ontotext
+9, IJpe, SeMI Technologies
+9, Lai, Accenture
+9, Ódinsdóttir, data.world
+9, van Eerd, Sponsor_2
+9, Correlli, Synaptica
+9, Barbas, Lymba
+9, Marcelje, OriginTrail
+9, Bakes, Ontoforce
+9, Pétursdóttir, Franz
+9, Tarbert, Oxford Semantic
+9, Neijt, Semantic Web
+10, Pavel, Semantic Web
+10, Bilker, Synaptica
+10, Nardone, Ontoforce
+10, IJpe, Katana Graph
+10, Negroponte, Sponsor_2
+10, Appelfeld, RelationalAI
+10, van der Pligt, MonteCarlo
+10, Lai, OriginTrail
+10, Ódinsdóttir, Sponsor_1
+10, Renus, SeMI Technologies
+10, van Eerd, TerminusDB
+10, Correlli, Accenture
+10, Barbas, Cambridge Semantics
+10, Marcelje, Ontotext
+10, Bakes, Brighthive
+10, Satoro, Datastax
+10, Pétursdóttir, Datachemist
+10, Tarbert, Sponsor_0
+10, Neijt, ExperoInc
+10, Stoppard, Lymba
+11, Fleta, Datastax
+11, Steukers, Katana Graph
+11, Norrell, Sponsor_1
+11, Pavel, Ontoforce
+11, Bilker, Cambridge Semantics
+11, IJpe, MonteCarlo
+11, van Hoogdalem, Sponsor_0
+11, Appelfeld, data.world
+11, van der Pligt, ExperoInc
+11, Lai, Oxford Semantic
+11, Ódinsdóttir, OriginTrail
+11, Renus, Brighthive
+11, van Eerd, LARUS Business Automation
+11, Barbas, SeMI Technologies
+11, Marcelje, Amazon
+11, Bakes, TerminusDB
+11, Satoro, Accenture
+11, Pétursdóttir, Sponsor_2
+11, Zargar, RelationalAI

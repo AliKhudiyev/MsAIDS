@@ -1,0 +1,361 @@
+slot,attendee,sponsor
+0,Abu Rdeineh,OriginTrail
+0,Adamovna,Brighthive
+0,Bernet,Franz
+0,Brownlee,Sponsor_2
+0,East,Sponsor_0
+0,Apsion,Datastax
+0,Apollinaire,Ontoforce
+0,Arcangelis,Lymba
+0,Aljoh,MonteCarlo
+0,Ebener,Katana Graph
+0,Bandar,Amazon
+0,De Longhi,LARUS Business Automation
+0,Blussé,Semantic Web
+0,Corso,CapGemini
+0,Akkaya,Oxford Semantic
+0,Bessem,ExperoInc
+0,Luethen,Cambridge Semantics
+0,Danen,Datachemist
+0,Beckert,SeMI Technologies
+0,Alda,Oracle
+0,Aalbregtse,Sponsor_1
+0,Faur,data.world
+0,Al-Hadi,Synaptica
+0,Broeder,Graph Aware
+0,Anastasopoulou,RelationalAI
+0,Beunders,Accenture
+0,Ah,Stardog
+0,Atzori,Sponsor_3
+0,Baer,TerminusDB
+0,Aguilar,Ontotext
+1,Arcangelis,Stardog
+1,Ah,Cambridge Semantics
+1,Aguilar,Oracle
+1,Beunders,Sponsor_3
+1,Diks,Sponsor_2
+1,Athanasopoulos,Datastax
+1,Barthel,Sponsor_1
+1,Dorsten,LARUS Business Automation
+1,Barbosa,Ontoforce
+1,Anastasopoulou,SeMI Technologies
+1,Abu Rdeineh,Accenture
+1,Eljon,Datachemist
+1,Bandar,TerminusDB
+1,Gossink,Katana Graph
+1,Anthonissen,MonteCarlo
+1,Adamovna,Sponsor_0
+1,Domino,CapGemini
+1,Akkaya,Ontotext
+1,Alda,Brighthive
+1,Carlsson,Synaptica
+1,Aljoh,ExperoInc
+1,Broeckx,Lymba
+1,Chebti,OriginTrail
+1,Baer,Graph Aware
+1,Apsion,data.world
+1,Brownlee,RelationalAI
+1,Alma Tadema,Oxford Semantic
+1,Boko,Amazon
+1,Aalbregtse,Franz
+1,Bernet,Semantic Web
+2,Aguilar,TerminusDB
+2,Atzori,ExperoInc
+2,Baer,Brighthive
+2,Adamovna,Katana Graph
+2,Bandar,Sponsor_3
+2,Aljoh,Ontoforce
+2,Al-Hadi,Sponsor_0
+2,Sharri,Cambridge Semantics
+2,De Longhi,Oxford Semantic
+2,Mallers,Oracle
+2,Alma Tadema,Sponsor_2
+2,Arcangelis,Datastax
+2,Donia,Amazon
+2,Fey,RelationalAI
+2,Apsion,LARUS Business Automation
+2,Diks,Datachemist
+2,Belgers,Ontotext
+2,Anastasopoulou,OriginTrail
+2,Abu Rdeineh,Lymba
+2,Eanjum,Synaptica
+2,Broeckx,MonteCarlo
+2,Dorsten,SeMI Technologies
+2,Barthel,CapGemini
+2,Anthonissen,Sponsor_1
+2,Alda,Stardog
+2,Athanasopoulos,Franz
+2,Gibbons,Semantic Web
+2,Akkaya,data.world
+2,Aalbregtse,Accenture
+2,Craw,Graph Aware
+3,Aguilar,Amazon
+3,Alma Tadema,Ontotext
+3,Barthel,Datachemist
+3,Belgers,Stardog
+3,Apollinaire,Accenture
+3,Beunders,CapGemini
+3,Barbosa,Brighthive
+3,Adamovna,Franz
+3,Dalessandro,Lymba
+3,Hauser,Oxford Semantic
+3,Akkaya,Datastax
+3,Dhawan,Sponsor_1
+3,Harges,Katana Graph
+3,Gibbons,SeMI Technologies
+3,Bandar,ExperoInc
+3,Ah,TerminusDB
+3,Atzori,data.world
+3,Dorsten,Sponsor_2
+3,Capell,MonteCarlo
+3,Apsion,Oracle
+3,Arcangelis,LARUS Business Automation
+3,Borgt,Sponsor_3
+3,Tl'izilani,Cambridge Semantics
+3,Beckert,Sponsor_0
+3,Dieken,Graph Aware
+3,Aalbregtse,Semantic Web
+3,Al-Hadi,Ontoforce
+3,Craw,OriginTrail
+3,Anthonissen,RelationalAI
+3,Eljon,Synaptica
+4,Bessem,data.world
+4,Aguilar,Sponsor_1
+4,Akkaya,Sponsor_2
+4,Heersema,Katana Graph
+4,Alma Tadema,Semantic Web
+4,Al-Hadi,Sponsor_3
+4,Belgers,Lymba
+4,Fane,Stardog
+4,Atzori,Synaptica
+4,Beunders,Cambridge Semantics
+4,Beckert,Accenture
+4,De Longhi,Amazon
+4,Cagney,ExperoInc
+4,Anthonissen,CapGemini
+4,Kahvecioglu,RelationalAI
+4,Crucq,OriginTrail
+4,Adamovna,Datastax
+4,Donia,Oracle
+4,Athanasopoulos,TerminusDB
+4,Barthel,Franz
+4,Barbosa,Datachemist
+4,Chatham,MonteCarlo
+4,Jesson,SeMI Technologies
+4,Bekkenk,Brighthive
+4,Dieken,Oxford Semantic
+4,Eljon,Ontotext
+4,Craw,Sponsor_0
+4,Diks,Graph Aware
+4,Alda,Ontoforce
+4,Boko,LARUS Business Automation
+5,Beckert,RelationalAI
+5,Ferguson,Sponsor_2
+5,Al-Hadi,Lymba
+5,Corso,Brighthive
+5,Donia,Sponsor_0
+5,Atzori,Amazon
+5,Alda,Datachemist
+5,Godding,CapGemini
+5,Barbosa,Franz
+5,DeMilo,Sponsor_3
+5,Alma Tadema,Ontoforce
+5,Boko,Stardog
+5,Bekkenk,Cambridge Semantics
+5,Beunders,OriginTrail
+5,Ah,Sponsor_1
+5,Aljoh,Datastax
+5,Barthel,Synaptica
+5,Eanjum,Graph Aware
+5,Jecheskeli,Oxford Semantic
+5,Junger,Ontotext
+5,Aguilar,SeMI Technologies
+5,Daemkin,ExperoInc
+5,Manfellotto,Katana Graph
+5,Blussé,data.world
+5,Naguib,Oracle
+5,Bernet,TerminusDB
+5,Dorsten,MonteCarlo
+5,Bleau,Accenture
+5,Anthonissen,LARUS Business Automation
+5,Apollinaire,Semantic Web
+6,Dalessandro,Datachemist
+6,Barendsen,Ontoforce
+6,Broeder,data.world
+6,Alda,Datastax
+6,Eljon,Stardog
+6,Franc,MonteCarlo
+6,Capell,Franz
+6,Broeckx,Semantic Web
+6,Aguilar,Accenture
+6,Elverdink,Sponsor_3
+6,Faur,ExperoInc
+6,Dhawan,Synaptica
+6,Beunders,Graph Aware
+6,Cagney,TerminusDB
+6,Aljoh,Sponsor_0
+6,Alma Tadema,Lymba
+6,MacCredie,Ontotext
+6,Ah,Katana Graph
+6,Athanasopoulos,Sponsor_1
+6,Boko,Cambridge Semantics
+6,Bessem,RelationalAI
+6,Deval,Brighthive
+6,Dieken,OriginTrail
+6,Kirdar,Oxford Semantic
+6,Apollinaire,LARUS Business Automation
+6,Koepke,SeMI Technologies
+6,Al-Hadi,Sponsor_2
+6,Goode,Amazon
+6,Laverman,CapGemini
+6,Bernet,Oracle
+7,Athanasopoulos,Ontoforce
+7,Barendsen,data.world
+7,Aguilar,RelationalAI
+7,Dieken,Brighthive
+7,Cagney,Sponsor_3
+7,McAlpine,CapGemini
+7,Chebti,Franz
+7,Pinas,Oracle
+7,Bernet,MonteCarlo
+7,East,TerminusDB
+7,Kyriakides,SeMI Technologies
+7,Golubev,Stardog
+7,Guinn,Amazon
+7,Baer,Datastax
+7,Bessem,OriginTrail
+7,Al-Hadi,LARUS Business Automation
+7,Deval,Ontotext
+7,Ah,Semantic Web
+7,Barthel,Sponsor_2
+7,Boko,Sponsor_0
+7,Alda,Synaptica
+7,Corso,Cambridge Semantics
+7,Apollinaire,Graph Aware
+7,Atzori,Lymba
+7,Bleau,Katana Graph
+7,Kuni,Oxford Semantic
+7,Flores,ExperoInc
+7,Dorsten,Datachemist
+7,Barbosa,Sponsor_1
+7,Crucq,Accenture
+8,Belgers,Ontoforce
+8,DeMilo,Sponsor_2
+8,Corso,Synaptica
+8,Detta,Franz
+8,Gasc,ExperoInc
+8,Barbosa,data.world
+8,Eddowes,TerminusDB
+8,Ah,Oxford Semantic
+8,Wa,Katana Graph
+8,Athanasopoulos,Accenture
+8,Eljon,Sponsor_3
+8,Kahvecioglu,Amazon
+8,Apollinaire,MonteCarlo
+8,El Amal,OriginTrail
+8,Daemkin,Cambridge Semantics
+8,Bernet,Datachemist
+8,East,Oracle
+8,Chatham,Lymba
+8,Cagney,Semantic Web
+8,Hammadi,Stardog
+8,Aguilar,Sponsor_0
+8,Franc,Brighthive
+8,Dorsten,CapGemini
+8,Aljoh,LARUS Business Automation
+8,Broeder,Sponsor_1
+8,Atzori,Datastax
+8,Baer,Ontotext
+8,Diks,RelationalAI
+8,Mathura,SeMI Technologies
+8,Golubev,Graph Aware
+9,Fane,Synaptica
+9,DeMilo,Stardog
+9,East,Datachemist
+9,Eljon,Sponsor_2
+9,Crucq,Lymba
+9,Aguilar,Katana Graph
+9,Chatham,Brighthive
+9,Katz,Amazon
+9,Baer,Ontoforce
+9,Domino,Franz
+9,Athanasopoulos,Sponsor_0
+9,Ermanetti,OriginTrail
+9,Gaston,TerminusDB
+9,Fey,Semantic Web
+9,Deval,Sponsor_1
+9,Bridges,Datastax
+9,Chebti,MonteCarlo
+9,Barendsen,Oxford Semantic
+9,Gibbons,ExperoInc
+9,Elverdink,RelationalAI
+9,Bekkenk,LARUS Business Automation
+9,Cagney,Oracle
+9,Barbosa,Cambridge Semantics
+9,Aljoh,Ontotext
+9,Goode,Graph Aware
+9,Beunders,data.world
+9,Hammadi,CapGemini
+9,Olivetti,SeMI Technologies
+9,Emmitt,Sponsor_3
+9,Daemkin,Accenture
+10,Ermanetti,Sponsor_2
+10,Apollinaire,Katana Graph
+10,Danibal,Accenture
+10,Gooszen,Brighthive
+10,Borgt,LARUS Business Automation
+10,Bernet,Ontoforce
+10,Belgers,Cambridge Semantics
+10,Dorsten,Oracle
+10,Bessem,Sponsor_0
+10,Baer,CapGemini
+10,Hesen,Stardog
+10,Eddowes,Franz
+10,East,Semantic Web
+10,Aguilar,Sponsor_3
+10,Aljoh,Oxford Semantic
+10,Barendsen,Ontotext
+10,Bekkenk,RelationalAI
+10,Craw,Datastax
+10,Eljon,ExperoInc
+10,Beunders,Synaptica
+10,Domino,Datachemist
+10,Greenway,MonteCarlo
+10,Carlsson,data.world
+10,DuChesne,Sponsor_1
+10,Ormazabal,SeMI Technologies
+10,Barbosa,Amazon
+10,Bridges,TerminusDB
+10,Levendis,Graph Aware
+10,Chatham,OriginTrail
+10,De Longhi,Lymba
+11,Kenner,LARUS Business Automation
+11,Chatham,Amazon
+11,Falke,Sponsor_3
+11,DeMilo,CapGemini
+11,Hilliard,Franz
+11,Boko,Ontoforce
+11,Gasc,RelationalAI
+11,Danibal,Datastax
+11,Bridges,Stardog
+11,Atzori,Katana Graph
+11,Baer,SeMI Technologies
+11,Emmitt,Semantic Web
+11,Ferguson,Cambridge Semantics
+11,Carlsson,Sponsor_1
+11,Apollinaire,Datachemist
+11,Beunders,TerminusDB
+11,Bekkenk,Oxford Semantic
+11,Bernet,Sponsor_0
+11,Aguilar,MonteCarlo
+11,De Longhi,data.world
+11,Ermanetti,Brighthive
+11,Dekker,Lymba
+11,Gooszen,Graph Aware
+11,Flores,OriginTrail
+11,Barbosa,ExperoInc
+11,Barendsen,Oracle
+11,El Amal,Accenture
+11,Aljoh,Synaptica
+11,Franc,Sponsor_2
+11,Chebti,Ontotext
